@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Comments on: My walk through the Git book</title>
+	<atom:link href="http://ripper234.com/p/my-walk-through-the-git-book/feed/" rel="self" type="application/rss+xml" />
+	<link>http://ripper234.com/p/my-walk-through-the-git-book/</link>
+	<description>Stuff Ron Gross Finds Interesting</description>
+	<lastBuildDate>Sun, 02 Aug 2015 11:03:35 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.5.3</generator>
+	<item>
+		<title>By: ripper234</title>
+		<link>http://ripper234.com/p/my-walk-through-the-git-book/comment-page-1/#comment-3725</link>
+		<dc:creator><![CDATA[ripper234]]></dc:creator>
+		<pubDate>Mon, 30 May 2011 07:23:48 +0000</pubDate>
+		<guid isPermaLink="false">http://ripper234.com/?p=1470#comment-3725</guid>
+		<description><![CDATA[Thanks @Ken for your comments, looking forward for your Git for Gits talk in two weeks.]]></description>
+		<content:encoded><![CDATA[<p>Thanks @Ken for your comments, looking forward for your Git for Gits talk in two weeks.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Ken Egozi</title>
+		<link>http://ripper234.com/p/my-walk-through-the-git-book/comment-page-1/#comment-3724</link>
+		<dc:creator><![CDATA[Ken Egozi]]></dc:creator>
+		<pubDate>Mon, 30 May 2011 06:20:00 +0000</pubDate>
+		<guid isPermaLink="false">http://ripper234.com/?p=1470#comment-3724</guid>
+		<description><![CDATA[Re: How does pushing actually work?:
+the if your local branch is *tracking* a remote branch, then git-push will work without arguments.
+usually when you create a local branch off of a remote one (e.g. &quot;git checkout origin/fa&quot; &#038; &quot;git checkout -b fa&quot;) it will create the new local branch (fa) as a tracking the remote one (origin/fa)
+
+apparently from your example, pushing a local branch to a remote repo, causing a creation of a new branch on the remote, will create the same tracking relationship between the local and remote branch]]></description>
+		<content:encoded><![CDATA[<p>Re: How does pushing actually work?:<br />
+the if your local branch is *tracking* a remote branch, then git-push will work without arguments.<br />
+usually when you create a local branch off of a remote one (e.g. &#8220;git checkout origin/fa&#8221; &amp; &#8220;git checkout -b fa&#8221;) it will create the new local branch (fa) as a tracking the remote one (origin/fa)</p>
+<p>apparently from your example, pushing a local branch to a remote repo, causing a creation of a new branch on the remote, will create the same tracking relationship between the local and remote branch</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Ken Egozi</title>
+		<link>http://ripper234.com/p/my-walk-through-the-git-book/comment-page-1/#comment-3723</link>
+		<dc:creator><![CDATA[Ken Egozi]]></dc:creator>
+		<pubDate>Mon, 30 May 2011 06:16:02 +0000</pubDate>
+		<guid isPermaLink="false">http://ripper234.com/?p=1470#comment-3723</guid>
+		<description><![CDATA[Re: fast forward:
+see my previous comment - this simply means &quot;moving the origin/branch&quot; label forward until it meets &quot;branch&quot; label.  If you think with labels in the gitk view, the whole git model becomes simple to digest]]></description>
+		<content:encoded><![CDATA[<p>Re: fast forward:<br />
+see my previous comment &#8211; this simply means &#8220;moving the origin/branch&#8221; label forward until it meets &#8220;branch&#8221; label.  If you think with labels in the gitk view, the whole git model becomes simple to digest</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Ken Egozi</title>
+		<link>http://ripper234.com/p/my-walk-through-the-git-book/comment-page-1/#comment-3722</link>
+		<dc:creator><![CDATA[Ken Egozi]]></dc:creator>
+		<pubDate>Mon, 30 May 2011 06:14:25 +0000</pubDate>
+		<guid isPermaLink="false">http://ripper234.com/?p=1470#comment-3722</guid>
+		<description><![CDATA[Re: How can you see the ‘branch structure’ of a repository?
+your conclusion is correct - git keeps track of objects, not branches.
+You should treat branches (and tags) simply as labels, that mark interesting commits.]]></description>
+		<content:encoded><![CDATA[<p>Re: How can you see the ‘branch structure’ of a repository?<br />
+your conclusion is correct &#8211; git keeps track of objects, not branches.<br />
+You should treat branches (and tags) simply as labels, that mark interesting commits.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Ken Egozi</title>
+		<link>http://ripper234.com/p/my-walk-through-the-git-book/comment-page-1/#comment-3721</link>
+		<dc:creator><![CDATA[Ken Egozi]]></dc:creator>
+		<pubDate>Mon, 30 May 2011 06:11:30 +0000</pubDate>
+		<guid isPermaLink="false">http://ripper234.com/?p=1470#comment-3721</guid>
+		<description><![CDATA[Re: After I git merge without conflicts, is a git commit needed?
+you do not need to commit, because git creates a commit representing the merge (does not include any change in files, but is pointing to both parent commits). gitk and see that for yourself.
+So you so actually *do* need to Push it to the remote, tracked branch (assuming you have one).]]></description>
+		<content:encoded><![CDATA[<p>Re: After I git merge without conflicts, is a git commit needed?<br />
+you do not need to commit, because git creates a commit representing the merge (does not include any change in files, but is pointing to both parent commits). gitk and see that for yourself.<br />
+So you so actually *do* need to Push it to the remote, tracked branch (assuming you have one).</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

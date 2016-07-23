@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Comments on: What to do about nondeterministic tests?</title>
+	<atom:link href="http://ripper234.com/p/what-to-do-about-nondeterministic-tests/feed/" rel="self" type="application/rss+xml" />
+	<link>http://ripper234.com/p/what-to-do-about-nondeterministic-tests/</link>
+	<description>Stuff Ron Gross Finds Interesting</description>
+	<lastBuildDate>Sun, 02 Aug 2015 11:03:35 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.5.3</generator>
+	<item>
+		<title>By: yonatan</title>
+		<link>http://ripper234.com/p/what-to-do-about-nondeterministic-tests/comment-page-1/#comment-1519</link>
+		<dc:creator><![CDATA[yonatan]]></dc:creator>
+		<pubDate>Sun, 26 Jul 2009 16:47:19 +0000</pubDate>
+		<guid isPermaLink="false">http://ripper234.com/?p=822#comment-1519</guid>
+		<description><![CDATA[hi! better late than never. many times problems in such tests arise from timers/synchronization problems.
+another method for handling those unpredictable tests is via use of mock objects/substitutes for the timers and synchronizers.
+you can write your custom timer to tick manually from your code and set the fake clock to any ol&#039; time you need.
+and you can set your mock synchronizer to enforce a certain order of execution to match the scenario you are testing.
+my two cents.]]></description>
+		<content:encoded><![CDATA[<p>hi! better late than never. many times problems in such tests arise from timers/synchronization problems.<br />
+another method for handling those unpredictable tests is via use of mock objects/substitutes for the timers and synchronizers.<br />
+you can write your custom timer to tick manually from your code and set the fake clock to any ol&#8217; time you need.<br />
+and you can set your mock synchronizer to enforce a certain order of execution to match the scenario you are testing.<br />
+my two cents.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: A Quantum Immortal &#187; Blog Archive &#187; Keep fighting the voodoo</title>
+		<link>http://ripper234.com/p/what-to-do-about-nondeterministic-tests/comment-page-1/#comment-1364</link>
+		<dc:creator><![CDATA[A Quantum Immortal &#187; Blog Archive &#187; Keep fighting the voodoo]]></dc:creator>
+		<pubDate>Thu, 19 Mar 2009 17:03:30 +0000</pubDate>
+		<guid isPermaLink="false">http://ripper234.com/?p=822#comment-1364</guid>
+		<description><![CDATA[[...] developers dislike Voodoo, but sometimes all the good will can&#8217;t stop a dark spawn of evil. For example, one of our [...]]]></description>
+		<content:encoded><![CDATA[<p>[&#8230;] developers dislike Voodoo, but sometimes all the good will can&#8217;t stop a dark spawn of evil. For example, one of our [&#8230;]</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: ripper234</title>
+		<link>http://ripper234.com/p/what-to-do-about-nondeterministic-tests/comment-page-1/#comment-1286</link>
+		<dc:creator><![CDATA[ripper234]]></dc:creator>
+		<pubDate>Sat, 07 Feb 2009 15:32:03 +0000</pubDate>
+		<guid isPermaLink="false">http://ripper234.com/?p=822#comment-1286</guid>
+		<description><![CDATA[I wasn&#039;t talking about Turing determinism or in Turing terms.
+I&#039;m well aware of nondeterminstic Turing machines, but one can talk about a deterministic result, outcome or program for that matter, without defining acceptance models in the Turing while. The word determinisim was around way before Turing, so we must be careful to choose our context properly.
+
+The important thing about nondeterministic turing machines is not that they make every outcome possible (because they don&#039;t have to, the indeterminism is bounded). The real kicker is the acceptance model - the machine is defined to Accept if at least one possible run accepts. This is the problem in actually implementing nondeterministic Turing machines.]]></description>
+		<content:encoded><![CDATA[<p>I wasn&#8217;t talking about Turing determinism or in Turing terms.<br />
+I&#8217;m well aware of nondeterminstic Turing machines, but one can talk about a deterministic result, outcome or program for that matter, without defining acceptance models in the Turing while. The word determinisim was around way before Turing, so we must be careful to choose our context properly.</p>
+<p>The important thing about nondeterministic turing machines is not that they make every outcome possible (because they don&#8217;t have to, the indeterminism is bounded). The real kicker is the acceptance model &#8211; the machine is defined to Accept if at least one possible run accepts. This is the problem in actually implementing nondeterministic Turing machines.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Friend</title>
+		<link>http://ripper234.com/p/what-to-do-about-nondeterministic-tests/comment-page-1/#comment-1284</link>
+		<dc:creator><![CDATA[Friend]]></dc:creator>
+		<pubDate>Sat, 07 Feb 2009 08:18:45 +0000</pubDate>
+		<guid isPermaLink="false">http://ripper234.com/?p=822#comment-1284</guid>
+		<description><![CDATA[You have a misconception, you talk about probability distribution, that is, the probability for a given output, while non-deterministic is all about making every possible outcome rather than a distribution. This is not a matter of definition, since there is a huge difference.
+Actually, there is no non-deterministic machine available, otherwise you cloud have prove that P=NP!.]]></description>
+		<content:encoded><![CDATA[<p>You have a misconception, you talk about probability distribution, that is, the probability for a given output, while non-deterministic is all about making every possible outcome rather than a distribution. This is not a matter of definition, since there is a huge difference.<br />
+Actually, there is no non-deterministic machine available, otherwise you cloud have prove that P=NP!.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: ripper234</title>
+		<link>http://ripper234.com/p/what-to-do-about-nondeterministic-tests/comment-page-1/#comment-1276</link>
+		<dc:creator><![CDATA[ripper234]]></dc:creator>
+		<pubDate>Fri, 06 Feb 2009 17:50:01 +0000</pubDate>
+		<guid isPermaLink="false">http://ripper234.com/?p=822#comment-1276</guid>
+		<description><![CDATA[It&#039;s a matter of definition. My definition here: a deterministic program emits the same output for a given input. This can certainly be achieve without quantum computers, but it requires a specific definition of input.
+
+Try opening 100 threads and have them all print their sequence number 10000 times. I assure you that on most platforms the output will not be the same between different runs of the program.]]></description>
+		<content:encoded><![CDATA[<p>It&#8217;s a matter of definition. My definition here: a deterministic program emits the same output for a given input. This can certainly be achieve without quantum computers, but it requires a specific definition of input.</p>
+<p>Try opening 100 threads and have them all print their sequence number 10000 times. I assure you that on most platforms the output will not be the same between different runs of the program.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Friend</title>
+		<link>http://ripper234.com/p/what-to-do-about-nondeterministic-tests/comment-page-1/#comment-1273</link>
+		<dc:creator><![CDATA[Friend]]></dc:creator>
+		<pubDate>Fri, 06 Feb 2009 15:17:59 +0000</pubDate>
+		<guid isPermaLink="false">http://ripper234.com/?p=822#comment-1273</guid>
+		<description><![CDATA[You probably talk about ``Random&#039;&#039; tests and not non-deterministic tests, since the letter cannot be achieved (maybe in quantum computing), this is just a mental experiment.]]></description>
+		<content:encoded><![CDATA[<p>You probably talk about &#8220;Random&#8221; tests and not non-deterministic tests, since the letter cannot be achieved (maybe in quantum computing), this is just a mental experiment.</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

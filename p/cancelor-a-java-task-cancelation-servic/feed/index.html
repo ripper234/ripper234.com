@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Comments on: Cancelor &#8211; a java task cancelation service</title>
+	<atom:link href="http://ripper234.com/p/cancelor-a-java-task-cancelation-servic/feed/" rel="self" type="application/rss+xml" />
+	<link>http://ripper234.com/p/cancelor-a-java-task-cancelation-servic/</link>
+	<description>Stuff Ron Gross Finds Interesting</description>
+	<lastBuildDate>Sun, 02 Aug 2015 11:03:35 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.5.3</generator>
+	<item>
+		<title>By: ripper234</title>
+		<link>http://ripper234.com/p/cancelor-a-java-task-cancelation-servic/comment-page-1/#comment-1976</link>
+		<dc:creator><![CDATA[ripper234]]></dc:creator>
+		<pubDate>Fri, 15 Jan 2010 14:35:32 +0000</pubDate>
+		<guid isPermaLink="false">http://ripper234.com/?p=1217#comment-1976</guid>
+		<description><![CDATA[Strike that, Future is an interface, not a class. You&#039;ll have to modify the code of the particular ExecutorService you&#039;re using to return a Future that supports this, I think ... does&#039;t sound too nice.]]></description>
+		<content:encoded><![CDATA[<p>Strike that, Future is an interface, not a class. You&#8217;ll have to modify the code of the particular ExecutorService you&#8217;re using to return a Future that supports this, I think &#8230; does&#8217;t sound too nice.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: ripper234</title>
+		<link>http://ripper234.com/p/cancelor-a-java-task-cancelation-servic/comment-page-1/#comment-1975</link>
+		<dc:creator><![CDATA[ripper234]]></dc:creator>
+		<pubDate>Fri, 15 Jan 2010 14:34:25 +0000</pubDate>
+		<guid isPermaLink="false">http://ripper234.com/?p=1217#comment-1975</guid>
+		<description><![CDATA[Fair enough. Alright, one more question: How would you use this if you&#039;re not starting the thread directly but rather using an ExecutorService? You only get a Future back, I don&#039;t believe you have direct access to the thread. I haven&#039;t look at the code of Future yet, but you could probably extend Future to support this.]]></description>
+		<content:encoded><![CDATA[<p>Fair enough. Alright, one more question: How would you use this if you&#8217;re not starting the thread directly but rather using an ExecutorService? You only get a Future back, I don&#8217;t believe you have direct access to the thread. I haven&#8217;t look at the code of Future yet, but you could probably extend Future to support this.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Tomer Gabel</title>
+		<link>http://ripper234.com/p/cancelor-a-java-task-cancelation-servic/comment-page-1/#comment-1967</link>
+		<dc:creator><![CDATA[Tomer Gabel]]></dc:creator>
+		<pubDate>Wed, 13 Jan 2010 13:37:19 +0000</pubDate>
+		<guid isPermaLink="false">http://ripper234.com/?p=1217#comment-1967</guid>
+		<description><![CDATA[What&#039;s IoC got to do with it? You can always inject an &quot;ICancellationService&quot; and expose the threadlocal as a getToken() method call or whatever. Using InheritableThreadLocal serves you the bother of having to manually route the flag between child tasks.]]></description>
+		<content:encoded><![CDATA[<p>What&#8217;s IoC got to do with it? You can always inject an &#8220;ICancellationService&#8221; and expose the threadlocal as a getToken() method call or whatever. Using InheritableThreadLocal serves you the bother of having to manually route the flag between child tasks.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: ripper234</title>
+		<link>http://ripper234.com/p/cancelor-a-java-task-cancelation-servic/comment-page-1/#comment-1966</link>
+		<dc:creator><![CDATA[ripper234]]></dc:creator>
+		<pubDate>Wed, 13 Jan 2010 13:23:30 +0000</pubDate>
+		<guid isPermaLink="false">http://ripper234.com/?p=1217#comment-1966</guid>
+		<description><![CDATA[Tomer, a boolean or AtomicBoolean is indeed the second other solution I discussed. The one downside is that sometimes you need to pass this boolean along a few call chains, which doesn&#039;t play nice with IOC frameworks like Guice. It is true however that it&#039;s a KISS solution that just works.]]></description>
+		<content:encoded><![CDATA[<p>Tomer, a boolean or AtomicBoolean is indeed the second other solution I discussed. The one downside is that sometimes you need to pass this boolean along a few call chains, which doesn&#8217;t play nice with IOC frameworks like Guice. It is true however that it&#8217;s a KISS solution that just works.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Tomer Gabel</title>
+		<link>http://ripper234.com/p/cancelor-a-java-task-cancelation-servic/comment-page-1/#comment-1964</link>
+		<dc:creator><![CDATA[Tomer Gabel]]></dc:creator>
+		<pubDate>Wed, 13 Jan 2010 11:45:14 +0000</pubDate>
+		<guid isPermaLink="false">http://ripper234.com/?p=1217#comment-1964</guid>
+		<description><![CDATA[Instead of using a string value and searching a global hashmap (potentially inefficient), there are several things you can do:
+
+* Ideally you&#039;d use a volatile bool for this (since there&#039;s only one state change -- cancelled: false-&#062;true). I&#039;m not sure it&#039;s possible to pass such a variable byref to child threads, so you&#039;ll probably need a reference type in there anyway.
+* Since that&#039;s the case, you may want to use a single flag variable (AtomicBoolean), place it in an InheritableThreadLocal (http://java.sun.com/javase/6/docs/api/java/lang/InheritableThreadLocal.html) and expose it once when the primary task is constructed. This allows you to cancel the entire task tree with a single boolean write. I&#039;m not sure how well this performs, but it does seem like an elegant solution to the problem and possibly worth investigating. There may also be issues when using a scheduler (since all tasks share a common thread pool) but I suppose there are ways around that as well.]]></description>
+		<content:encoded><![CDATA[<p>Instead of using a string value and searching a global hashmap (potentially inefficient), there are several things you can do:</p>
+<p>* Ideally you&#8217;d use a volatile bool for this (since there&#8217;s only one state change &#8212; cancelled: false-&gt;true). I&#8217;m not sure it&#8217;s possible to pass such a variable byref to child threads, so you&#8217;ll probably need a reference type in there anyway.<br />
+* Since that&#8217;s the case, you may want to use a single flag variable (AtomicBoolean), place it in an InheritableThreadLocal (<a href="http://java.sun.com/javase/6/docs/api/java/lang/InheritableThreadLocal.html" rel="nofollow">http://java.sun.com/javase/6/docs/api/java/lang/InheritableThreadLocal.html</a>) and expose it once when the primary task is constructed. This allows you to cancel the entire task tree with a single boolean write. I&#8217;m not sure how well this performs, but it does seem like an elegant solution to the problem and possibly worth investigating. There may also be issues when using a scheduler (since all tasks share a common thread pool) but I suppose there are ways around that as well.</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

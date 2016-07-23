@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Comments on: C# Alternative to Directory.GetFiles()</title>
+	<atom:link href="http://ripper234.com/p/c-alternative-to-directorygetfiles/feed/" rel="self" type="application/rss+xml" />
+	<link>http://ripper234.com/p/c-alternative-to-directorygetfiles/</link>
+	<description>Stuff Ron Gross Finds Interesting</description>
+	<lastBuildDate>Sun, 02 Aug 2015 11:03:35 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.5.3</generator>
+	<item>
+		<title>By: Desarrollador</title>
+		<link>http://ripper234.com/p/c-alternative-to-directorygetfiles/comment-page-1/#comment-1994</link>
+		<dc:creator><![CDATA[Desarrollador]]></dc:creator>
+		<pubDate>Fri, 22 Jan 2010 22:08:57 +0000</pubDate>
+		<guid isPermaLink="false">http://ripper234.com/?p=937#comment-1994</guid>
+		<description><![CDATA[Very interesting, very functional
+I congratulate them.
+
+My aplications daily process 6000 files. I integrate this code. Thanks]]></description>
+		<content:encoded><![CDATA[<p>Very interesting, very functional<br />
+I congratulate them.</p>
+<p>My aplications daily process 6000 files. I integrate this code. Thanks</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: ripper234</title>
+		<link>http://ripper234.com/p/c-alternative-to-directorygetfiles/comment-page-1/#comment-1591</link>
+		<dc:creator><![CDATA[ripper234]]></dc:creator>
+		<pubDate>Mon, 24 Aug 2009 06:05:17 +0000</pubDate>
+		<guid isPermaLink="false">http://ripper234.com/?p=937#comment-1591</guid>
+		<description><![CDATA[You can try having the enumerator close itself automatically at the end of iteration:
+
+if (lastError == ERROR_NO_MORE_FILES)
+ {
+   // try calling Reset(); or Dispose(); here
+   return false;
+}]]></description>
+		<content:encoded><![CDATA[<p>You can try having the enumerator close itself automatically at the end of iteration:</p>
+<p>if (lastError == ERROR_NO_MORE_FILES)<br />
+ {<br />
+   // try calling Reset(); or Dispose(); here<br />
+   return false;<br />
+}</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: tjam</title>
+		<link>http://ripper234.com/p/c-alternative-to-directorygetfiles/comment-page-1/#comment-1590</link>
+		<dc:creator><![CDATA[tjam]]></dc:creator>
+		<pubDate>Sun, 23 Aug 2009 22:07:31 +0000</pubDate>
+		<guid isPermaLink="false">http://ripper234.com/?p=937#comment-1590</guid>
+		<description><![CDATA[Hmmm.  I must not be getting this.  I changed the class FilesFinder so I could call the Dispose()method on the enumerator:
+
+ public class FilesFinder : IEnumerable
+    {
+        readonly string _fileName;
+        IEnumerator _fileenumerator;
+ 
+        public FilesFinder(string fileName)
+        {
+            _fileName = fileName;
+            _fileenumerator = new FilesEnumerator(_fileName);
+        }
+ 
+        public IEnumerator GetEnumerator()
+        {
+            return _fileenumerator;
+        }
+ 
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+ 
+        public void Dispose()
+        {
+               _fileenumerator.Dispose();
+        }
+ 
+    }
+
+Then added:  filesFinder.Dispose(); the GetFiles()method after the foreach completed.
+
+Still no luck.]]></description>
+		<content:encoded><![CDATA[<p>Hmmm.  I must not be getting this.  I changed the class FilesFinder so I could call the Dispose()method on the enumerator:</p>
+<p> public class FilesFinder : IEnumerable<br />
+    {<br />
+        readonly string _fileName;<br />
+        IEnumerator _fileenumerator;</p>
+<p>        public FilesFinder(string fileName)<br />
+        {<br />
+            _fileName = fileName;<br />
+            _fileenumerator = new FilesEnumerator(_fileName);<br />
+        }</p>
+<p>        public IEnumerator GetEnumerator()<br />
+        {<br />
+            return _fileenumerator;<br />
+        }</p>
+<p>        IEnumerator IEnumerable.GetEnumerator()<br />
+        {<br />
+            return GetEnumerator();<br />
+        }</p>
+<p>        public void Dispose()<br />
+        {<br />
+               _fileenumerator.Dispose();<br />
+        }</p>
+<p>    }</p>
+<p>Then added:  filesFinder.Dispose(); the GetFiles()method after the foreach completed.</p>
+<p>Still no luck.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: ripper234</title>
+		<link>http://ripper234.com/p/c-alternative-to-directorygetfiles/comment-page-1/#comment-1584</link>
+		<dc:creator><![CDATA[ripper234]]></dc:creator>
+		<pubDate>Fri, 21 Aug 2009 16:36:13 +0000</pubDate>
+		<guid isPermaLink="false">http://ripper234.com/?p=937#comment-1584</guid>
+		<description><![CDATA[Amm ... after you&#039;re finished using FilesEnumerator? It holds the directory open.]]></description>
+		<content:encoded><![CDATA[<p>Amm &#8230; after you&#8217;re finished using FilesEnumerator? It holds the directory open.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: tjam</title>
+		<link>http://ripper234.com/p/c-alternative-to-directorygetfiles/comment-page-1/#comment-1582</link>
+		<dc:creator><![CDATA[tjam]]></dc:creator>
+		<pubDate>Fri, 21 Aug 2009 14:15:33 +0000</pubDate>
+		<guid isPermaLink="false">http://ripper234.com/?p=937#comment-1582</guid>
+		<description><![CDATA[I have to admit my ignorance here. No, I am not calling Dsipose. But I&#039;m not exactly sure where to call it.]]></description>
+		<content:encoded><![CDATA[<p>I have to admit my ignorance here. No, I am not calling Dsipose. But I&#8217;m not exactly sure where to call it.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: ripper234</title>
+		<link>http://ripper234.com/p/c-alternative-to-directorygetfiles/comment-page-1/#comment-1578</link>
+		<dc:creator><![CDATA[ripper234]]></dc:creator>
+		<pubDate>Fri, 21 Aug 2009 06:41:19 +0000</pubDate>
+		<guid isPermaLink="false">http://ripper234.com/?p=937#comment-1578</guid>
+		<description><![CDATA[@tijam, note that FilesEnumerator has a Dispose method (even though my implementation didn&#039;t implement the IDisposable pattern - it rather should). Are you calling Dispose()?4]]></description>
+		<content:encoded><![CDATA[<p>@tijam, note that FilesEnumerator has a Dispose method (even though my implementation didn&#8217;t implement the IDisposable pattern &#8211; it rather should). Are you calling Dispose()?4</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: tjam</title>
+		<link>http://ripper234.com/p/c-alternative-to-directorygetfiles/comment-page-1/#comment-1577</link>
+		<dc:creator><![CDATA[tjam]]></dc:creator>
+		<pubDate>Thu, 20 Aug 2009 21:43:21 +0000</pubDate>
+		<guid isPermaLink="false">http://ripper234.com/?p=937#comment-1577</guid>
+		<description><![CDATA[I&#039;m using this code to grab &quot;handfuls&quot; of files and move them to a different directory.  It works great, except when the original directory is empty, I want to delete it.  Unfortunately, any attempt I make results in an error indicating the directory is being used by another process, the culprit seeming to be your GetFiles.  When using the Directory.GetFiles() I am able to process everything and perform the delete.  But I really need to use your method for grabbing smaller chunks.  It works perfectly except for not wanting to release the directory.  Any ideas?]]></description>
+		<content:encoded><![CDATA[<p>I&#8217;m using this code to grab &#8220;handfuls&#8221; of files and move them to a different directory.  It works great, except when the original directory is empty, I want to delete it.  Unfortunately, any attempt I make results in an error indicating the directory is being used by another process, the culprit seeming to be your GetFiles.  When using the Directory.GetFiles() I am able to process everything and perform the delete.  But I really need to use your method for grabbing smaller chunks.  It works perfectly except for not wanting to release the directory.  Any ideas?</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: ripper234</title>
+		<link>http://ripper234.com/p/c-alternative-to-directorygetfiles/comment-page-1/#comment-1509</link>
+		<dc:creator><![CDATA[ripper234]]></dc:creator>
+		<pubDate>Tue, 14 Jul 2009 14:14:18 +0000</pubDate>
+		<guid isPermaLink="false">http://ripper234.com/?p=937#comment-1509</guid>
+		<description><![CDATA[FindFirstFile does no sorting of the search result (&lt;a href=&quot;http://msdn.microsoft.com/en-us/library/aa364418(VS.85).aspx&quot; rel=&quot;nofollow&quot;&gt;MSDN&lt;/a&gt;)]]></description>
+		<content:encoded><![CDATA[<p>FindFirstFile does no sorting of the search result (<a href="http://msdn.microsoft.com/en-us/library/aa364418(VS.85).aspx" rel="nofollow">MSDN</a>)</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: slide</title>
+		<link>http://ripper234.com/p/c-alternative-to-directorygetfiles/comment-page-1/#comment-1508</link>
+		<dc:creator><![CDATA[slide]]></dc:creator>
+		<pubDate>Tue, 14 Jul 2009 13:35:57 +0000</pubDate>
+		<guid isPermaLink="false">http://ripper234.com/?p=937#comment-1508</guid>
+		<description><![CDATA[I&#039;m very interested in this code, had one question though. Does it return the files in sorted order?]]></description>
+		<content:encoded><![CDATA[<p>I&#8217;m very interested in this code, had one question though. Does it return the files in sorted order?</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

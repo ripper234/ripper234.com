@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Comments on: Easy linux backup with duplicity</title>
+	<atom:link href="http://ripper234.com/p/easy-linux-backup-with-duplicity/feed/" rel="self" type="application/rss+xml" />
+	<link>http://ripper234.com/p/easy-linux-backup-with-duplicity/</link>
+	<description>Stuff Ron Gross Finds Interesting</description>
+	<lastBuildDate>Sun, 02 Aug 2015 11:03:35 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.5.3</generator>
+	<item>
+		<title>By: Sultan</title>
+		<link>http://ripper234.com/p/easy-linux-backup-with-duplicity/comment-page-1/#comment-5884</link>
+		<dc:creator><![CDATA[Sultan]]></dc:creator>
+		<pubDate>Wed, 20 Jun 2012 22:33:43 +0000</pubDate>
+		<guid isPermaLink="false">http://ripper234.com/?p=1688#comment-5884</guid>
+		<description><![CDATA[@ripper234: Thanks. I&#039;ll look more into Boxbackup (and Duplicity) and try to remember to post back when I do. It won&#039;t be for a while, though. Very busy these days... .]]></description>
+		<content:encoded><![CDATA[<p>@ripper234: Thanks. I&#8217;ll look more into Boxbackup (and Duplicity) and try to remember to post back when I do. It won&#8217;t be for a while, though. Very busy these days&#8230; .</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: ripper234</title>
+		<link>http://ripper234.com/p/easy-linux-backup-with-duplicity/comment-page-1/#comment-5883</link>
+		<dc:creator><![CDATA[ripper234]]></dc:creator>
+		<pubDate>Wed, 20 Jun 2012 20:05:52 +0000</pubDate>
+		<guid isPermaLink="false">http://ripper234.com/?p=1688#comment-5883</guid>
+		<description><![CDATA[@Sultan - I don&#039;t know, I don&#039;t remember finding boxbackup in my research.
+If you try it, please post about your experience.
+
+Duplicity has been doing a great job for us - just be sure not to use s3fs as I wrote above, but rather use the builtin S3 connector - we ran into some perf problems with duplicity on s3fs.]]></description>
+		<content:encoded><![CDATA[<p>@Sultan &#8211; I don&#8217;t know, I don&#8217;t remember finding boxbackup in my research.<br />
+If you try it, please post about your experience.</p>
+<p>Duplicity has been doing a great job for us &#8211; just be sure not to use s3fs as I wrote above, but rather use the builtin S3 connector &#8211; we ran into some perf problems with duplicity on s3fs.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Sultan</title>
+		<link>http://ripper234.com/p/easy-linux-backup-with-duplicity/comment-page-1/#comment-5882</link>
+		<dc:creator><![CDATA[Sultan]]></dc:creator>
+		<pubDate>Wed, 20 Jun 2012 19:32:43 +0000</pubDate>
+		<guid isPermaLink="false">http://ripper234.com/?p=1688#comment-5882</guid>
+		<description><![CDATA[How does it compare to http://www.boxbackup.org/ (if you happen to have done the comparison during your research). I&#039;m currently looking for a system, too.
+Thanks]]></description>
+		<content:encoded><![CDATA[<p>How does it compare to <a href="http://www.boxbackup.org/" rel="nofollow">http://www.boxbackup.org/</a> (if you happen to have done the comparison during your research). I&#8217;m currently looking for a system, too.<br />
+Thanks</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: ripper234</title>
+		<link>http://ripper234.com/p/easy-linux-backup-with-duplicity/comment-page-1/#comment-5431</link>
+		<dc:creator><![CDATA[ripper234]]></dc:creator>
+		<pubDate>Thu, 22 Mar 2012 06:40:14 +0000</pubDate>
+		<guid isPermaLink="false">http://ripper234.com/?p=1688#comment-5431</guid>
+		<description><![CDATA[@Ronen - very nice, I missed that flag, it simplifies my life considerably :)]]></description>
+		<content:encoded><![CDATA[<p>@Ronen &#8211; very nice, I missed that flag, it simplifies my life considerably 🙂</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Ronen</title>
+		<link>http://ripper234.com/p/easy-linux-backup-with-duplicity/comment-page-1/#comment-5427</link>
+		<dc:creator><![CDATA[Ronen]]></dc:creator>
+		<pubDate>Thu, 22 Mar 2012 00:05:38 +0000</pubDate>
+		<guid isPermaLink="false">http://ripper234.com/?p=1688#comment-5427</guid>
+		<description><![CDATA[BTW you can tell it to do full after some time:
+
+--full-if-older-than time
+Perform a full backup if an incremental backup is requested, but the latest full backup in the collection is older than the given time. See the TIME FORMATS section for more information.]]></description>
+		<content:encoded><![CDATA[<p>BTW you can tell it to do full after some time:</p>
+<p>&#8211;full-if-older-than time<br />
+Perform a full backup if an incremental backup is requested, but the latest full backup in the collection is older than the given time. See the TIME FORMATS section for more information.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Ronen</title>
+		<link>http://ripper234.com/p/easy-linux-backup-with-duplicity/comment-page-1/#comment-5426</link>
+		<dc:creator><![CDATA[Ronen]]></dc:creator>
+		<pubDate>Wed, 21 Mar 2012 23:23:25 +0000</pubDate>
+		<guid isPermaLink="false">http://ripper234.com/?p=1688#comment-5426</guid>
+		<description><![CDATA[Yeap Im talking about the desktop version (its installed by default):
+
+   https://launchpad.net/deja-dup
+
+It uses duplicity behind the scenes]]></description>
+		<content:encoded><![CDATA[<p>Yeap Im talking about the desktop version (its installed by default):</p>
+<p>   <a href="https://launchpad.net/deja-dup" rel="nofollow">https://launchpad.net/deja-dup</a></p>
+<p>It uses duplicity behind the scenes</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: ripper234</title>
+		<link>http://ripper234.com/p/easy-linux-backup-with-duplicity/comment-page-1/#comment-5414</link>
+		<dc:creator><![CDATA[ripper234]]></dc:creator>
+		<pubDate>Wed, 21 Mar 2012 02:43:10 +0000</pubDate>
+		<guid isPermaLink="false">http://ripper234.com/?p=1688#comment-5414</guid>
+		<description><![CDATA[@Ronen - what&#039;s the default backup utility? I&#039;m talking about an Ubuntu server on EC2, it doesn&#039;t have the UI sub-system as far as I know.]]></description>
+		<content:encoded><![CDATA[<p>@Ronen &#8211; what&#8217;s the default backup utility? I&#8217;m talking about an Ubuntu server on EC2, it doesn&#8217;t have the UI sub-system as far as I know.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Ronen</title>
+		<link>http://ripper234.com/p/easy-linux-backup-with-duplicity/comment-page-1/#comment-5413</link>
+		<dc:creator><![CDATA[Ronen]]></dc:creator>
+		<pubDate>Wed, 21 Mar 2012 01:13:49 +0000</pubDate>
+		<guid isPermaLink="false">http://ripper234.com/?p=1688#comment-5413</guid>
+		<description><![CDATA[I think that the default backup utility in Ubuntu uses that also, point it to an ssh server and thats it,
+
+The Ubuntu UI client does do a full backup once in a while]]></description>
+		<content:encoded><![CDATA[<p>I think that the default backup utility in Ubuntu uses that also, point it to an ssh server and thats it,</p>
+<p>The Ubuntu UI client does do a full backup once in a while</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

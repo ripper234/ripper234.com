@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Comments on: On the evils of yield</title>
+	<atom:link href="http://ripper234.com/p/on-evils-of-yield/feed/" rel="self" type="application/rss+xml" />
+	<link>http://ripper234.com/p/on-evils-of-yield/</link>
+	<description>Stuff Ron Gross Finds Interesting</description>
+	<lastBuildDate>Sun, 02 Aug 2015 11:03:35 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.5.3</generator>
+	<item>
+		<title>By: ripper234</title>
+		<link>http://ripper234.com/p/on-evils-of-yield/comment-page-1/#comment-4866</link>
+		<dc:creator><![CDATA[ripper234]]></dc:creator>
+		<pubDate>Thu, 29 Dec 2011 20:40:51 +0000</pubDate>
+		<guid isPermaLink="false">http://ripper234.com/?p=1008#comment-4866</guid>
+		<description><![CDATA[Yeah, that&#039;s a good book.
+
+It took me a while to remember what this post was about.
+C# as a language tends to be very magical. It&#039;s fun most of the time ... until it bites you in the ass.
+
+(See &lt;a href=&quot;http://ripper234.com/p/java-is-less-magical-than-c/&quot; rel=&quot;nofollow&quot;&gt;C# vs Java&lt;/a&gt;)]]></description>
+		<content:encoded><![CDATA[<p>Yeah, that&#8217;s a good book.</p>
+<p>It took me a while to remember what this post was about.<br />
+C# as a language tends to be very magical. It&#8217;s fun most of the time &#8230; until it bites you in the ass.</p>
+<p>(See <a href="http://ripper234.com/p/java-is-less-magical-than-c/" rel="nofollow">C# vs Java</a>)</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: M. A. Hanin</title>
+		<link>http://ripper234.com/p/on-evils-of-yield/comment-page-1/#comment-4863</link>
+		<dc:creator><![CDATA[M. A. Hanin]]></dc:creator>
+		<pubDate>Thu, 29 Dec 2011 16:04:35 +0000</pubDate>
+		<guid isPermaLink="false">http://ripper234.com/?p=1008#comment-4863</guid>
+		<description><![CDATA[&quot;Odds are it should return a List or Collection&quot; - very true!
+
+One thing I took from &quot;framework design guidelines&quot; (a book by Microsoft), is to be flexible about what you accept and strict about what you return. Therefore, it is a good practice to accept an IEnumerable when taking a collection as an argument, but defining the return type as IEnumerable is bad practice (as opposed to, say, returning an array, or List, or even IList).
+
+An IEnumerable really should be the last choice for a return type IMHO, and we should prefer to work with more explicit interfaces or classes when actually processing the collection - or restrict ourselves to actually enumerating (&quot;for each&quot;).
+A trivial example is the Count method of the IEnumerable interface - this is an extension method, which counts the number of elements in the collection by... that&#039;s right - enumerating through the entire collection, making it a O(n) operation. If we work with a List, Collection or Array, and use their respective Count/Length instance methods / properties, then we&#039;re executing an O(1) operation.]]></description>
+		<content:encoded><![CDATA[<p>&#8220;Odds are it should return a List or Collection&#8221; &#8211; very true!</p>
+<p>One thing I took from &#8220;framework design guidelines&#8221; (a book by Microsoft), is to be flexible about what you accept and strict about what you return. Therefore, it is a good practice to accept an IEnumerable when taking a collection as an argument, but defining the return type as IEnumerable is bad practice (as opposed to, say, returning an array, or List, or even IList).</p>
+<p>An IEnumerable really should be the last choice for a return type IMHO, and we should prefer to work with more explicit interfaces or classes when actually processing the collection &#8211; or restrict ourselves to actually enumerating (&#8220;for each&#8221;).<br />
+A trivial example is the Count method of the IEnumerable interface &#8211; this is an extension method, which counts the number of elements in the collection by&#8230; that&#8217;s right &#8211; enumerating through the entire collection, making it a O(n) operation. If we work with a List, Collection or Array, and use their respective Count/Length instance methods / properties, then we&#8217;re executing an O(1) operation.</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

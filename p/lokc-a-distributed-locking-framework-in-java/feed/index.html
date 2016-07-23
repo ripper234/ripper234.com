@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Comments on: lokc &#8211; a distributed locking framework in Java</title>
+	<atom:link href="http://ripper234.com/p/lokc-a-distributed-locking-framework-in-java/feed/" rel="self" type="application/rss+xml" />
+	<link>http://ripper234.com/p/lokc-a-distributed-locking-framework-in-java/</link>
+	<description>Stuff Ron Gross Finds Interesting</description>
+	<lastBuildDate>Sun, 02 Aug 2015 11:03:35 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.5.3</generator>
+	<item>
+		<title>By: ripper234</title>
+		<link>http://ripper234.com/p/lokc-a-distributed-locking-framework-in-java/comment-page-1/#comment-1498</link>
+		<dc:creator><![CDATA[ripper234]]></dc:creator>
+		<pubDate>Sun, 05 Jul 2009 07:45:03 +0000</pubDate>
+		<guid isPermaLink="false">http://ripper234.com/?p=1086#comment-1498</guid>
+		<description><![CDATA[Shlomo - yes, something like that. I do need auto-release semantics - after X time the lock should be released automatically.
+
+I don&#039;t think I&#039;ll write an SQL implementation, the implementation in GigaSpaces was rather easy and good enough for us - most of the time was spent on writing the tests anyway.]]></description>
+		<content:encoded><![CDATA[<p>Shlomo &#8211; yes, something like that. I do need auto-release semantics &#8211; after X time the lock should be released automatically.</p>
+<p>I don&#8217;t think I&#8217;ll write an SQL implementation, the implementation in GigaSpaces was rather easy and good enough for us &#8211; most of the time was spent on writing the tests anyway.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Shlomo</title>
+		<link>http://ripper234.com/p/lokc-a-distributed-locking-framework-in-java/comment-page-1/#comment-1497</link>
+		<dc:creator><![CDATA[Shlomo]]></dc:creator>
+		<pubDate>Sun, 05 Jul 2009 07:39:35 +0000</pubDate>
+		<guid isPermaLink="false">http://ripper234.com/?p=1086#comment-1497</guid>
+		<description><![CDATA[I have no idea what the library does, but I shamelessly assume that by saying &quot;using MySQL&quot; you&#039;re referring to creating some table holding the lock data, in a similar way to Gigaspaces. 
+FYI, MySQL has support for application locks in the form of RELEASE_LOCK() and GET_LOCK(). Those are just named mutexes you can create, without meddling with tables. More info here: &lt;a href=&quot;http://dev.mysql.com/doc/refman/5.1/en/miscellaneous-functions.html&quot; rel=&quot;nofollow&quot;&gt;http://dev.mysql.com/doc/refman/5.1/en/miscellaneous-functions.html&lt;/a&gt;. Those functions are pretty neat and sometimes very convenient, but I don&#039;t know if they are any good for you.]]></description>
+		<content:encoded><![CDATA[<p>I have no idea what the library does, but I shamelessly assume that by saying &#8220;using MySQL&#8221; you&#8217;re referring to creating some table holding the lock data, in a similar way to Gigaspaces.<br />
+FYI, MySQL has support for application locks in the form of RELEASE_LOCK() and GET_LOCK(). Those are just named mutexes you can create, without meddling with tables. More info here: <a href="http://dev.mysql.com/doc/refman/5.1/en/miscellaneous-functions.html" rel="nofollow">http://dev.mysql.com/doc/refman/5.1/en/miscellaneous-functions.html</a>. Those functions are pretty neat and sometimes very convenient, but I don&#8217;t know if they are any good for you.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: ripper234</title>
+		<link>http://ripper234.com/p/lokc-a-distributed-locking-framework-in-java/comment-page-1/#comment-1496</link>
+		<dc:creator><![CDATA[ripper234]]></dc:creator>
+		<pubDate>Sun, 05 Jul 2009 06:08:57 +0000</pubDate>
+		<guid isPermaLink="false">http://ripper234.com/?p=1086#comment-1496</guid>
+		<description><![CDATA[Thanks, I &lt;a href=&quot;http://stackoverflow.com/questions/1082071/choosing-a-name-for-an-open-source-library&quot; rel=&quot;nofollow&quot;&gt;pondered the name&lt;/a&gt; for some time.]]></description>
+		<content:encoded><![CDATA[<p>Thanks, I <a href="http://stackoverflow.com/questions/1082071/choosing-a-name-for-an-open-source-library" rel="nofollow">pondered the name</a> for some time.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Avish</title>
+		<link>http://ripper234.com/p/lokc-a-distributed-locking-framework-in-java/comment-page-1/#comment-1495</link>
+		<dc:creator><![CDATA[Avish]]></dc:creator>
+		<pubDate>Sat, 04 Jul 2009 20:34:24 +0000</pubDate>
+		<guid isPermaLink="false">http://ripper234.com/?p=1086#comment-1495</guid>
+		<description><![CDATA[Nice to see &lt;del&gt;us&lt;/del&gt; you contributing to the community. Way to go! Also, good choice of name.]]></description>
+		<content:encoded><![CDATA[<p>Nice to see <del>us</del> you contributing to the community. Way to go! Also, good choice of name.</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

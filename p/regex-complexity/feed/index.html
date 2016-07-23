@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Comments on: Regex Complexity</title>
+	<atom:link href="http://ripper234.com/p/regex-complexity/feed/" rel="self" type="application/rss+xml" />
+	<link>http://ripper234.com/p/regex-complexity/</link>
+	<description>Stuff Ron Gross Finds Interesting</description>
+	<lastBuildDate>Sun, 02 Aug 2015 11:03:35 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.5.3</generator>
+	<item>
+		<title>By: ripper234</title>
+		<link>http://ripper234.com/p/regex-complexity/comment-page-1/#comment-389</link>
+		<dc:creator><![CDATA[ripper234]]></dc:creator>
+		<pubDate>Wed, 13 Aug 2008 11:31:00 +0000</pubDate>
+		<guid isPermaLink="false">http://localhost/p/regex-complexity/#comment-389</guid>
+		<description><![CDATA[This thread is going a bit off topic, but as lorg pointed out in a private conversation, his version of the regex works better for cases like &quot;&lt;a HREF=&quot;...&quot; REL=&quot;nofollow&quot;&gt;&lt;b&gt;text&lt;/b&gt;&lt;/a&gt;&quot;. I still need to do a bit of work to find the optimal regex for this purpose.]]></description>
+		<content:encoded><![CDATA[<p>This thread is going a bit off topic, but as lorg pointed out in a private conversation, his version of the regex works better for cases like &#8220;<a HREF="..." REL="nofollow"><b>text</b></a>&#8220;. I still need to do a bit of work to find the optimal regex for this purpose.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: ripper234</title>
+		<link>http://ripper234.com/p/regex-complexity/comment-page-1/#comment-397</link>
+		<dc:creator><![CDATA[ripper234]]></dc:creator>
+		<pubDate>Wed, 13 Aug 2008 09:00:00 +0000</pubDate>
+		<guid isPermaLink="false">http://localhost/p/regex-complexity/#comment-397</guid>
+		<description><![CDATA[I&#039;m not 100% sure, but I think it&#039;s not exactly the same semantic as my regex. It could be &quot;good enough&quot;, just like my own modified version.]]></description>
+		<content:encoded><![CDATA[<p>I&#8217;m not 100% sure, but I think it&#8217;s not exactly the same semantic as my regex. It could be &#8220;good enough&#8221;, just like my own modified version.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: lorg</title>
+		<link>http://ripper234.com/p/regex-complexity/comment-page-1/#comment-396</link>
+		<dc:creator><![CDATA[lorg]]></dc:creator>
+		<pubDate>Wed, 13 Aug 2008 08:25:00 +0000</pubDate>
+		<guid isPermaLink="false">http://localhost/p/regex-complexity/#comment-396</guid>
+		<description><![CDATA[I did a little experiment.&lt;br/&gt;I tried out your original regexp in Python (tweaked to conform to the Python re syntax), on http://qimmortal.blogspot.com/&lt;br/&gt;&lt;br/&gt;Indeed, it got stuck.&lt;br/&gt;Then, I rewrote your regexp like so:&lt;br/&gt;&lt;br/&gt;r = &#039;href=[\&#039;&#034;](?P&#060;link&#062;.+?)[\&#039;&#034;](.*?)&#062;(?P&#060;displayed&#062;.*?)&#060;/a&#062;&#039;&lt;br/&gt;&lt;br/&gt;On the same input, my regexp runs fast, and re.finditer found all links without a problem.]]></description>
+		<content:encoded><![CDATA[<p>I did a little experiment.<br />I tried out your original regexp in Python (tweaked to conform to the Python re syntax), on <a href="http://qimmortal.blogspot.com/" rel="nofollow">http://qimmortal.blogspot.com/</a></p>
+<p>Indeed, it got stuck.<br />Then, I rewrote your regexp like so:</p>
+<p>r = &#39;href=[\&#39;&quot;](?P&lt;link&gt;.+?)[\&#39;&quot;](.*?)&gt;(?P&lt;displayed&gt;.*?)&lt;/a&gt;&#39;</p>
+<p>On the same input, my regexp runs fast, and re.finditer found all links without a problem.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: ripper234</title>
+		<link>http://ripper234.com/p/regex-complexity/comment-page-1/#comment-395</link>
+		<dc:creator><![CDATA[ripper234]]></dc:creator>
+		<pubDate>Tue, 12 Aug 2008 20:22:00 +0000</pubDate>
+		<guid isPermaLink="false">http://localhost/p/regex-complexity/#comment-395</guid>
+		<description><![CDATA[Thanks Eli for the referral to the interesting and rather long discussion. &lt;b&gt;My&lt;/b&gt; viewpoint - PERL and other relevant languages should provide Thompson NFA, because this problem is not limited to so called pathological cases, but does come up (albeit rarely) in practice.&lt;br/&gt;&lt;br/&gt;Of course it&#039;s a Task to write an efficient implementation, and has to be prioritized, tested, integrated... but in a perfect world, my regexes would not get stuck, and I would not have to learn intricacies on which are the pathological cases (if the class of pathological cases can be described so simply, then it should be simple to test for them and use NFA only for these cases).]]></description>
+		<content:encoded><![CDATA[<p>Thanks Eli for the referral to the interesting and rather long discussion. <b>My</b> viewpoint &#8211; PERL and other relevant languages should provide Thompson NFA, because this problem is not limited to so called pathological cases, but does come up (albeit rarely) in practice.</p>
+<p>Of course it&#8217;s a Task to write an efficient implementation, and has to be prioritized, tested, integrated&#8230; but in a perfect world, my regexes would not get stuck, and I would not have to learn intricacies on which are the pathological cases (if the class of pathological cases can be described so simply, then it should be simple to test for them and use NFA only for these cases).</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Eli</title>
+		<link>http://ripper234.com/p/regex-complexity/comment-page-1/#comment-394</link>
+		<dc:creator><![CDATA[Eli]]></dc:creator>
+		<pubDate>Tue, 12 Aug 2008 18:06:00 +0000</pubDate>
+		<guid isPermaLink="false">http://localhost/p/regex-complexity/#comment-394</guid>
+		<description><![CDATA[Good stuff. Regex implementations are a fascinating topic, and I&#039;ve spent a few pleasant hours &lt;a HREF=&quot;http://eli.thegreenplace.net/articles/&quot; REL=&quot;nofollow&quot;&gt;exploring the subject&lt;/a&gt; (bottom) a few years ago. &lt;br/&gt;&lt;br/&gt;The link tomer gabel posted is excellent and has its place, but it is important to see the whole picture, which is why it can be very educational to read the ensuing &lt;a HREF=&quot;http://perlmonks.org/?node_id=597262&quot; REL=&quot;nofollow&quot;&gt;discussion on Perlmonks&lt;/a&gt;, which explains *why* Perl (and others) chose what they chose, and how to avoid such problems.]]></description>
+		<content:encoded><![CDATA[<p>Good stuff. Regex implementations are a fascinating topic, and I&#8217;ve spent a few pleasant hours <a HREF="http://eli.thegreenplace.net/articles/" REL="nofollow">exploring the subject</a> (bottom) a few years ago. </p>
+<p>The link tomer gabel posted is excellent and has its place, but it is important to see the whole picture, which is why it can be very educational to read the ensuing <a HREF="http://perlmonks.org/?node_id=597262" REL="nofollow">discussion on Perlmonks</a>, which explains *why* Perl (and others) chose what they chose, and how to avoid such problems.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: ripper234</title>
+		<link>http://ripper234.com/p/regex-complexity/comment-page-1/#comment-393</link>
+		<dc:creator><![CDATA[ripper234]]></dc:creator>
+		<pubDate>Mon, 11 Aug 2008 12:25:00 +0000</pubDate>
+		<guid isPermaLink="false">http://localhost/p/regex-complexity/#comment-393</guid>
+		<description><![CDATA[It appears java &#038; perl also suffer from this. It&#039;s beyond me why these languages do not implement the efficient NFA approach (the same O(n) algorithm that is taught in basic automata classes, and has been implemented in awk and grep years ago). &lt;br/&gt;&lt;br/&gt;Backtracking should definitely not be used for regular expressions that do not contain back references.&lt;br/&gt;&lt;br/&gt;From the link you posted:&lt;br/&gt;&lt;br/&gt;Regular expression matching can be simple and fast, using finite automata-based techniques that have been known for decades. In contrast, Perl, PCRE, Python, Ruby, Java, and many other languages have regular expression implementations based on recursive backtracking that are simple but can be excruciatingly slow. With the exception of backreferences, the features provided by the slow backtracking implementations can be provided by the automata-based implementations at dramatically faster, more consistent speeds.]]></description>
+		<content:encoded><![CDATA[<p>It appears java &amp; perl also suffer from this. It&#39;s beyond me why these languages do not implement the efficient NFA approach (the same O(n) algorithm that is taught in basic automata classes, and has been implemented in awk and grep years ago). </p>
+<p>Backtracking should definitely not be used for regular expressions that do not contain back references.</p>
+<p>From the link you posted:</p>
+<p>Regular expression matching can be simple and fast, using finite automata-based techniques that have been known for decades. In contrast, Perl, PCRE, Python, Ruby, Java, and many other languages have regular expression implementations based on recursive backtracking that are simple but can be excruciatingly slow. With the exception of backreferences, the features provided by the slow backtracking implementations can be provided by the automata-based implementations at dramatically faster, more consistent speeds.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Tomer Gabel</title>
+		<link>http://ripper234.com/p/regex-complexity/comment-page-1/#comment-392</link>
+		<dc:creator><![CDATA[Tomer Gabel]]></dc:creator>
+		<pubDate>Mon, 11 Aug 2008 12:02:00 +0000</pubDate>
+		<guid isPermaLink="false">http://localhost/p/regex-complexity/#comment-392</guid>
+		<description><![CDATA[There&#039;s a &lt;a HREF=&quot;http://swtch.com/~rsc/regexp/regexp1.html&quot; REL=&quot;nofollow&quot;&gt;classic article&lt;/a&gt; on the effect of backtracking support on most modern regex implementations. I&#039;m surprised you didn&#039;t know that.]]></description>
+		<content:encoded><![CDATA[<p>There&#8217;s a <a HREF="http://swtch.com/~rsc/regexp/regexp1.html" REL="nofollow">classic article</a> on the effect of backtracking support on most modern regex implementations. I&#8217;m surprised you didn&#8217;t know that.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: ripper234</title>
+		<link>http://ripper234.com/p/regex-complexity/comment-page-1/#comment-391</link>
+		<dc:creator><![CDATA[ripper234]]></dc:creator>
+		<pubDate>Sun, 10 Aug 2008 20:36:00 +0000</pubDate>
+		<guid isPermaLink="false">http://localhost/p/regex-complexity/#comment-391</guid>
+		<description><![CDATA[It&#039;s not always what you want. But in any case, the regex I composed initially had non-greedy operators - it was still too slow (== never finished). I tried some tweaking to make it faster, including replacing all * with {0, 200}, but it didn&#039;t do much for the speed.]]></description>
+		<content:encoded><![CDATA[<p>It&#8217;s not always what you want. But in any case, the regex I composed initially had non-greedy operators &#8211; it was still too slow (== never finished). I tried some tweaking to make it faster, including replacing all * with {0, 200}, but it didn&#8217;t do much for the speed.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: lorg</title>
+		<link>http://ripper234.com/p/regex-complexity/comment-page-1/#comment-390</link>
+		<dc:creator><![CDATA[lorg]]></dc:creator>
+		<pubDate>Sun, 10 Aug 2008 19:32:00 +0000</pubDate>
+		<guid isPermaLink="false">http://localhost/p/regex-complexity/#comment-390</guid>
+		<description><![CDATA[Along with other approaches, I suggest constructing your regex with non-greedy operators. (In Python these are &quot;+?&quot; and &quot;*?&quot;).&lt;br/&gt;I also found that this is what I actually need in most cases. For example,&lt;br/&gt;&quot;x.*?x&quot; will match anything from the first x to the next x, without another x in the middle.]]></description>
+		<content:encoded><![CDATA[<p>Along with other approaches, I suggest constructing your regex with non-greedy operators. (In Python these are &#8220;+?&#8221; and &#8220;*?&#8221;).<br />I also found that this is what I actually need in most cases. For example,<br />&#8220;x.*?x&#8221; will match anything from the first x to the next x, without another x in the middle.</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

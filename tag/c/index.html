@@ -1,0 +1,1236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  xmlns:fb="http://ogp.me/ns/fb#" xmlns:og="http://ogp.me/ns#" lang="en-US">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>A Quantum Immortal  &raquo; C#</title>
+
+<link rel="stylesheet" href="http://ripper234.wpengine.netdna-cdn.com/wp-content/themes/fluid-blue-categoriless/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="http://ripper234.wpengine.netdna-cdn.com/wp-content/themes/fluid-blue-categoriless/print.css" type="text/css" media="print" />
+<link rel="alternate" type="application/rss+xml" title="A Quantum Immortal RSS Feed" href="http://ripper234.com/feed/" />
+<link rel="pingback" href="http://ripper234.com/xmlrpc.php" />
+<link rel="icon" type="image/x-icon" href="http://ripper234.wpengine.netdna-cdn.com/favicon.png">
+
+<link rel="alternate" type="application/rss+xml" title="A Quantum Immortal &raquo; C# Tag Feed" href="http://ripper234.com/tag/c/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/ripper234.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.5.3"}};
+			!function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;if(!g||!g.fillText)return!1;switch(g.textBaseline="top",g.font="600 32px Arial",a){case"flag":return g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3;case"diversity":return g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,d=c[0]+","+c[1]+","+c[2]+","+c[3],g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e;case"simple":return g.fillText(h(55357,56835),0,0),0!==g.getImageData(16,16,1,1).data[0];case"unicode8":return g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='wp-postratings-css'  href='http://ripper234.wpengine.netdna-cdn.com/wp-content/plugins/wp-postratings/postratings-css.css?ver=1.63' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-syntax-css-css'  href='http://ripper234.wpengine.netdna-cdn.com/wp-content/plugins/wp-syntax/css/wp-syntax.css?ver=1.0' type='text/css' media='all' />
+<script type='text/javascript' src='http://ripper234.wpengine.netdna-cdn.com/wp-content/plugins/wp-plus-one/wp-plus-one.js?ver=4.5.3'></script>
+<script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
+<script type='text/javascript'>try{jQuery.noConflict();}catch(e){};</script>
+<script type='text/javascript' src='http://ripper234.wpengine.netdna-cdn.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://www.google.com/jsapi?ver=4.5.3'></script>
+<script type='text/javascript' src='http://platform.twitter.com/anywhere.js?id=RtEPLcQgDog7UFzqlmWHrg&#038;v=1'></script>
+<script type='text/javascript' src='http://ripper234.wpengine.netdna-cdn.com/wp-content/plugins/google-analyticator/external-tracking.min.js?ver=6.4.7.3'></script>
+<link rel='https://api.w.org/' href='http://ripper234.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://ripper234.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://ripper234.com/wp-includes/wlwmanifest.xml" /> 
+<meta property='og:site_name' content='A Quantum Immortal' />
+<meta property='fb:app_id' content='125818707482670' />
+<meta property='og:locale' content='en_US' />
+<meta http-equiv="X-XRDS-Location" content="http://ripper234.com/?xrds" />
+<meta http-equiv="X-Yadis-Location" content="http://ripper234.com/?xrds" />
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<!-- Google Analytics Tracking by Google Analyticator 6.4.7.3: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+                var analyticsFileTypes = [''];
+                            var analyticsSnippet = 'enabled';
+                var analyticsEventTracking = 'enabled';
+            </script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+  
+	_gaq.push(['_setAccount', 'UA-3992244-2']);
+    _gaq.push(['_addDevId', 'i9k95']); // Google Analyticator App ID with Google
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+</head>
+
+<body>
+<div id="page">
+<div id="header">
+	<div id="headertitle">
+		<h1><a href="http://ripper234.com" title="A Quantum Immortal: Stuff Ron Gross Finds Interesting">A Quantum Immortal</a></h1>
+		<p>Stuff Ron Gross Finds Interesting</p>
+	</div> 
+	<!-- Search box (If you prefer having search form as a sidebar widget, remove this block) -->
+	<div class="search">
+		<form method="get" id="searchform" action="http://ripper234.com/">
+<input type="text" size="20" name="s" id="s" value="Search..."  onblur="if(this.value=='') this.value='Search...';" onfocus="if(this.value=='Search...') this.value='';"/>
+</form>
+	</div> 
+	<!-- Search ends here-->
+		
+</div>
+
+<div id="hmenu">
+<ul>
+	<li class="hmenu1"><a href="http://ripper234.com">Home</a></li>
+	<li class="page_item page-item-205"><a href="http://ripper234.com/about/">About</a></li>
+<li class="page_item page-item-488"><a href="http://ripper234.com/feedback/">Feedback</a></li>
+<li class="page_item page-item-835 page_item_has_children"><a href="http://ripper234.com/magic/">Magic</a></li>
+<li class="page_item page-item-781"><a href="http://ripper234.com/plugins/">Plugins</a></li>
+</ul>
+</div>
+<div id="wrapper">
+
+	<div id="content">
+
+	<div id="post-ratings-" class="post-ratings" data-nonce="1fa7fad55a"><img id="rating__1" src="http://ripper234.wpengine.netdna-cdn.com/wp-content/plugins/wp-postratings/images/squares/rating_off.gif" alt="1 Star" title="1 Star" onmouseover="current_rating(, 1, '1 Star');" onmouseout="ratings_off(0, 0, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer; border: 0px;" /><img id="rating__2" src="http://ripper234.wpengine.netdna-cdn.com/wp-content/plugins/wp-postratings/images/squares/rating_off.gif" alt="2 Stars" title="2 Stars" onmouseover="current_rating(, 2, '2 Stars');" onmouseout="ratings_off(0, 0, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer; border: 0px;" /><img id="rating__3" src="http://ripper234.wpengine.netdna-cdn.com/wp-content/plugins/wp-postratings/images/squares/rating_off.gif" alt="3 Stars" title="3 Stars" onmouseover="current_rating(, 3, '3 Stars');" onmouseout="ratings_off(0, 0, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer; border: 0px;" /><img id="rating__4" src="http://ripper234.wpengine.netdna-cdn.com/wp-content/plugins/wp-postratings/images/squares/rating_off.gif" alt="4 Stars" title="4 Stars" onmouseover="current_rating(, 4, '4 Stars');" onmouseout="ratings_off(0, 0, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer; border: 0px;" /><img id="rating__5" src="http://ripper234.wpengine.netdna-cdn.com/wp-content/plugins/wp-postratings/images/squares/rating_off.gif" alt="5 Stars" title="5 Stars" onmouseover="current_rating(, 5, '5 Stars');" onmouseout="ratings_off(0, 0, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer; border: 0px;" /> (No Ratings Yet)<br /><span class="post-ratings-text" id="ratings__text"></span></div>
+<div id="post-ratings--loading"  class="post-ratings-loading"><img src="http://ripper234.wpengine.netdna-cdn.com/wp-content/plugins/wp-postratings/images/loading.gif" width="16" height="16" alt="Loading ..." title="Loading ..." class="post-ratings-image" />&nbsp;Loading ...</div>
+			<p>Posts tagged &#8216;C#&#8217;</p>
+
+	 		
+		<div class="navigation">
+			<div class="alignleft"><a href="http://ripper234.com/tag/c/page/2/" >&laquo; Previous Entries</a></div>
+			<div class="alignright"></div>
+		</div>
+
+						
+			<div class="post" id="post-1192">
+				<h2 class="posttitle"><a href="http://ripper234.com/p/playing-around-with-plinq-and-io-bound-tasks/" rel="bookmark" title="Permanent Link to Playing around with PLINQ and IO-bound tasks">Playing around with PLINQ and IO-bound tasks</a></h2>
+				<div class="postmetadata">30/11/09, 1:04 <!-- by ripper234 --></div>
+				<div class="postentry">
+					<div class="fblikebutton_button" style="margin-bottom: 10px; display: block;"><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fripper234.com%2Fp%2Fplaying-around-with-plinq-and-io-bound-tasks%2F&amp;layout=standard&amp;show-faces=true&amp;width=450&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; width:450px; height:26px"></iframe></div>
+<p>
+<script>
+   function hide(id){
+      document.getElementById(id).style.display = 'none';
+   }    
+   function show(id){
+      document.getElementById(id).style.display = '';
+   }
+   function spoilerhide(){
+      for (i=0;i<document.getElementsByTagName('div').length;i++) {
+         if (document.getElementsByTagName('div')[i].class == 'spoiler') {
+            document.getElementsByTagName('div')[i].style.color = '#0000FF';
+         }
+      }
+   }
+   function spoilershow(){
+      for (i=0;i<document.getElementsByTagName('div').length;i++) {
+         if (document.getElementsByTagName('div')[i].class == 'spoiler') {
+            document.getElementsByTagName('div')[i].style.color = '#FF0000';
+         }
+      }
+   }
+</script>
+<br />
+I recently <a href="http://msdn.microsoft.com/en-us/vstudio/dd582936.aspx">downloaded</a> Visual Studio 2010 beta, and took the chance to play with <a href="http://en.wikipedia.org/wiki/Parallel_Extensions">PLINQ</a>. PLINQ, for those of you in the dark ages of .Net Framework 2.0, is parallel LINQ &#8211; an extension to the famous query language that makes it easy to write parallel code (essential to programming in the 21th century, <a href="http://en.wikipedia.org/wiki/Moore's_law#Transistor_count_versus_computing_performance">in the age of the many-core</a>).</p>
+<p>A code sample, as usual, is the best demonstration:</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="csharp" style="font-family:monospace;"><span style="color: #0600FF; font-weight: bold;">public</span> <span style="color: #0600FF; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">int</span> CountPrimes<span style="color: #008000;">&#40;</span>IEnumerable<span style="color: #008000;">&lt;</span><span style="color: #6666cc; font-weight: bold;">int</span><span style="color: #008000;">&gt;</span> input<span style="color: #008000;">&#41;</span>
+<span style="color: #008000;">&#123;</span>
+    <span style="color: #0600FF; font-weight: bold;">return</span> input<span style="color: #008000;">.</span><span style="color: #0000FF;">AsParallel</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">.</span><span style="color: #0600FF; font-weight: bold;">Where</span><span style="color: #008000;">&#40;</span>IsPrime<span style="color: #008000;">&#41;</span><span style="color: #008000;">.</span><span style="color: #0000FF;">Count</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+<span style="color: #008000;">&#125;</span>
+&nbsp;
+<span style="color: #0600FF; font-weight: bold;">private</span> <span style="color: #0600FF; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">bool</span> IsPrime<span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">int</span> n<span style="color: #008000;">&#41;</span>
+<span style="color: #008000;">&#123;</span>
+    <span style="color: #0600FF; font-weight: bold;">for</span> <span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">int</span> i <span style="color: #008000;">=</span> <span style="color: #FF0000;">2</span><span style="color: #008000;">;</span> i<span style="color: #008000;">*</span>i <span style="color: #008000;">&lt;</span> n<span style="color: #008000;">;</span> <span style="color: #008000;">++</span>i<span style="color: #008000;">&#41;</span>
+        <span style="color: #0600FF; font-weight: bold;">if</span> <span style="color: #008000;">&#40;</span>n <span style="color: #008000;">%</span> i <span style="color: #008000;">==</span> <span style="color: #FF0000;">0</span><span style="color: #008000;">&#41;</span>
+            <span style="color: #0600FF; font-weight: bold;">return</span> <span style="color: #0600FF; font-weight: bold;">false</span><span style="color: #008000;">;</span>
+    <span style="color: #0600FF; font-weight: bold;">return</span> <span style="color: #0600FF; font-weight: bold;">true</span><span style="color: #008000;">;</span>
+<span style="color: #008000;">&#125;</span></pre></td></tr></table></div>
+
+<p>This code sample, regardless of using an inefficient primality test, is fully parallel. PLINQ will utilize all your cores when running the above code, and I didn&#8217;t have to use any locks, queues, threadpools or any of the more complex tools of the trade. Just tell PLINQ &#8220;AsParallel()&#8221;, and it works.</p>
+<p>I hit some gotcha when I tried to compare the parallel performance with the sequential one. Do you spot the problem in the following code?</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="csharp" style="font-family:monospace;"><span style="color: #0600FF; font-weight: bold;">public</span> <span style="color: #0600FF; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">void</span> CountPrimesTest<span style="color: #008000;">&#40;</span>IEnumerable<span style="color: #008000;">&lt;</span><span style="color: #6666cc; font-weight: bold;">int</span><span style="color: #008000;">&gt;</span> input<span style="color: #008000;">&#41;</span>
+<span style="color: #008000;">&#123;</span>
+    <span style="color: #008080; font-style: italic;">// parallel benchmark </span>
+    <span style="color: #0600FF; font-weight: bold;">var</span> timer <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> Stopwatch<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+    timer<span style="color: #008000;">.</span><span style="color: #0000FF;">Start</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+    CountPrimes<span style="color: #008000;">&#40;</span>input<span style="color: #008000;">.</span><span style="color: #0000FF;">AsParallel</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+    timer<span style="color: #008000;">.</span><span style="color: #0000FF;">Stop</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+    Console<span style="color: #008000;">.</span><span style="color: #0000FF;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #666666;">&quot;Counted primes in parallel took &quot;</span> <span style="color: #008000;">+</span> timer<span style="color: #008000;">.</span><span style="color: #0000FF;">Elapsed</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+&nbsp;
+    <span style="color: #008080; font-style: italic;">// sequential benchmark</span>
+    timer <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> Stopwatch<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+    timer<span style="color: #008000;">.</span><span style="color: #0000FF;">Start</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+    CountPrimes<span style="color: #008000;">&#40;</span>input<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+    timer<span style="color: #008000;">.</span><span style="color: #0000FF;">Stop</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+    Console<span style="color: #008000;">.</span><span style="color: #0000FF;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #666666;">&quot;Counted primes sequentially took &quot;</span> <span style="color: #008000;">+</span> timer<span style="color: #008000;">.</span><span style="color: #0000FF;">Elapsed</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+<span style="color: #008000;">&#125;</span></pre></td></tr></table></div>
+
+<div id="div1">
+    <input type="button" onClick="hide('div1'); show('div2'); spoilershow();" value="Ooh, tell me please!">
+</div>
+<div id="div2" style="display:none;">
+    <input type="button" onClick="show('div1'); hide('div2'); spoilerhide();" value="I'm sorry I looked"><br />
+    As <a href="http://stackoverflow.com/questions/1812615/how-exactly-does-asparallel-work">StackOverflow told me</a>, PLINQ cares about the static type of the sequence, not the dynamic type. When input is cast to IEnumerable&lt;T&gt;, it loses the original intent, and is not parallelized by LINQ.
+</div>
+<p></p>
+<p>This is all fine and dandy when the task at hand is CPU bound, but works pretty miserabbly when your task is IO bound, like downloading a bunch of web pages. Next, I simulated some IO-bound tasks (I used Sleep() to emulate IO &#8211; basically not using a lot of CPU for every task):</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="csharp" style="font-family:monospace;"><span style="color: #008000;">&#91;</span>ThreadStatic<span style="color: #008000;">&#93;</span>
+<span style="color: #0600FF; font-weight: bold;">private</span> <span style="color: #0600FF; font-weight: bold;">static</span> Random _random<span style="color: #008000;">;</span>
+&nbsp;
+<span style="color: #0600FF; font-weight: bold;">public</span> <span style="color: #0600FF; font-weight: bold;">static</span> List<span style="color: #008000;">&lt;</span><span style="color: #6666cc; font-weight: bold;">string</span><span style="color: #008000;">&gt;</span> FindInterestingDomains<span style="color: #008000;">&#40;</span>IEnumerable<span style="color: #008000;">&lt;</span><span style="color: #6666cc; font-weight: bold;">string</span><span style="color: #008000;">&gt;</span> urls<span style="color: #008000;">&#41;</span>
+<span style="color: #008000;">&#123;</span>
+    <span style="color: #008080; font-style: italic;">// select all the domains of the interesting URLs</span>
+    <span style="color: #0600FF; font-weight: bold;">return</span> urls<span style="color: #008000;">.</span><span style="color: #0000FF;">AsParallel</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">.</span><span style="color: #0600FF; font-weight: bold;">Where</span><span style="color: #008000;">&#40;</span>SexFilter<span style="color: #008000;">&#41;</span><span style="color: #008000;">.</span>
+                <span style="color: #0600FF; font-weight: bold;">Select</span><span style="color: #008000;">&#40;</span>url <span style="color: #008000;">=&gt;</span> <span style="color: #008000;">new</span> Uri<span style="color: #008000;">&#40;</span>url<span style="color: #008000;">&#41;</span><span style="color: #008000;">.</span><span style="color: #0000FF;">Host</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">.</span><span style="color: #0000FF;">ToList</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+<span style="color: #008000;">&#125;</span>
+&nbsp;
+<span style="color: #0600FF; font-weight: bold;">public</span> <span style="color: #0600FF; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">bool</span> SexFilter<span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">string</span> url<span style="color: #008000;">&#41;</span>
+<span style="color: #008000;">&#123;</span>
+    <span style="color: #0600FF; font-weight: bold;">if</span> <span style="color: #008000;">&#40;</span>_random <span style="color: #008000;">==</span> <span style="color: #0600FF; font-weight: bold;">null</span><span style="color: #008000;">&#41;</span>
+        _random <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> Random<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+&nbsp;
+    <span style="color: #008080; font-style: italic;">// simulate a download</span>
+    Thread<span style="color: #008000;">.</span><span style="color: #0000FF;">Sleep</span><span style="color: #008000;">&#40;</span><span style="color: #FF0000;">1000</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+    <span style="color: #0600FF; font-weight: bold;">var</span> html <span style="color: #008000;">=</span> <span style="color: #666666;">&quot;&lt;html&gt;&quot;</span> <span style="color: #008000;">+</span> _random<span style="color: #008000;">.</span><span style="color: #0000FF;">Next</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span> <span style="color: #008000;">+</span> <span style="color: #666666;">&quot;&lt;/html&gt;&quot;</span><span style="color: #008000;">;</span>
+    <span style="color: #0600FF; font-weight: bold;">return</span> html<span style="color: #008000;">.</span><span style="color: #0000FF;">Contains</span><span style="color: #008000;">&#40;</span><span style="color: #666666;">&quot;69&quot;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+<span style="color: #008000;">&#125;</span></pre></td></tr></table></div>
+
+<p>Testing this with a list of 10 URLs took 5 seconds, meaning LINQ again spun only two cores, which is the number of cores on my machine. This really sucks for IO bound tasks, because most of the time the threads are idle, waiting on IO. Let&#8217;s see if we can speed this up:</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="csharp" style="font-family:monospace;"><span style="color: #008080; font-style: italic;">// Use WithDegreeOfParallelism to specify the number of threads to run</span>
+<span style="color: #0600FF; font-weight: bold;">return</span> urls<span style="color: #008000;">.</span><span style="color: #0000FF;">AsParallel</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">.</span><span style="color: #0000FF;">WithDegreeOfParallelism</span><span style="color: #008000;">&#40;</span><span style="color: #FF0000;">10</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">.</span><span style="color: #0600FF; font-weight: bold;">Where</span><span style="color: #008000;">&#40;</span>SexFilter<span style="color: #008000;">&#41;</span><span style="color: #008000;">.</span>
+              <span style="color: #0600FF; font-weight: bold;">Select</span><span style="color: #008000;">&#40;</span>url <span style="color: #008000;">=&gt;</span> <span style="color: #008000;">new</span> Uri<span style="color: #008000;">&#40;</span>url<span style="color: #008000;">&#41;</span><span style="color: #008000;">.</span><span style="color: #0000FF;">Host</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">.</span><span style="color: #0000FF;">ToList</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span></pre></td></tr></table></div>
+
+<p>This appeared not to work at first, because WithDegreeOfParallelism is just a recommendation or upper bound. You can ask PLINQ nicely to run with ten threads, but it will only allocate two if it so chooses. This is yet another example of C# being <a href="http://ripper234.com/p/java-is-less-magical-than-c/">more magical than Java</a> &#8211; compared to Java&#8217;s rich <a href="http://java.sun.com/j2se/1.5.0/docs/api/java/util/concurrent/ExecutorService.html">ExecutorService</a>, PLINQ offers less fine grained control.</p>
+<p>However, further testing revealed the damage is not so horrible. This is what happened when I put the above code in a while(true):</p>
+<pre>
+Tested 10 URLs in 00:00:05.0576333
+Tested 10 URLs in 00:00:03.0018617
+Tested 10 URLs in 00:00:03.0013939
+Tested 10 URLs in 00:00:03.0013175
+Tested 10 URLs in 00:00:04.0018983
+Tested 10 URLs in 00:00:03.0024044
+Tested 10 URLs in 00:00:01.0004407
+Tested 10 URLs in 00:00:01.0007645
+Tested 10 URLs in 00:00:01.0007280
+Tested 10 URLs in 00:00:01.0003358
+Tested 10 URLs in 00:00:01.0003347
+Tested 10 URLs in 00:00:01.0002470
+</pre>
+<p>After some trial and error, PLINQ found that the optimal number of threads needed to run this task under its concurrency guidelines is ten. I imagine that if at some point in the future the optimal number of threads change, it will adapt.</p>
+<p>P.S.<br />
+If you found this interesting, wait till you read about <a href="http://research.microsoft.com/en-us/projects/DryadLINQ/">DryadLINQ</a> &#8211; it&#8217;s LINQ taken to the extreme, run over a cluster of computers.</p>
+				</div>
+		
+				<div class="postmetadata">
+					Tags: <a href="http://ripper234.com/tag/net/" rel="tag">.net</a>, <a href="http://ripper234.com/tag/c/" rel="tag">C#</a>, <a href="http://ripper234.com/tag/linq/" rel="tag">LINQ</a>, <a href="http://ripper234.com/tag/plinq/" rel="tag">PLINQ</a>, <a href="http://ripper234.com/tag/programming/" rel="tag">Programming</a>, <a href="http://ripper234.com/tag/threading/" rel="tag">Threading</a>, <a href="http://ripper234.com/tag/tpl/" rel="tag">TPL</a><br /><!--					Category: <a href="http://ripper234.com/p/category/uncategorized/" rel="category tag">Uncategorized</a>&nbsp;&nbsp;|&nbsp; !-->
+					<span>Comments Off<span class="screen-reader-text"> on Playing around with PLINQ and IO-bound tasks</span></span>									 </div>
+			</div>
+	
+						
+			<div class="post" id="post-1123">
+				<h2 class="posttitle"><a href="http://ripper234.com/p/java-is-less-magical-than-c/" rel="bookmark" title="Permanent Link to Java is less magical than C#">Java is less magical than C#</a></h2>
+				<div class="postmetadata">20/8/09, 21:42 <!-- by ripper234 --></div>
+				<div class="postentry">
+					<div class="fblikebutton_button" style="margin-bottom: 10px; display: block;"><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fripper234.com%2Fp%2Fjava-is-less-magical-than-c%2F&amp;layout=standard&amp;show-faces=true&amp;width=450&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; width:450px; height:26px"></iframe></div>
+<p>I have been programming in C# for several years now, and recently made the switch to Java (at least for now). I noticed that Java, as a language, is &#8220;less magical&#8221; than C#.</p>
+<p>What do I mean by that is that in C# things are usually done for you, behind the scenes, magically, while Java is much more explicit in the toolset it provides. For example, take <a href="http://en.wikipedia.org/wiki/Thread-local_storage">thread-local storage</a>. The concept is identical in both langauges &#8211; there is often a need for a copy of a member variable that&#8217;s unique to the current thread, so it can be used without any locks or fear of concurrency problems.</p>
+<p><a href="http://msdn.microsoft.com/en-us/library/system.threadstaticattribute(VS.71).aspx">The implementation in C#</a> is based on attributes. You basically take a static field, annotate it with [ThreadStatic], and that&#8217;s it:</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="csharp" style="font-family:monospace;"><span style="color: #008000;">&#91;</span>ThreadStatic<span style="color: #008000;">&#93;</span>
+<span style="color: #0600FF; font-weight: bold;">private</span> <span style="color: #0600FF; font-weight: bold;">static</span> ThreadUnsafeClass foo <span style="color: #008000;">=</span> <span style="color: #0600FF; font-weight: bold;">null</span><span style="color: #008000;">;</span>
+&nbsp;
+<span style="color: #0600FF; font-weight: bold;">private</span> ThreadUnsafeClass Foo
+<span style="color: #008000;">&#123;</span>
+  <span style="color: #0600FF; font-weight: bold;">get</span>
+  <span style="color: #008000;">&#123;</span>
+    <span style="color: #0600FF; font-weight: bold;">if</span> <span style="color: #008000;">&#40;</span>foo <span style="color: #008000;">!=</span> <span style="color: #0600FF; font-weight: bold;">null</span><span style="color: #008000;">&#41;</span>
+      foo <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> ThreadUnsafeClass<span style="color: #008000;">&#40;</span><span style="color: #008000;">...</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+&nbsp;
+    <span style="color: #008080; font-style: italic;">// no other thread will have access to this copy of foo</span>
+    <span style="color: #008080; font-style: italic;">// note - foo is still static, so it will be shared between instances of this class.</span>
+    <span style="color: #0600FF; font-weight: bold;">return</span> foo<span style="color: #008000;">;</span>
+  <span style="color: #008000;">&#125;</span>
+<span style="color: #008000;">&#125;</span></pre></td></tr></table></div>
+
+<p>How does it work? <a href="http://en.wikipedia.org/wiki/Magic_(programming)">Magic</a>. Sure, one can find the implementation if he digs deep enough, but the first time I encountered it I just had to try it to make sure it actually works, because it seemed too mysterious.</p>
+<p>Let&#8217;s take a look at Java&#8217;s equivalent, <a href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/ThreadLocal.html">ThreadLocal</a>. This is how it works (amusingly enough, from a <a href="http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=6202942">documentation bug report</a>):</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="java" style="font-family:monospace;"><span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">class</span> SerialNum <span style="color: #009900;">&#123;</span>
+     <span style="color: #666666; font-style: italic;">// The next serial number to be assigned</span>
+     <span style="color: #000000; font-weight: bold;">private</span> <span style="color: #000000; font-weight: bold;">static</span> <span style="color: #000066; font-weight: bold;">int</span> nextSerialNum <span style="color: #339933;">=</span> <span style="color: #cc66cc;">0</span><span style="color: #339933;">;</span>
+&nbsp;
+     <span style="color: #000000; font-weight: bold;">private</span> <span style="color: #000000; font-weight: bold;">static</span> ThreadLocal<span style="color: #339933;">&lt;</span>Integer<span style="color: #339933;">&gt;</span> serialNum <span style="color: #339933;">=</span> <span style="color: #000000; font-weight: bold;">new</span> ThreadLocal<span style="color: #339933;">&lt;</span>Integer<span style="color: #339933;">&gt;</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+         <span style="color: #000000; font-weight: bold;">protected</span> <span style="color: #000000; font-weight: bold;">synchronized</span> <span style="color: #003399;">Integer</span> initialValue<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+             <span style="color: #000000; font-weight: bold;">return</span> <span style="color: #000000; font-weight: bold;">new</span> <span style="color: #003399;">Integer</span><span style="color: #009900;">&#40;</span>nextSerialNum<span style="color: #339933;">++</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+         <span style="color: #009900;">&#125;</span>
+     <span style="color: #009900;">&#125;</span><span style="color: #339933;">;</span>
+&nbsp;
+     <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">static</span> <span style="color: #000066; font-weight: bold;">int</span> get<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+         <span style="color: #000000; font-weight: bold;">return</span> serialNum.<span style="color: #006633;">get</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+     <span style="color: #009900;">&#125;</span>
+ <span style="color: #009900;">&#125;</span></pre></td></tr></table></div>
+
+<p>No magic is involved here &#8211; get() gets the value from a map, stored on the calling Thread object (source code <a href="http://www.docjar.org/html/api/java/lang/ThreadLocal.java.html">here</a>, but the real beauty is that&#8217;s it&#8217;s available from inside your IDE without any special effort to install it). </p>
+<p>Let&#8217;s look at another example &#8211; closures.</p>
+<p>In C#, you can write this useful piece of code:</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="csharp" style="font-family:monospace;"><span style="color: #0600FF; font-weight: bold;">var</span> list <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> List<span style="color: #008000;">&lt;</span><span style="color: #6666cc; font-weight: bold;">int</span><span style="color: #008000;">&gt;</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+<span style="color: #008000;">...</span>
+<span style="color: #008080; font-style: italic;">// find an element larger than 10</span>
+list<span style="color: #008000;">.</span><span style="color: #0000FF;">Find</span><span style="color: #008000;">&#40;</span>x <span style="color: #008000;">=&gt;</span> x <span style="color: #008000;">&gt;</span> <span style="color: #FF0000;">10</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span></pre></td></tr></table></div>
+
+<p>You can also make this mistake:</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="csharp" style="font-family:monospace;"><span style="color: #0600FF; font-weight: bold;">var</span> printers <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> List<span style="color: #008000;">&lt;</span>Action<span style="color: #008000;">&gt;</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+<span style="color: #008000;">...</span>
+<span style="color: #0600FF; font-weight: bold;">foreach</span> <span style="color: #008000;">&#40;</span><span style="color: #0600FF; font-weight: bold;">var</span> item <span style="color: #0600FF; font-weight: bold;">in</span> list<span style="color: #008000;">&#41;</span>
+<span style="color: #008000;">&#123;</span>
+  printers<span style="color: #008000;">.</span><span style="color: #0600FF; font-weight: bold;">Add</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span> <span style="color: #008000;">=&gt;</span> Console<span style="color: #008000;">.</span><span style="color: #0000FF;">WriteLine</span><span style="color: #008000;">&#40;</span>item<span style="color: #008000;">&#41;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+<span style="color: #008000;">&#125;</span>
+Parallel<span style="color: #008000;">.</span><span style="color: #0600FF; font-weight: bold;">Foreach</span><span style="color: #008000;">&#40;</span>printers, p <span style="color: #008000;">=&gt;</span> p<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">&#41;</span></pre></td></tr></table></div>
+
+<p>An innocent reader might think this prints all the items in <i>list</i>, but actually this only prints the last items list.Count times. This is how <a href="http://csharpindepth.com/Articles/Chapter5/Closures.aspx">closures</a> work. This happens because the <i>item</i> referred to in the closure is not a new copy of item, it&#8217;s actually the same item that&#8217;s being modified by the loop. A workaround is to add a new temporary variable like this:</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="csharp" style="font-family:monospace;"><span style="color: #0600FF; font-weight: bold;">foreach</span> <span style="color: #008000;">&#40;</span><span style="color: #0600FF; font-weight: bold;">var</span> item <span style="color: #0600FF; font-weight: bold;">in</span> list<span style="color: #008000;">&#41;</span>
+<span style="color: #008000;">&#123;</span>
+  <span style="color: #6666cc; font-weight: bold;">int</span> tempItem <span style="color: #008000;">=</span> item<span style="color: #008000;">;</span>
+  printers<span style="color: #008000;">.</span><span style="color: #0600FF; font-weight: bold;">add</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span> <span style="color: #008000;">=&gt;</span> Console<span style="color: #008000;">.</span><span style="color: #0000FF;">WriteLine</span><span style="color: #008000;">&#40;</span>tempItem<span style="color: #008000;">&#41;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+<span style="color: #008000;">&#125;</span></pre></td></tr></table></div>
+
+<p>And in Java? Instead of closures, one uses <a href="http://hell.org.ua/Docs/oreilly/javaenterprise/jnut/ch03_12.htm">anonymous classes</a>. In fact, this is how they are implemented under the hood in C#. Here the same example, in Java:</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="java" style="font-family:monospace;"><span style="color: #000000; font-weight: bold;">for</span> <span style="color: #009900;">&#40;</span><span style="color: #003399;">Integer</span> item <span style="color: #339933;">:</span> list<span style="color: #009900;">&#41;</span>
+<span style="color: #009900;">&#123;</span>
+  <span style="color: #000000; font-weight: bold;">final</span> <span style="color: #000066; font-weight: bold;">int</span> tempItem <span style="color: #339933;">=</span> item<span style="color: #339933;">;</span>
+  printers.<span style="color: #006633;">add</span><span style="color: #009900;">&#40;</span><span style="color: #000000; font-weight: bold;">new</span> <span style="color: #003399;">Action</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#123;</span>
+    <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000066; font-weight: bold;">void</span> doAction<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #009900;">&#123;</span>
+      <span style="color: #666666; font-style: italic;">// can't reference item here because it's not final.</span>
+      <span style="color: #666666; font-style: italic;">// this would have been a compilation error</span>
+      <span style="color: #666666; font-style: italic;">// system.out.println(item);</span>
+      <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">&#40;</span>tempItem<span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+    <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+<span style="color: #009900;">&#125;</span>
+...</pre></td></tr></table></div>
+
+<p>Notice it&#8217;s impossible to make the mistake and capture the loop variable instead of a copy of it, because Java requires it to be final. So &#8230; less powerful perhaps than C#, but more predictable. As a side note, Resharper catches the ill-advised capturing of local variables and warns about it.</p>
+<p>I myself rather prefer the magic of C#, because it does save a lot of the trouble. Lambdas, properties, auto-typing variables&#8230; all these are so convenient it&#8217;s addictive. But I have to give Java a bit of credit, as the explicit way of doing stuff sometimes teaches you things that you just wouldn&#8217;t have learn cruising away in C# land.</p>
+				</div>
+		
+				<div class="postmetadata">
+					Tags: <a href="http://ripper234.com/tag/net/" rel="tag">.net</a>, <a href="http://ripper234.com/tag/c/" rel="tag">C#</a>, <a href="http://ripper234.com/tag/java/" rel="tag">Java</a>, <a href="http://ripper234.com/tag/magic/" rel="tag">Magic</a>, <a href="http://ripper234.com/tag/programming/" rel="tag">Programming</a>, <a href="http://ripper234.com/tag/threading/" rel="tag">Threading</a><br /><!--					Category: <a href="http://ripper234.com/p/category/uncategorized/" rel="category tag">Uncategorized</a>&nbsp;&nbsp;|&nbsp; !-->
+					<a href="http://ripper234.com/p/java-is-less-magical-than-c/#comments">3 Comments</a>									 </div>
+			</div>
+	
+						
+			<div class="post" id="post-1008">
+				<h2 class="posttitle"><a href="http://ripper234.com/p/on-evils-of-yield/" rel="bookmark" title="Permanent Link to On the evils of yield">On the evils of yield</a></h2>
+				<div class="postmetadata">9/3/09, 23:14 <!-- by ripper234 --></div>
+				<div class="postentry">
+					<div class="fblikebutton_button" style="margin-bottom: 10px; display: block;"><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fripper234.com%2Fp%2Fon-evils-of-yield%2F&amp;layout=standard&amp;show-faces=true&amp;width=450&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; width:450px; height:26px"></iframe></div>
+<p>I absolutely love <a href="http://msdn.microsoft.com/en-us/library/9k7k7cf0.aspx">yield</a>. Don&#8217;t we all? It simplifies writing enumerations to the point of absurdity. Simplicity, however, is a double-edged sword &#8211; I spent the better part of this day debugging a most evil bug, that resulted from over-yielding.</p>
+<p>At <a href="http://delver.com/">Delver</a> (<a href="http://www.techcrunch.com/2009/03/08/delver-gets-acquired-by-sears-really/">now Sears</a>) we have a file-based repository containing millions of items. We try to make things <a href="http://ripper234.com/tag/optimization/">as efficient as possible</a>, and sometime we overdo it. Our sin for today is using IEnumerable a bit too much.  This repository was designed to be:</p>
+<ol>
+<li>Scalable (within our constraints) &#8211; should able to hold several million tasks</li>
+<li>Fast</li>
+<li>Relatively convenient to use &#8211; the user should be able to iterate on it using <em>foreach</em>, for one.</li>
+</ol>
+<p>To accomplish 1 and 2, we avoided allocating large in-memory structures because they wouldn&#8217;t be able to hold the amount of items we&#8217;re talking about. To provide a convenient interface, we used IEnumerable.</p>
+<p>Here is a mock-up of the code (for simplicity, it doesn&#8217;t use the disk but an in-memory serialized dictionary):</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="csharp" style="font-family:monospace;"><span style="color: #0600FF; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">class</span> PeopleRepository
+<span style="color: #008000;">&#123;</span>
+    <span style="color: #0600FF; font-weight: bold;">private</span> <span style="color: #0600FF; font-weight: bold;">readonly</span> Dictionary _serializedPeople <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> Dictionary<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+&nbsp;
+    <span style="color: #0600FF; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">void</span> Save<span style="color: #008000;">&#40;</span>Person person<span style="color: #008000;">&#41;</span>
+    <span style="color: #008000;">&#123;</span>
+        <span style="color: #008080; font-style: italic;">// this method, as innocent as it looks, make it more difficult to discover the bug. See ahead.</span>
+        Save<span style="color: #008000;">&#40;</span><span style="color: #008000;">new</span><span style="color: #008000;">&#91;</span><span style="color: #008000;">&#93;</span><span style="color: #008000;">&#123;</span>person<span style="color: #008000;">&#125;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+    <span style="color: #008000;">&#125;</span>
+&nbsp;
+    <span style="color: #0600FF; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">void</span> Save<span style="color: #008000;">&#40;</span>IEnumerable<span style="color: #008000;">&lt;</span>Person<span style="color: #008000;">&gt;</span> people<span style="color: #008000;">&#41;</span>
+    <span style="color: #008000;">&#123;</span>
+        <span style="color: #0600FF; font-weight: bold;">var</span> serializedPeople <span style="color: #008000;">=</span> <span style="color: #0600FF; font-weight: bold;">from</span> p <span style="color: #0600FF; font-weight: bold;">in</span> people <span style="color: #0600FF; font-weight: bold;">select</span> <span style="color: #008000;">new</span> <span style="color: #008000;">&#123;</span>p<span style="color: #008000;">.</span><span style="color: #0000FF;">ID</span>, p<span style="color: #008000;">.</span><span style="color: #0000FF;">Serialized</span><span style="color: #008000;">&#125;</span><span style="color: #008000;">;</span>
+        <span style="color: #0600FF; font-weight: bold;">foreach</span> <span style="color: #008000;">&#40;</span><span style="color: #0600FF; font-weight: bold;">var</span> p <span style="color: #0600FF; font-weight: bold;">in</span> serializedPeople<span style="color: #008000;">&#41;</span>
+            _serializedPeople<span style="color: #008000;">&#91;</span>p<span style="color: #008000;">.</span><span style="color: #0000FF;">ID</span><span style="color: #008000;">&#93;</span> <span style="color: #008000;">=</span> p<span style="color: #008000;">.</span><span style="color: #0000FF;">Serialized</span><span style="color: #008000;">;</span>
+    <span style="color: #008000;">&#125;</span>
+&nbsp;
+    <span style="color: #0600FF; font-weight: bold;">public</span> IEnumerable<span style="color: #008000;">&lt;</span>Person<span style="color: #008000;">&gt;</span> Read<span style="color: #008000;">&#40;</span>Predicate<span style="color: #008000;">&lt;</span>Person<span style="color: #008000;">&gt;</span> predicate<span style="color: #008000;">&#41;</span>
+    <span style="color: #008000;">&#123;</span>
+        <span style="color: #0600FF; font-weight: bold;">foreach</span> <span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">int</span> id <span style="color: #0600FF; font-weight: bold;">in</span> _serializedPeople<span style="color: #008000;">.</span><span style="color: #0000FF;">Keys</span><span style="color: #008000;">&#41;</span>
+        <span style="color: #008000;">&#123;</span>
+            <span style="color: #0600FF; font-weight: bold;">var</span> person <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> Person<span style="color: #008000;">&#40;</span>_serializedPeople<span style="color: #008000;">&#91;</span>id<span style="color: #008000;">&#93;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+            <span style="color: #0600FF; font-weight: bold;">if</span> <span style="color: #008000;">&#40;</span>predicate<span style="color: #008000;">&#40;</span>person<span style="color: #008000;">&#41;</span><span style="color: #008000;">&#41;</span>
+                <span style="color: #0600FF; font-weight: bold;">yield</span> <span style="color: #0600FF; font-weight: bold;">return</span> person<span style="color: #008000;">;</span>
+        <span style="color: #008000;">&#125;</span>
+    <span style="color: #008000;">&#125;</span>
+<span style="color: #008000;">&#125;</span></pre></td></tr></table></div>
+
+<p>The bug I tracked was that updates to the repository were not taking place, but instead were simply ignored. The first thing I tried, was writing a simple test:</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="csharp" style="font-family:monospace;"><span style="color: #008080; font-style: italic;">// Setup</span>
+<span style="color: #0600FF; font-weight: bold;">var</span> repository <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> PeopleRepository<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+repository<span style="color: #008000;">.</span><span style="color: #0000FF;">Save</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">new</span> Person<span style="color: #008000;">&#40;</span><span style="color: #FF0000;">1</span>, <span style="color: #666666;">&quot; John&quot;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span> <span style="color: #008080; font-style: italic;">// oops, I put an extra space here</span>
+&nbsp;
+<span style="color: #008080; font-style: italic;">// Find &amp;amp; Fix John</span>
+<span style="color: #0600FF; font-weight: bold;">var</span> john <span style="color: #008000;">=</span> repository<span style="color: #008000;">.</span><span style="color: #0000FF;">Read</span><span style="color: #008000;">&#40;</span>p <span style="color: #008000;">=&gt;</span> p<span style="color: #008000;">.</span><span style="color: #0000FF;">ID</span> <span style="color: #008000;">==</span> <span style="color: #FF0000;">1</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">.</span><span style="color: #0000FF;">First</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+john<span style="color: #008000;">.</span><span style="color: #0000FF;">Name</span> <span style="color: #008000;">=</span> john<span style="color: #008000;">.</span><span style="color: #0000FF;">Name</span><span style="color: #008000;">.</span><span style="color: #0000FF;">Trim</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+&nbsp;
+<span style="color: #008080; font-style: italic;">// Fix poor John back to the repository</span>
+repository<span style="color: #008000;">.</span><span style="color: #0000FF;">Save</span><span style="color: #008000;">&#40;</span>john<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+&nbsp;
+<span style="color: #008080; font-style: italic;">// Make sure john is saved properly</span>
+john <span style="color: #008000;">=</span> repository<span style="color: #008000;">.</span><span style="color: #0000FF;">Read</span><span style="color: #008000;">&#40;</span>p <span style="color: #008000;">=&gt;</span> p<span style="color: #008000;">.</span><span style="color: #0000FF;">ID</span> <span style="color: #008000;">==</span> <span style="color: #FF0000;">1</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">.</span><span style="color: #0000FF;">First</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+<span style="color: #0600FF; font-weight: bold;">if</span> <span style="color: #008000;">&#40;</span>john<span style="color: #008000;">.</span><span style="color: #0000FF;">Name</span> <span style="color: #008000;">!=</span> <span style="color: #666666;">&quot;John&quot;</span><span style="color: #008000;">&#41;</span>
+    <span style="color: #0600FF; font-weight: bold;">throw</span> <span style="color: #008000;">new</span> Exception<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span></pre></td></tr></table></div>
+
+<p>Sadly, this test passed with flying colors. More debugging revealed the problem happened because both our Read and Save methods returned IEnumerables. It appears that Read() read the items and made the required updates &#8230; but &#8230; when writing the items back to the repository, it iterated on them.</p>
+<p>Let me repeat &#8211; we read some items, iterated on them and modified some, saved and thus reiterated. <strong>Bam!</strong></p>
+<p><img title="Bam" src="http://www.tonsofgloves.com/images/tn_400px-One-ton_weight.jpg" alt="Bam" width="120" height="120" /></p>
+<p>The second iteration didn&#8217;t iterate on the modified items &#8211; because the internal implementation of Read used a <em>yield</em> statement, there was no actual collection returned. So the second iteration just caused the repository to re-read all the items from disk, and ignore the modified items.</p>
+<p><strong>Conclusion</strong>: whenever you see methods that return IEnumerables, be suspicious. Odds are it should return a List or Collection. And whatever you do, watch out from feeding that IEnumerable back to the same repository.</p>
+<p>Here is a final test that almost reproduces the problem. It crashes with a CollectionWasModified exception, while my actual test &amp; code just silently failed (because the repository I mocked up here doesn&#8217;t save to the disk, but rather keep everything in-memory).</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="csharp" style="font-family:monospace;"><span style="color: #008080; font-style: italic;">// Setup</span>
+<span style="color: #0600FF; font-weight: bold;">var</span> repository <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> PeopleRepository<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+repository<span style="color: #008000;">.</span><span style="color: #0000FF;">Save</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">new</span> Person<span style="color: #008000;">&#40;</span><span style="color: #FF0000;">1</span>, <span style="color: #666666;">&quot; John&quot;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span> <span style="color: #008080; font-style: italic;">// oops, I saved a space in front of John</span>
+&nbsp;
+<span style="color: #008080; font-style: italic;">// Let's read and fix all people starting with a space</span>
+<span style="color: #0600FF; font-weight: bold;">var</span> people <span style="color: #008000;">=</span> repository<span style="color: #008000;">.</span><span style="color: #0000FF;">Read</span><span style="color: #008000;">&#40;</span>p <span style="color: #008000;">=&gt;</span> p<span style="color: #008000;">.</span><span style="color: #0000FF;">Name</span><span style="color: #008000;">.</span><span style="color: #0000FF;">StartsWith</span><span style="color: #008000;">&#40;</span><span style="color: #666666;">&quot; &quot;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+<span style="color: #0600FF; font-weight: bold;">foreach</span> <span style="color: #008000;">&#40;</span><span style="color: #0600FF; font-weight: bold;">var</span> person <span style="color: #0600FF; font-weight: bold;">in</span> people<span style="color: #008000;">&#41;</span>
+    person<span style="color: #008000;">.</span><span style="color: #0000FF;">Name</span> <span style="color: #008000;">=</span> person<span style="color: #008000;">.</span><span style="color: #0000FF;">Name</span><span style="color: #008000;">.</span><span style="color: #0000FF;">Trim</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+&nbsp;
+<span style="color: #008080; font-style: italic;">// store the modified points back</span>
+repository<span style="color: #008000;">.</span><span style="color: #0000FF;">Save</span><span style="color: #008000;">&#40;</span>people<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span></pre></td></tr></table></div>
+
+				</div>
+		
+				<div class="postmetadata">
+					Tags: <a href="http://ripper234.com/tag/net/" rel="tag">.net</a>, <a href="http://ripper234.com/tag/bugs/" rel="tag">Bugs</a>, <a href="http://ripper234.com/tag/c/" rel="tag">C#</a>, <a href="http://ripper234.com/tag/optimization/" rel="tag">Optimization</a>, <a href="http://ripper234.com/tag/programming/" rel="tag">Programming</a>, <a href="http://ripper234.com/tag/yield/" rel="tag">yield</a><br /><!--					Category: <a href="http://ripper234.com/p/category/uncategorized/" rel="category tag">Uncategorized</a>&nbsp;&nbsp;|&nbsp; !-->
+					<a href="http://ripper234.com/p/on-evils-of-yield/#comments">2 Comments</a>									 </div>
+			</div>
+	
+						
+			<div class="post" id="post-999">
+				<h2 class="posttitle"><a href="http://ripper234.com/p/efficient-multiple-totient-calculation-in-c/" rel="bookmark" title="Permanent Link to Efficient multiple totient calculation in C#">Efficient multiple totient calculation in C#</a></h2>
+				<div class="postmetadata">7/3/09, 20:30 <!-- by ripper234 --></div>
+				<div class="postentry">
+					<div class="fblikebutton_button" style="margin-bottom: 10px; display: block;"><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fripper234.com%2Fp%2Fefficient-multiple-totient-calculation-in-c%2F&amp;layout=standard&amp;show-faces=true&amp;width=450&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; width:450px; height:26px"></iframe></div>
+<p>For a certain problem in <a href="http://projecteuler.net/">Project Euler</a>, I needed a function to calculate the <a href="http://en.wikipedia.org/wiki/Euler%27s_totient_function">Totient</a> of all numbers in [2..10^7]. Going over them one at a time and factorizing them would take too long, so I used a variant of the <a href="http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">prime sieve</a> to speed up the calculation. The code is not overly documented, but it should be relatively easy to grok once you understand how to calculate the Totient of a single number.</p>
+<p>The time complexity is O(n log n).</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="csharp" style="font-family:monospace;"><span style="color: #008080; font-style: italic;">/// &lt;summary&gt;</span>
+<span style="color: #008080; font-style: italic;">/// Return an array of all totients in [0..n-1]</span>
+<span style="color: #008080; font-style: italic;">/// &lt;/summary&gt;</span>
+<span style="color: #008080; font-style: italic;">/// &lt;param name=&quot;n&quot;&gt;&lt;/param&gt;</span>
+<span style="color: #008080; font-style: italic;">/// &lt;returns&gt;&lt;/returns&gt;</span>
+<span style="color: #0600FF; font-weight: bold;">public</span> <span style="color: #0600FF; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">long</span><span style="color: #008000;">&#91;</span><span style="color: #008000;">&#93;</span> CalcTotients<span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">long</span> n<span style="color: #008000;">&#41;</span>
+<span style="color: #008000;">&#123;</span>
+    <span style="color: #6666cc; font-weight: bold;">long</span><span style="color: #008000;">&#91;</span><span style="color: #008000;">&#93;</span> divisors <span style="color: #008000;">=</span> GetDivisors<span style="color: #008000;">&#40;</span>n<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+    <span style="color: #6666cc; font-weight: bold;">long</span> i<span style="color: #008000;">;</span>
+    <span style="color: #0600FF; font-weight: bold;">var</span> phi <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> <span style="color: #6666cc; font-weight: bold;">long</span><span style="color: #008000;">&#91;</span>n<span style="color: #008000;">&#93;</span><span style="color: #008000;">;</span>
+    phi<span style="color: #008000;">&#91;</span><span style="color: #FF0000;">1</span><span style="color: #008000;">&#93;</span> <span style="color: #008000;">=</span> <span style="color: #FF0000;">1</span><span style="color: #008000;">;</span>
+    <span style="color: #0600FF; font-weight: bold;">for</span> <span style="color: #008000;">&#40;</span>i <span style="color: #008000;">=</span> <span style="color: #FF0000;">1</span><span style="color: #008000;">;</span> i <span style="color: #008000;">&lt;</span> n<span style="color: #008000;">;</span> <span style="color: #008000;">++</span>i<span style="color: #008000;">&#41;</span>
+        CalcTotient<span style="color: #008000;">&#40;</span>i, phi, divisors<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+&nbsp;
+    <span style="color: #0600FF; font-weight: bold;">return</span> phi<span style="color: #008000;">;</span>
+<span style="color: #008000;">&#125;</span>
+&nbsp;
+<span style="color: #008080; font-style: italic;">/// &lt;summary&gt;</span>
+<span style="color: #008080; font-style: italic;">/// For every integer, the result will contain its lowest divisor.</span>
+<span style="color: #008080; font-style: italic;">/// &lt;/summary&gt;</span>
+<span style="color: #008080; font-style: italic;">/// &lt;param name=&quot;n&quot;&gt;&lt;/param&gt;</span>
+<span style="color: #008080; font-style: italic;">/// &lt;returns&gt;&lt;/returns&gt;</span>
+<span style="color: #0600FF; font-weight: bold;">private</span> <span style="color: #0600FF; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">long</span><span style="color: #008000;">&#91;</span><span style="color: #008000;">&#93;</span> GetDivisors<span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">long</span> n<span style="color: #008000;">&#41;</span>
+<span style="color: #008000;">&#123;</span>
+    <span style="color: #0600FF; font-weight: bold;">var</span> divisors <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> <span style="color: #6666cc; font-weight: bold;">long</span><span style="color: #008000;">&#91;</span>n<span style="color: #008000;">&#93;</span><span style="color: #008000;">;</span>
+    divisors<span style="color: #008000;">&#91;</span><span style="color: #FF0000;">1</span><span style="color: #008000;">&#93;</span> <span style="color: #008000;">=</span> <span style="color: #FF0000;">1</span><span style="color: #008000;">;</span>
+    <span style="color: #6666cc; font-weight: bold;">long</span> i<span style="color: #008000;">;</span>
+    <span style="color: #0600FF; font-weight: bold;">for</span> <span style="color: #008000;">&#40;</span>i <span style="color: #008000;">=</span> <span style="color: #FF0000;">2</span><span style="color: #008000;">;</span> i <span style="color: #008000;">&lt;</span> n<span style="color: #008000;">;</span> <span style="color: #008000;">++</span>i<span style="color: #008000;">&#41;</span>
+    <span style="color: #008000;">&#123;</span>
+        <span style="color: #0600FF; font-weight: bold;">if</span> <span style="color: #008000;">&#40;</span>divisors<span style="color: #008000;">&#91;</span>i<span style="color: #008000;">&#93;</span> <span style="color: #008000;">!=</span> <span style="color: #FF0000;">0</span><span style="color: #008000;">&#41;</span>
+            <span style="color: #0600FF; font-weight: bold;">continue</span><span style="color: #008000;">;</span>
+&nbsp;
+        <span style="color: #0600FF; font-weight: bold;">for</span> <span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">long</span> j <span style="color: #008000;">=</span> i<span style="color: #008000;">;</span> j <span style="color: #008000;">&lt;</span> n<span style="color: #008000;">;</span> j <span style="color: #008000;">+=</span> i<span style="color: #008000;">&#41;</span>
+            divisors<span style="color: #008000;">&#91;</span>j<span style="color: #008000;">&#93;</span> <span style="color: #008000;">=</span> i<span style="color: #008000;">;</span>
+    <span style="color: #008000;">&#125;</span>
+    <span style="color: #0600FF; font-weight: bold;">return</span> divisors<span style="color: #008000;">;</span>
+<span style="color: #008000;">&#125;</span>
+&nbsp;
+<span style="color: #0600FF; font-weight: bold;">private</span> <span style="color: #0600FF; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">long</span> CalcTotient<span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">long</span> i, <span style="color: #6666cc; font-weight: bold;">long</span><span style="color: #008000;">&#91;</span><span style="color: #008000;">&#93;</span> phi, <span style="color: #6666cc; font-weight: bold;">long</span><span style="color: #008000;">&#91;</span><span style="color: #008000;">&#93;</span> divisors<span style="color: #008000;">&#41;</span>
+<span style="color: #008000;">&#123;</span>
+    <span style="color: #0600FF; font-weight: bold;">if</span> <span style="color: #008000;">&#40;</span>phi<span style="color: #008000;">&#91;</span>i<span style="color: #008000;">&#93;</span> <span style="color: #008000;">!=</span> <span style="color: #FF0000;">0</span><span style="color: #008000;">&#41;</span>
+        <span style="color: #0600FF; font-weight: bold;">return</span> phi<span style="color: #008000;">&#91;</span>i<span style="color: #008000;">&#93;</span><span style="color: #008000;">;</span>
+&nbsp;
+    <span style="color: #6666cc; font-weight: bold;">long</span> div <span style="color: #008000;">=</span> divisors<span style="color: #008000;">&#91;</span>i<span style="color: #008000;">&#93;</span><span style="color: #008000;">;</span>
+    <span style="color: #0600FF; font-weight: bold;">if</span> <span style="color: #008000;">&#40;</span>div <span style="color: #008000;">==</span> i<span style="color: #008000;">&#41;</span>
+    <span style="color: #008000;">&#123;</span>
+        phi<span style="color: #008000;">&#91;</span>i<span style="color: #008000;">&#93;</span> <span style="color: #008000;">=</span> i <span style="color: #008000;">-</span> <span style="color: #FF0000;">1</span><span style="color: #008000;">;</span>
+        <span style="color: #0600FF; font-weight: bold;">return</span> phi<span style="color: #008000;">&#91;</span>i<span style="color: #008000;">&#93;</span><span style="color: #008000;">;</span>
+    <span style="color: #008000;">&#125;</span>
+&nbsp;
+    <span style="color: #6666cc; font-weight: bold;">long</span> lower <span style="color: #008000;">=</span> <span style="color: #FF0000;">1</span><span style="color: #008000;">;</span>
+    <span style="color: #6666cc; font-weight: bold;">int</span> exp <span style="color: #008000;">=</span> <span style="color: #FF0000;">0</span><span style="color: #008000;">;</span>
+    <span style="color: #0600FF; font-weight: bold;">while</span> <span style="color: #008000;">&#40;</span><span style="color: #008000;">&#40;</span>i <span style="color: #008000;">&gt;</span> <span style="color: #FF0000;">1</span><span style="color: #008000;">&#41;</span> <span style="color: #008000;">&amp;&amp;</span> <span style="color: #008000;">&#40;</span>i <span style="color: #008000;">%</span> div <span style="color: #008000;">==</span> <span style="color: #FF0000;">0</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">&#41;</span>
+    <span style="color: #008000;">&#123;</span>
+        i <span style="color: #008000;">/=</span> div<span style="color: #008000;">;</span>
+        lower <span style="color: #008000;">*=</span> div<span style="color: #008000;">;</span>
+        exp<span style="color: #008000;">++;</span>
+    <span style="color: #008000;">&#125;</span>
+    <span style="color: #0600FF; font-weight: bold;">if</span> <span style="color: #008000;">&#40;</span>i <span style="color: #008000;">==</span> <span style="color: #FF0000;">1</span><span style="color: #008000;">&#41;</span>
+    <span style="color: #008000;">&#123;</span>
+        phi<span style="color: #008000;">&#91;</span>lower<span style="color: #008000;">&#93;</span> <span style="color: #008000;">=</span> <span style="color: #008000;">&#40;</span><span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">long</span><span style="color: #008000;">&#41;</span>Math<span style="color: #008000;">.</span><span style="color: #0000FF;">Pow</span><span style="color: #008000;">&#40;</span>div, exp <span style="color: #008000;">-</span> <span style="color: #FF0000;">1</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">&#41;</span> <span style="color: #008000;">*</span> <span style="color: #008000;">&#40;</span>div<span style="color: #008000;">-</span><span style="color: #FF0000;">1</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+        <span style="color: #0600FF; font-weight: bold;">return</span> phi<span style="color: #008000;">&#91;</span>lower<span style="color: #008000;">&#93;</span><span style="color: #008000;">;</span>
+    <span style="color: #008000;">&#125;</span>
+    phi<span style="color: #008000;">&#91;</span>i<span style="color: #008000;">*</span>lower<span style="color: #008000;">&#93;</span> <span style="color: #008000;">=</span> CalcTotient<span style="color: #008000;">&#40;</span>i, phi, divisors<span style="color: #008000;">&#41;</span> <span style="color: #008000;">*</span>
+                         CalcTotient<span style="color: #008000;">&#40;</span>lower, phi, divisors<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+    <span style="color: #0600FF; font-weight: bold;">return</span> phi<span style="color: #008000;">&#91;</span>i<span style="color: #008000;">*</span>lower<span style="color: #008000;">&#93;</span><span style="color: #008000;">;</span>
+<span style="color: #008000;">&#125;</span></pre></td></tr></table></div>
+
+				</div>
+		
+				<div class="postmetadata">
+					Tags: <a href="http://ripper234.com/tag/algorithms/" rel="tag">Algorithms</a>, <a href="http://ripper234.com/tag/c/" rel="tag">C#</a>, <a href="http://ripper234.com/tag/complexity/" rel="tag">Complexity</a>, <a href="http://ripper234.com/tag/phi/" rel="tag">phi</a>, <a href="http://ripper234.com/tag/programming/" rel="tag">Programming</a>, <a href="http://ripper234.com/tag/project-euler/" rel="tag">Project Euler</a>, <a href="http://ripper234.com/tag/totient/" rel="tag">totient</a><br /><!--					Category: <a href="http://ripper234.com/p/category/uncategorized/" rel="category tag">Uncategorized</a>&nbsp;&nbsp;|&nbsp; !-->
+					<span>Comments Off<span class="screen-reader-text"> on Efficient multiple totient calculation in C#</span></span>									 </div>
+			</div>
+	
+						
+			<div class="post" id="post-982">
+				<h2 class="posttitle"><a href="http://ripper234.com/p/most-annoying-euler-problem-yet/" rel="bookmark" title="Permanent Link to Most annoying Euler problem yet">Most annoying Euler problem yet</a></h2>
+				<div class="postmetadata">4/3/09, 1:39 <!-- by ripper234 --></div>
+				<div class="postentry">
+					<div class="fblikebutton_button" style="margin-bottom: 10px; display: block;"><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fripper234.com%2Fp%2Fmost-annoying-euler-problem-yet%2F&amp;layout=standard&amp;show-faces=true&amp;width=450&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; width:450px; height:26px"></iframe></div>
+<p>In <a href="http://projecteuler.net/index.php?section=problems&#038;id=54">Problem 54</a>, you receive a set of poker hands, and are asked to count the number of times Player 1 won. No algorithmic or mathematical intelligence here, just coding. I advise skipping it in favor of more interesting problems.</p>
+<p>Some say the Chinese word for &#8220;<a href="http://en.wikipedia.org/wiki/Chinese_translation_of_crisis">crisis</a>&#8221; is composed of &#8220;danger&#8221; and opportunity (<a href="http://omriqa.blogspot.com/">others</a> do not). I took the time to play with <a href="http://en.wikipedia.org/wiki/Language_Integrated_Query">LINQ</a> and lambdas for the first time (in C# at least), and it was a great deal of fun &#8211; even at my home computer which is currently suffering from lack of <a href="http://www.jetbrains.com/resharper/">Resharper</a>.</p>
+<p>SPOILER SPOILER SPOILER</p>
+<p>Here&#8217;s a bit of LINQ goodness. The method I used (SPOILER SPOILER) to calculate the winner of two similar hands is a weighted sum. I summed all the best cards with a high weight, then added less important cards with lower weight (for example, 3 twos get more weight each than 2 kings in the same hand).</p>
+<p>Once I found which value is the best in a given hand (2 in the above hand), I used this little one liner to count the number of cards equal to the maximal value.</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="csharp" style="font-family:monospace;">_cards<span style="color: #008000;">.</span><span style="color: #0600FF; font-weight: bold;">Where</span><span style="color: #008000;">&#40;</span>c <span style="color: #008000;">=&gt;</span> c<span style="color: #008000;">.</span><span style="color: #0600FF; font-weight: bold;">Value</span> <span style="color: #008000;">==</span> bestValue<span style="color: #008000;">&#41;</span><span style="color: #008000;">.</span><span style="color: #0000FF;">Count</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span></pre></td></tr></table></div>
+
+<p><a href="http://en.wikipedia.org/wiki/The_new_black">Terse is the new black</a>.</p>
+				</div>
+		
+				<div class="postmetadata">
+					Tags: <a href="http://ripper234.com/tag/c/" rel="tag">C#</a>, <a href="http://ripper234.com/tag/functional-programming/" rel="tag">Functional Programming</a>, <a href="http://ripper234.com/tag/linq/" rel="tag">LINQ</a>, <a href="http://ripper234.com/tag/poker/" rel="tag">Poker</a>, <a href="http://ripper234.com/tag/programming/" rel="tag">Programming</a>, <a href="http://ripper234.com/tag/project-euler/" rel="tag">Project Euler</a>, <a href="http://ripper234.com/tag/resharper/" rel="tag">Resharper</a><br /><!--					Category: <a href="http://ripper234.com/p/category/uncategorized/" rel="category tag">Uncategorized</a>&nbsp;&nbsp;|&nbsp; !-->
+					<span>Comments Off<span class="screen-reader-text"> on Most annoying Euler problem yet</span></span>									 </div>
+			</div>
+	
+						
+			<div class="post" id="post-957">
+				<h2 class="posttitle"><a href="http://ripper234.com/p/dont-switch-your-lock-object-mid-lock/" rel="bookmark" title="Permanent Link to Don&#8217;t switch your lock object mid-lock">Don&#8217;t switch your lock object mid-lock</a></h2>
+				<div class="postmetadata">18/2/09, 16:09 <!-- by ripper234 --></div>
+				<div class="postentry">
+					<div class="fblikebutton_button" style="margin-bottom: 10px; display: block;"><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fripper234.com%2Fp%2Fdont-switch-your-lock-object-mid-lock%2F&amp;layout=standard&amp;show-faces=true&amp;width=450&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; width:450px; height:26px"></iframe></div>
+<p>Today I encountered a weird exception from List.AddRange()</p>
+<pre>
+[Exception(System.ArgumentException)]:
+Destination array was not long enough. Check destIndex and length, and the array's lower bounds.
+</pre>
+<p>Looking at the code, I saw it multithreaded like this:</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="csharp" style="font-family:monospace;">List<span style="color: #008000;">&lt;</span><span style="color: #6666cc; font-weight: bold;">int</span><span style="color: #008000;">&gt;</span> tmp<span style="color: #008000;">;</span>
+<span style="color: #0600FF; font-weight: bold;">lock</span> <span style="color: #008000;">&#40;</span>_list<span style="color: #008000;">&#41;</span>
+<span style="color: #008000;">&#123;</span>
+    tmp <span style="color: #008000;">=</span> _list<span style="color: #008000;">;</span>
+    _list <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> List<span style="color: #008000;">&lt;</span><span style="color: #6666cc; font-weight: bold;">int</span><span style="color: #008000;">&gt;</span><span style="color: #008000;">&#40;</span><span style="color: #FF0000;">1</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+<span style="color: #008000;">&#125;</span>
+&nbsp;
+<span style="color: #008080; font-style: italic;">// use tmp object like it's owned exclusively by this thread</span></pre></td></tr></table></div>
+
+<p>The thinking here was to avoid &#8220;expensive&#8221; operations inside the lock, so we locked _list only for enough time to replace it with a new list, and then do the heavy lifting on the tmp variable (assuming no other threads can interfere). Most locks are used immutably &#8211; the lock object itself rarely changes identity.</p>
+<p>Well, it appears the above code is indeed not thread safe. Here what I recon happened:</p>
+<ol>
+<li>Thread 1 acquired a lock on _list</li>
+<li>Thread 2 tried acquiring the lock, but blocked.</li>
+<li>Thread 1 changed _list to a new instance and released the lock on the old value of _list</li>
+<li>Thread 3 came and acquired the lock on the new value of _list</li>
+<li>Thread 2 was now released and acquired the lock on the old value of _list</li>
+</ol>
+<p>At this point, both thread 2 &#038; 3 got inside the critical section and grabbed the same value of _list (the new one) as their &#8220;exclusive&#8221; tmp, and then worked on it concurrently outside the lock. The easy solution is not to lock on an object whose identity (not state) changes. In this case, a lock either on the containing object or on a new <a href="http://stackoverflow.com/questions/484080/why-is-system-object-not-abstract-in-net">custom object</a> (object _lock = new object()) should do the trick.</p>
+<p>This program reproduces the problem:</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="csharp" style="font-family:monospace;"><span style="color: #0600FF; font-weight: bold;">using</span> <span style="color: #008080;">System</span><span style="color: #008000;">;</span>
+<span style="color: #0600FF; font-weight: bold;">using</span> <span style="color: #008080;">System.Collections.Generic</span><span style="color: #008000;">;</span>
+<span style="color: #0600FF; font-weight: bold;">using</span> <span style="color: #008080;">System.Threading</span><span style="color: #008000;">;</span>
+&nbsp;
+<span style="color: #0600FF; font-weight: bold;">namespace</span> tstlock
+<span style="color: #008000;">&#123;</span>
+    <span style="color: #0600FF; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">class</span> LockTester
+    <span style="color: #008000;">&#123;</span>
+        <span style="color: #0600FF; font-weight: bold;">private</span> List<span style="color: #008000;">&lt;</span><span style="color: #6666cc; font-weight: bold;">int</span><span style="color: #008000;">&gt;</span> _list <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> List<span style="color: #008000;">&lt;</span><span style="color: #6666cc; font-weight: bold;">int</span><span style="color: #008000;">&gt;</span><span style="color: #008000;">&#40;</span><span style="color: #FF0000;">1</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+&nbsp;
+        <span style="color: #0600FF; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">void</span> Run<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span>
+        <span style="color: #008000;">&#123;</span>
+            <span style="color: #0600FF; font-weight: bold;">var</span> threads <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> Thread<span style="color: #008000;">&#91;</span><span style="color: #FF0000;">40</span><span style="color: #008000;">&#93;</span><span style="color: #008000;">;</span>
+            <span style="color: #0600FF; font-weight: bold;">for</span> <span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">int</span> i <span style="color: #008000;">=</span> <span style="color: #FF0000;">0</span><span style="color: #008000;">;</span> i <span style="color: #008000;">&lt;</span> threads<span style="color: #008000;">.</span><span style="color: #0000FF;">Length</span><span style="color: #008000;">;</span> <span style="color: #008000;">++</span>i<span style="color: #008000;">&#41;</span>
+            <span style="color: #008000;">&#123;</span>
+                threads<span style="color: #008000;">&#91;</span>i<span style="color: #008000;">&#93;</span> <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> Thread<span style="color: #008000;">&#40;</span>ThreadFunc<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+                threads<span style="color: #008000;">&#91;</span>i<span style="color: #008000;">&#93;</span><span style="color: #008000;">.</span><span style="color: #0000FF;">Start</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+            <span style="color: #008000;">&#125;</span>
+            <span style="color: #0600FF; font-weight: bold;">foreach</span> <span style="color: #008000;">&#40;</span><span style="color: #0600FF; font-weight: bold;">var</span> thread <span style="color: #0600FF; font-weight: bold;">in</span> threads<span style="color: #008000;">&#41;</span>
+                thread<span style="color: #008000;">.</span><span style="color: #0600FF; font-weight: bold;">Join</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+        <span style="color: #008000;">&#125;</span>
+&nbsp;
+        <span style="color: #0600FF; font-weight: bold;">private</span> <span style="color: #6666cc; font-weight: bold;">void</span> ThreadFunc<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span>
+        <span style="color: #008000;">&#123;</span>
+            <span style="color: #0600FF; font-weight: bold;">for</span> <span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">int</span> i <span style="color: #008000;">=</span> <span style="color: #FF0000;">0</span><span style="color: #008000;">;</span> i <span style="color: #008000;">&lt;</span> <span style="color: #FF0000;">1000000</span><span style="color: #008000;">;</span> <span style="color: #008000;">++</span>i<span style="color: #008000;">&#41;</span>
+            <span style="color: #008000;">&#123;</span>
+                List<span style="color: #008000;">&lt;</span><span style="color: #6666cc; font-weight: bold;">int</span><span style="color: #008000;">&gt;</span> tmp<span style="color: #008000;">;</span>
+                <span style="color: #0600FF; font-weight: bold;">lock</span> <span style="color: #008000;">&#40;</span>_list<span style="color: #008000;">&#41;</span>
+                <span style="color: #008000;">&#123;</span>
+                    tmp <span style="color: #008000;">=</span> _list<span style="color: #008000;">;</span>
+&nbsp;
+                    <span style="color: #008080; font-style: italic;">// at this point _list is always supposed to be an empty list</span>
+                    <span style="color: #008080; font-style: italic;">// because all the additions to it are after the new list is allocated</span>
+                    _list <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> List<span style="color: #008000;">&lt;</span><span style="color: #6666cc; font-weight: bold;">int</span><span style="color: #008000;">&gt;</span><span style="color: #008000;">&#40;</span><span style="color: #FF0000;">1</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+                <span style="color: #008000;">&#125;</span>
+&nbsp;
+                <span style="color: #0600FF; font-weight: bold;">var</span> array <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> <span style="color: #008000;">&#91;</span><span style="color: #008000;">&#93;</span><span style="color: #008000;">&#123;</span><span style="color: #FF0000;">1</span>,<span style="color: #FF0000;">2</span>,<span style="color: #FF0000;">3</span>,<span style="color: #FF0000;">54</span>,<span style="color: #FF0000;">5</span>,<span style="color: #FF0000;">6</span><span style="color: #008000;">&#125;</span><span style="color: #008000;">;</span>
+                tmp<span style="color: #008000;">.</span><span style="color: #0000FF;">AddRange</span><span style="color: #008000;">&#40;</span>array<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+                <span style="color: #0600FF; font-weight: bold;">if</span> <span style="color: #008000;">&#40;</span>tmp<span style="color: #008000;">.</span><span style="color: #0000FF;">Count</span> <span style="color: #008000;">!=</span> array<span style="color: #008000;">.</span><span style="color: #0000FF;">Length</span><span style="color: #008000;">&#41;</span>
+                <span style="color: #008000;">&#123;</span>
+                    <span style="color: #0600FF; font-weight: bold;">throw</span> <span style="color: #008000;">new</span> Exception<span style="color: #008000;">&#40;</span><span style="color: #666666;">&quot;Bug - tmp is not local as we thought&quot;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+                <span style="color: #008000;">&#125;</span>
+            <span style="color: #008000;">&#125;</span>
+        <span style="color: #008000;">&#125;</span>
+    <span style="color: #008000;">&#125;</span>
+<span style="color: #008000;">&#125;</span></pre></td></tr></table></div>
+
+				</div>
+		
+				<div class="postmetadata">
+					Tags: <a href="http://ripper234.com/tag/c/" rel="tag">C#</a>, <a href="http://ripper234.com/tag/programming/" rel="tag">Programming</a>, <a href="http://ripper234.com/tag/threading/" rel="tag">Threading</a><br /><!--					Category: <a href="http://ripper234.com/p/category/uncategorized/" rel="category tag">Uncategorized</a>&nbsp;&nbsp;|&nbsp; !-->
+					<a href="http://ripper234.com/p/dont-switch-your-lock-object-mid-lock/#comments">3 Comments</a>									 </div>
+			</div>
+	
+						
+			<div class="post" id="post-937">
+				<h2 class="posttitle"><a href="http://ripper234.com/p/c-alternative-to-directorygetfiles/" rel="bookmark" title="Permanent Link to C# Alternative to Directory.GetFiles()">C# Alternative to Directory.GetFiles()</a></h2>
+				<div class="postmetadata">16/2/09, 17:42 <!-- by ripper234 --></div>
+				<div class="postentry">
+					<div class="fblikebutton_button" style="margin-bottom: 10px; display: block;"><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fripper234.com%2Fp%2Fc-alternative-to-directorygetfiles%2F&amp;layout=standard&amp;show-faces=true&amp;width=450&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; width:450px; height:26px"></iframe></div>
+<p>A while ago I was working with directories with thousands of files, and wanted to get only the first few files in the directory.<br />
+Directory.GetFiles() always returns the entire directory, and so is rather slow on huge directories.</p>
+<p>I found and used <a href="http://blogs.msdn.com/yvesdolc/archive/2005/08/06/448673.aspx">this excellent post</a> with a managed C++ class that does exactly what I wanted. A caveat I had with the code is that it didn&#8217;t work on 64bit machines when run in 64bit mode (instead of in <a href="http://en.wikipedia.org/wiki/WOW64">WOW64 </a>compatibility mode). Today I finally got the time to translate it to C#, so we can compile it as part of our solution instead of referencing a pre-built C++ dll. I&#8217;m also included a small wrapper DirectoryUtils, that provides an easier way to get a list of N files in a dir (simple API wrapper), plus an additional method to get a random selection of N files from that directory.</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="csharp" style="font-family:monospace;"><span style="color: #0600FF; font-weight: bold;">using</span> <span style="color: #008080;">System</span><span style="color: #008000;">;</span>
+<span style="color: #0600FF; font-weight: bold;">using</span> <span style="color: #008080;">System.Collections</span><span style="color: #008000;">;</span>
+<span style="color: #0600FF; font-weight: bold;">using</span> <span style="color: #008080;">System.Collections.Generic</span><span style="color: #008000;">;</span>
+<span style="color: #0600FF; font-weight: bold;">using</span> <span style="color: #008080;">System.ComponentModel</span><span style="color: #008000;">;</span>
+<span style="color: #0600FF; font-weight: bold;">using</span> <span style="color: #008080;">System.IO</span><span style="color: #008000;">;</span>
+<span style="color: #0600FF; font-weight: bold;">using</span> <span style="color: #008080;">System.Runtime.InteropServices</span><span style="color: #008000;">;</span>
+<span style="color: #0600FF; font-weight: bold;">using</span> <span style="color: #008080;">Microsoft.Win32.SafeHandles</span><span style="color: #008000;">;</span>
+<span style="color: #0600FF; font-weight: bold;">using</span> <span style="color: #008080;">NUnit.Framework</span><span style="color: #008000;">;</span>
+<span style="color: #0600FF; font-weight: bold;">using</span> <span style="color: #008080;">FILETIME</span><span style="color: #008000;">=</span><span style="color: #000000;">System.<span style="color: #0000FF;">Runtime</span><span style="color: #008000;">.</span><span style="color: #0000FF;">InteropServices</span></span><span style="color: #008000;">.</span><span style="color: #0000FF;">ComTypes</span><span style="color: #008000;">.</span><span style="color: #0000FF;">FILETIME</span><span style="color: #008000;">;</span>
+<span style="color: #0600FF; font-weight: bold;">using</span> <span style="color: #008080;">IEnumerator</span><span style="color: #008000;">=</span><span style="color: #000000;">System.<span style="color: #0000FF;">Collections</span></span><span style="color: #008000;">.</span><span style="color: #0000FF;">IEnumerator</span><span style="color: #008000;">;</span>
+&nbsp;
+<span style="color: #0600FF; font-weight: bold;">namespace</span> Semingo<span style="color: #008000;">.</span><span style="color: #0000FF;">IntegrationTests</span><span style="color: #008000;">.</span><span style="color: #0000FF;">DirectoryUtils</span>
+<span style="color: #008000;">&#123;</span>
+    <span style="color: #0600FF; font-weight: bold;">public</span> <span style="color: #0600FF; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">class</span> DirectoryUtils
+    <span style="color: #008000;">&#123;</span>
+        <span style="color: #008080; font-style: italic;">/// &lt;summary&gt;</span>
+        <span style="color: #008080; font-style: italic;">/// Efficiently get only some files from a dir</span>
+        <span style="color: #008080; font-style: italic;">/// &lt;/summary&gt;</span>
+        <span style="color: #008080; font-style: italic;">/// &lt;param name=&quot;directory&quot;&gt;&lt;/param&gt;</span>
+        <span style="color: #008080; font-style: italic;">/// &lt;param name=&quot;limit&quot;&gt;&lt;/param&gt;</span>
+        <span style="color: #008080; font-style: italic;">/// &lt;returns&gt;&lt;/returns&gt;</span>
+        <span style="color: #0600FF; font-weight: bold;">public</span> <span style="color: #0600FF; font-weight: bold;">static</span> List<span style="color: #008000;">&lt;</span><span style="color: #6666cc; font-weight: bold;">string</span><span style="color: #008000;">&gt;</span> GetFiles<span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">string</span> directory, <span style="color: #6666cc; font-weight: bold;">int</span> limit<span style="color: #008000;">&#41;</span>
+        <span style="color: #008000;">&#123;</span>
+            Assert<span style="color: #008000;">.</span><span style="color: #0000FF;">IsTrue</span><span style="color: #008000;">&#40;</span>limit <span style="color: #008000;">&gt;</span> <span style="color: #FF0000;">0</span>, <span style="color: #666666;">&quot;Limit should be positive&quot;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+            List<span style="color: #008000;">&lt;</span><span style="color: #6666cc; font-weight: bold;">string</span><span style="color: #008000;">&gt;</span> result <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> List<span style="color: #008000;">&lt;</span><span style="color: #6666cc; font-weight: bold;">string</span><span style="color: #008000;">&gt;</span><span style="color: #008000;">&#40;</span>limit<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+            FilesFinder filesFinder <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> FilesFinder<span style="color: #008000;">&#40;</span>directory <span style="color: #008000;">+</span> <span style="color: #666666;">&quot;<span style="color: #008080; font-weight: bold;">\\</span>*.*&quot;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+            <span style="color: #0600FF; font-weight: bold;">foreach</span> <span style="color: #008000;">&#40;</span>FoundFileData foundFile <span style="color: #0600FF; font-weight: bold;">in</span> filesFinder<span style="color: #008000;">&#41;</span>
+            <span style="color: #008000;">&#123;</span>
+                <span style="color: #6666cc; font-weight: bold;">string</span> fullFilename <span style="color: #008000;">=</span> directory <span style="color: #008000;">+</span> <span style="color: #666666;">&quot;<span style="color: #008080; font-weight: bold;">\\</span>&quot;</span> <span style="color: #008000;">+</span> foundFile<span style="color: #008000;">.</span><span style="color: #0000FF;">FileName</span><span style="color: #008000;">;</span>
+                <span style="color: #0600FF; font-weight: bold;">if</span> <span style="color: #008000;">&#40;</span><span style="color: #008000;">!</span>IsFile<span style="color: #008000;">&#40;</span>fullFilename<span style="color: #008000;">&#41;</span><span style="color: #008000;">&#41;</span>
+                    <span style="color: #0600FF; font-weight: bold;">continue</span><span style="color: #008000;">;</span>
+&nbsp;
+                limit<span style="color: #008000;">--;</span>
+&nbsp;
+                result<span style="color: #008000;">.</span><span style="color: #0600FF; font-weight: bold;">Add</span><span style="color: #008000;">&#40;</span>fullFilename<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+&nbsp;
+                <span style="color: #0600FF; font-weight: bold;">if</span> <span style="color: #008000;">&#40;</span>limit <span style="color: #008000;">==</span> <span style="color: #FF0000;">0</span><span style="color: #008000;">&#41;</span>
+                    <span style="color: #0600FF; font-weight: bold;">return</span> result<span style="color: #008000;">;</span>
+            <span style="color: #008000;">&#125;</span>
+&nbsp;
+            <span style="color: #0600FF; font-weight: bold;">return</span> result<span style="color: #008000;">;</span>
+        <span style="color: #008000;">&#125;</span>
+&nbsp;
+        <span style="color: #008080; font-style: italic;">/// &lt;summary&gt;</span>
+        <span style="color: #008080; font-style: italic;">/// Return a random set of count files from a directory. (note, this can be slow on huge directories!)</span>
+        <span style="color: #008080; font-style: italic;">/// &lt;/summary&gt;</span>
+        <span style="color: #008080; font-style: italic;">/// &lt;remarks&gt;</span>
+        <span style="color: #008080; font-style: italic;">/// If the directory has less files, all of it is returned</span>
+        <span style="color: #008080; font-style: italic;">/// &lt;/remarks&gt;</span>
+        <span style="color: #008080; font-style: italic;">/// &lt;param name=&quot;directory&quot;&gt;&lt;/param&gt;</span>
+        <span style="color: #008080; font-style: italic;">/// &lt;param name=&quot;limit&quot;&gt;&lt;/param&gt;</span>
+        <span style="color: #008080; font-style: italic;">/// &lt;returns&gt;&lt;/returns&gt;</span>
+        <span style="color: #0600FF; font-weight: bold;">public</span> <span style="color: #0600FF; font-weight: bold;">static</span> List<span style="color: #008000;">&lt;</span><span style="color: #6666cc; font-weight: bold;">string</span><span style="color: #008000;">&gt;</span> GetRandomizedFiles<span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">string</span> directory, <span style="color: #6666cc; font-weight: bold;">int</span> limit
+        <span style="color: #008000;">&#123;</span>
+            <span style="color: #6666cc; font-weight: bold;">string</span><span style="color: #008000;">&#91;</span><span style="color: #008000;">&#93;</span> files <span style="color: #008000;">=</span> Directory<span style="color: #008000;">.</span><span style="color: #0000FF;">GetFiles</span><span style="color: #008000;">&#40;</span>directory<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+            <span style="color: #0600FF; font-weight: bold;">if</span> <span style="color: #008000;">&#40;</span>files<span style="color: #008000;">.</span><span style="color: #0000FF;">Length</span> <span style="color: #008000;">&lt;=</span> limit<span style="color: #008000;">&#41;</span>
+                <span style="color: #0600FF; font-weight: bold;">return</span> <span style="color: #008000;">new</span> List<span style="color: #008000;">&lt;</span><span style="color: #6666cc; font-weight: bold;">string</span><span style="color: #008000;">&gt;</span><span style="color: #008000;">&#40;</span>files<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+&nbsp;
+            <span style="color: #008080; font-style: italic;">// we don't have enough, so we have to randomize</span>
+            <span style="color: #6666cc; font-weight: bold;">int</span><span style="color: #008000;">&#91;</span><span style="color: #008000;">&#93;</span> permutation <span style="color: #008000;">=</span> GenerateRandomPermutation<span style="color: #008000;">&#40;</span>files<span style="color: #008000;">.</span><span style="color: #0000FF;">Length</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+&nbsp;
+            <span style="color: #008080; font-style: italic;">// take first count files</span>
+            List<span style="color: #008000;">&lt;</span><span style="color: #6666cc; font-weight: bold;">string</span><span style="color: #008000;">&gt;</span> result <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> List<span style="color: #008000;">&lt;</span><span style="color: #6666cc; font-weight: bold;">string</span><span style="color: #008000;">&gt;</span><span style="color: #008000;">&#40;</span>count<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+            <span style="color: #0600FF; font-weight: bold;">for</span> <span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">int</span> i <span style="color: #008000;">=</span> <span style="color: #FF0000;">0</span><span style="color: #008000;">;</span> i <span style="color: #008000;">&lt;</span> count<span style="color: #008000;">;</span> <span style="color: #008000;">++</span>i<span style="color: #008000;">&#41;</span>
+            <span style="color: #008000;">&#123;</span>
+                result<span style="color: #008000;">.</span><span style="color: #0600FF; font-weight: bold;">Add</span><span style="color: #008000;">&#40;</span>files<span style="color: #008000;">&#91;</span>permutation<span style="color: #008000;">&#91;</span>i<span style="color: #008000;">&#93;</span><span style="color: #008000;">&#93;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+            <span style="color: #008000;">&#125;</span>
+            <span style="color: #0600FF; font-weight: bold;">return</span> result<span style="color: #008000;">;</span>
+        <span style="color: #008000;">&#125;</span>
+&nbsp;
+        <span style="color: #0600FF; font-weight: bold;">private</span> <span style="color: #0600FF; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">bool</span> IsFile<span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">string</span> name<span style="color: #008000;">&#41;</span>
+        <span style="color: #008000;">&#123;</span>
+            <span style="color: #0600FF; font-weight: bold;">return</span> File<span style="color: #008000;">.</span><span style="color: #0000FF;">Exists</span><span style="color: #008000;">&#40;</span>name<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+        <span style="color: #008000;">&#125;</span>
+&nbsp;
+        <span style="color: #0600FF; font-weight: bold;">private</span> <span style="color: #0600FF; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">int</span><span style="color: #008000;">&#91;</span><span style="color: #008000;">&#93;</span> GenerateRandomPermutation<span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">int</span> count<span style="color: #008000;">&#41;</span>
+        <span style="color: #008000;">&#123;</span>
+            <span style="color: #6666cc; font-weight: bold;">int</span><span style="color: #008000;">&#91;</span><span style="color: #008000;">&#93;</span> array <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> <span style="color: #6666cc; font-weight: bold;">int</span><span style="color: #008000;">&#91;</span>count<span style="color: #008000;">&#93;</span><span style="color: #008000;">;</span>
+            <span style="color: #0600FF; font-weight: bold;">for</span> <span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">int</span> i <span style="color: #008000;">=</span> <span style="color: #FF0000;">0</span><span style="color: #008000;">;</span> i <span style="color: #008000;">&lt;</span> count<span style="color: #008000;">;</span> <span style="color: #008000;">++</span>i<span style="color: #008000;">&#41;</span>
+                array<span style="color: #008000;">&#91;</span>i<span style="color: #008000;">&#93;</span> <span style="color: #008000;">=</span> i<span style="color: #008000;">;</span>
+&nbsp;
+            <span style="color: #008080; font-style: italic;">// http://forums.msdn.microsoft.com/en-US/csharpgeneral/thread/8b489948-f1b5-46d0-8bc5-bd94c418e41d/</span>
+            Random random <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> Random<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>  <span style="color: #008080; font-style: italic;">// i.e., Random Class.  </span>
+            <span style="color: #6666cc; font-weight: bold;">int</span> n <span style="color: #008000;">=</span> array<span style="color: #008000;">.</span><span style="color: #0000FF;">Length</span><span style="color: #008000;">;</span>       <span style="color: #008080; font-style: italic;">// The number of items left to shuffle (loop invariant).  </span>
+            <span style="color: #0600FF; font-weight: bold;">while</span> <span style="color: #008000;">&#40;</span>n <span style="color: #008000;">&gt;</span> <span style="color: #FF0000;">1</span><span style="color: #008000;">&#41;</span>
+            <span style="color: #008000;">&#123;</span>
+                <span style="color: #6666cc; font-weight: bold;">int</span> k <span style="color: #008000;">=</span> random<span style="color: #008000;">.</span><span style="color: #0000FF;">Next</span><span style="color: #008000;">&#40;</span>n<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>  <span style="color: #008080; font-style: italic;">// 0 &lt;= k &lt; n.  </span>
+                n<span style="color: #008000;">--;</span>                     <span style="color: #008080; font-style: italic;">// n is now the last pertinent index;  </span>
+                <span style="color: #6666cc; font-weight: bold;">int</span> temp <span style="color: #008000;">=</span> array<span style="color: #008000;">&#91;</span>n<span style="color: #008000;">&#93;</span><span style="color: #008000;">;</span>     <span style="color: #008080; font-style: italic;">// swap array[n] with array[k] (does nothing if k == n).  </span>
+                array<span style="color: #008000;">&#91;</span>n<span style="color: #008000;">&#93;</span> <span style="color: #008000;">=</span> array<span style="color: #008000;">&#91;</span>k<span style="color: #008000;">&#93;</span><span style="color: #008000;">;</span>
+                array<span style="color: #008000;">&#91;</span>k<span style="color: #008000;">&#93;</span> <span style="color: #008000;">=</span> temp<span style="color: #008000;">;</span>
+            <span style="color: #008000;">&#125;</span>
+            <span style="color: #0600FF; font-weight: bold;">return</span> array<span style="color: #008000;">;</span>
+        <span style="color: #008000;">&#125;</span>
+    <span style="color: #008000;">&#125;</span>
+&nbsp;
+    <span style="color: #008080; font-style: italic;">/// &lt;summary&gt;</span>
+    <span style="color: #008080; font-style: italic;">/// Taken from http://blogs.msdn.com/yvesdolc/archive/2005/08/06/448673.aspx and translated to C#</span>
+    <span style="color: #008080; font-style: italic;">/// &lt;/summary&gt;</span>
+    <span style="color: #0600FF; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">class</span> FilesEnumerator <span style="color: #008000;">:</span> IEnumerator<span style="color: #008000;">&lt;</span>FoundFileData<span style="color: #008000;">&gt;</span>
+    <span style="color: #008000;">&#123;</span>
+        <span style="color: #008080;">#region Interop imports</span>
+&nbsp;
+        <span style="color: #0600FF; font-weight: bold;">private</span> <span style="color: #0600FF; font-weight: bold;">const</span> <span style="color: #6666cc; font-weight: bold;">int</span> ERROR_FILE_NOT_FOUND <span style="color: #008000;">=</span> <span style="color: #FF0000;">2</span><span style="color: #008000;">;</span>
+        <span style="color: #0600FF; font-weight: bold;">private</span> <span style="color: #0600FF; font-weight: bold;">const</span> <span style="color: #6666cc; font-weight: bold;">int</span> ERROR_NO_MORE_FILES <span style="color: #008000;">=</span> <span style="color: #FF0000;">18</span><span style="color: #008000;">;</span>
+&nbsp;
+        <span style="color: #008000;">&#91;</span>DllImport<span style="color: #008000;">&#40;</span><span style="color: #666666;">&quot;kernel32.dll&quot;</span>, SetLastError <span style="color: #008000;">=</span> <span style="color: #0600FF; font-weight: bold;">true</span>, CharSet <span style="color: #008000;">=</span> CharSet<span style="color: #008000;">.</span><span style="color: #0000FF;">Auto</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">&#93;</span>
+        <span style="color: #0600FF; font-weight: bold;">private</span> <span style="color: #0600FF; font-weight: bold;">static</span> <span style="color: #0600FF; font-weight: bold;">extern</span> IntPtr FindFirstFile<span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">string</span> lpFileName, <span style="color: #0600FF; font-weight: bold;">out</span> WIN32_FIND_DATA lpFindFileData<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+&nbsp;
+        <span style="color: #008000;">&#91;</span>DllImport<span style="color: #008000;">&#40;</span><span style="color: #666666;">&quot;kernel32.dll&quot;</span>, SetLastError <span style="color: #008000;">=</span> <span style="color: #0600FF; font-weight: bold;">true</span>, CharSet <span style="color: #008000;">=</span> CharSet<span style="color: #008000;">.</span><span style="color: #0000FF;">Auto</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">&#93;</span>
+        <span style="color: #0600FF; font-weight: bold;">private</span> <span style="color: #0600FF; font-weight: bold;">static</span> <span style="color: #0600FF; font-weight: bold;">extern</span> <span style="color: #6666cc; font-weight: bold;">bool</span> FindNextFile<span style="color: #008000;">&#40;</span>SafeHandle hFindFile, <span style="color: #0600FF; font-weight: bold;">out</span> WIN32_FIND_DATA lpFindFileData<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+&nbsp;
+        <span style="color: #008080;">#endregion</span>
+&nbsp;
+        <span style="color: #008080;">#region Data Members</span>
+&nbsp;
+        <span style="color: #0600FF; font-weight: bold;">private</span> <span style="color: #0600FF; font-weight: bold;">readonly</span> <span style="color: #6666cc; font-weight: bold;">string</span> _fileName<span style="color: #008000;">;</span>
+        <span style="color: #0600FF; font-weight: bold;">private</span> SafeHandle _findHandle<span style="color: #008000;">;</span>
+        <span style="color: #0600FF; font-weight: bold;">private</span> WIN32_FIND_DATA _win32FindData<span style="color: #008000;">;</span>
+&nbsp;
+        <span style="color: #008080;">#endregion</span>
+&nbsp;
+        <span style="color: #0600FF; font-weight: bold;">public</span> FilesEnumerator<span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">string</span> fileName<span style="color: #008000;">&#41;</span>
+        <span style="color: #008000;">&#123;</span>
+            _fileName <span style="color: #008000;">=</span> fileName<span style="color: #008000;">;</span>
+            _findHandle <span style="color: #008000;">=</span> <span style="color: #0600FF; font-weight: bold;">null</span><span style="color: #008000;">;</span>
+            _win32FindData <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> WIN32_FIND_DATA<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+        <span style="color: #008000;">&#125;</span>
+&nbsp;
+        <span style="color: #008080;">#region IEnumerator&lt;FoundFileData&gt; Members</span>
+&nbsp;
+        <span style="color: #0600FF; font-weight: bold;">public</span> FoundFileData Current
+        <span style="color: #008000;">&#123;</span>
+            <span style="color: #0600FF; font-weight: bold;">get</span>
+            <span style="color: #008000;">&#123;</span>
+                <span style="color: #0600FF; font-weight: bold;">if</span> <span style="color: #008000;">&#40;</span>_findHandle <span style="color: #008000;">==</span> <span style="color: #0600FF; font-weight: bold;">null</span><span style="color: #008000;">&#41;</span>
+                    <span style="color: #0600FF; font-weight: bold;">throw</span> <span style="color: #008000;">new</span> InvalidOperationException<span style="color: #008000;">&#40;</span><span style="color: #666666;">&quot;MoveNext() must be called first&quot;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+&nbsp;
+                <span style="color: #0600FF; font-weight: bold;">return</span> <span style="color: #008000;">new</span> FoundFileData<span style="color: #008000;">&#40;</span><span style="color: #0600FF; font-weight: bold;">ref</span> _win32FindData<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+            <span style="color: #008000;">&#125;</span>
+        <span style="color: #008000;">&#125;</span>
+&nbsp;
+        <span style="color: #6666cc; font-weight: bold;">object</span> IEnumerator<span style="color: #008000;">.</span><span style="color: #0000FF;">Current</span>
+        <span style="color: #008000;">&#123;</span>
+            <span style="color: #0600FF; font-weight: bold;">get</span> <span style="color: #008000;">&#123;</span> <span style="color: #0600FF; font-weight: bold;">return</span> Current<span style="color: #008000;">;</span> <span style="color: #008000;">&#125;</span>
+        <span style="color: #008000;">&#125;</span>
+&nbsp;
+        <span style="color: #0600FF; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">bool</span> MoveNext<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span>
+        <span style="color: #008000;">&#123;</span>
+            <span style="color: #0600FF; font-weight: bold;">if</span> <span style="color: #008000;">&#40;</span>_findHandle <span style="color: #008000;">==</span> <span style="color: #0600FF; font-weight: bold;">null</span><span style="color: #008000;">&#41;</span>
+            <span style="color: #008000;">&#123;</span>
+                _findHandle <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> SafeFileHandle<span style="color: #008000;">&#40;</span>FindFirstFile<span style="color: #008000;">&#40;</span>_fileName, <span style="color: #0600FF; font-weight: bold;">out</span> _win32FindData<span style="color: #008000;">&#41;</span>, <span style="color: #0600FF; font-weight: bold;">true</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+                <span style="color: #0600FF; font-weight: bold;">if</span> <span style="color: #008000;">&#40;</span>_findHandle<span style="color: #008000;">.</span><span style="color: #0000FF;">IsInvalid</span><span style="color: #008000;">&#41;</span>
+                <span style="color: #008000;">&#123;</span>
+                    <span style="color: #6666cc; font-weight: bold;">int</span> lastError <span style="color: #008000;">=</span> Marshal<span style="color: #008000;">.</span><span style="color: #0000FF;">GetLastWin32Error</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+                    <span style="color: #0600FF; font-weight: bold;">if</span> <span style="color: #008000;">&#40;</span>lastError <span style="color: #008000;">==</span> ERROR_FILE_NOT_FOUND<span style="color: #008000;">&#41;</span>
+                        <span style="color: #0600FF; font-weight: bold;">return</span> <span style="color: #0600FF; font-weight: bold;">false</span><span style="color: #008000;">;</span>
+&nbsp;
+                    <span style="color: #0600FF; font-weight: bold;">throw</span> <span style="color: #008000;">new</span> Win32Exception<span style="color: #008000;">&#40;</span>lastError<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+                <span style="color: #008000;">&#125;</span>
+            <span style="color: #008000;">&#125;</span>
+            <span style="color: #0600FF; font-weight: bold;">else</span>
+            <span style="color: #008000;">&#123;</span>
+                <span style="color: #0600FF; font-weight: bold;">if</span> <span style="color: #008000;">&#40;</span><span style="color: #008000;">!</span>FindNextFile<span style="color: #008000;">&#40;</span>_findHandle, <span style="color: #0600FF; font-weight: bold;">out</span> _win32FindData<span style="color: #008000;">&#41;</span><span style="color: #008000;">&#41;</span>
+                <span style="color: #008000;">&#123;</span>
+                    <span style="color: #6666cc; font-weight: bold;">int</span> lastError <span style="color: #008000;">=</span> Marshal<span style="color: #008000;">.</span><span style="color: #0000FF;">GetLastWin32Error</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+                    <span style="color: #0600FF; font-weight: bold;">if</span> <span style="color: #008000;">&#40;</span>lastError <span style="color: #008000;">==</span> ERROR_NO_MORE_FILES<span style="color: #008000;">&#41;</span>
+                        <span style="color: #0600FF; font-weight: bold;">return</span> <span style="color: #0600FF; font-weight: bold;">false</span><span style="color: #008000;">;</span>
+&nbsp;
+                    <span style="color: #0600FF; font-weight: bold;">throw</span> <span style="color: #008000;">new</span> Win32Exception<span style="color: #008000;">&#40;</span>lastError<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+                <span style="color: #008000;">&#125;</span>
+            <span style="color: #008000;">&#125;</span>
+&nbsp;
+            <span style="color: #0600FF; font-weight: bold;">return</span> <span style="color: #0600FF; font-weight: bold;">true</span><span style="color: #008000;">;</span>
+        <span style="color: #008000;">&#125;</span>
+&nbsp;
+        <span style="color: #0600FF; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">void</span> Reset<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span>
+        <span style="color: #008000;">&#123;</span>
+            <span style="color: #0600FF; font-weight: bold;">if</span> <span style="color: #008000;">&#40;</span>_findHandle<span style="color: #008000;">.</span><span style="color: #0000FF;">IsInvalid</span><span style="color: #008000;">&#41;</span>
+                <span style="color: #0600FF; font-weight: bold;">return</span><span style="color: #008000;">;</span>
+&nbsp;
+            _findHandle<span style="color: #008000;">.</span><span style="color: #0000FF;">Close</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+            _findHandle<span style="color: #008000;">.</span><span style="color: #0000FF;">SetHandleAsInvalid</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+        <span style="color: #008000;">&#125;</span>
+&nbsp;
+        <span style="color: #0600FF; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">void</span> Dispose<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span>
+        <span style="color: #008000;">&#123;</span>
+            _findHandle<span style="color: #008000;">.</span><span style="color: #0000FF;">Dispose</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+        <span style="color: #008000;">&#125;</span>
+&nbsp;
+        <span style="color: #008080;">#endregion</span>
+    <span style="color: #008000;">&#125;</span>
+&nbsp;
+    <span style="color: #0600FF; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">class</span> FilesFinder <span style="color: #008000;">:</span> IEnumerable<span style="color: #008000;">&lt;</span>FoundFileData<span style="color: #008000;">&gt;</span>
+    <span style="color: #008000;">&#123;</span>
+        <span style="color: #0600FF; font-weight: bold;">readonly</span> <span style="color: #6666cc; font-weight: bold;">string</span> _fileName<span style="color: #008000;">;</span>
+        <span style="color: #0600FF; font-weight: bold;">public</span> FilesFinder<span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">string</span> fileName<span style="color: #008000;">&#41;</span>
+        <span style="color: #008000;">&#123;</span>
+            _fileName <span style="color: #008000;">=</span> fileName<span style="color: #008000;">;</span>
+        <span style="color: #008000;">&#125;</span>
+&nbsp;
+        <span style="color: #0600FF; font-weight: bold;">public</span> IEnumerator<span style="color: #008000;">&lt;</span>FoundFileData<span style="color: #008000;">&gt;</span> GetEnumerator<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span>
+        <span style="color: #008000;">&#123;</span>
+            <span style="color: #0600FF; font-weight: bold;">return</span> <span style="color: #008000;">new</span> FilesEnumerator<span style="color: #008000;">&#40;</span>_fileName<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+        <span style="color: #008000;">&#125;</span>
+&nbsp;
+        IEnumerator IEnumerable<span style="color: #008000;">.</span><span style="color: #0000FF;">GetEnumerator</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span>
+        <span style="color: #008000;">&#123;</span>
+            <span style="color: #0600FF; font-weight: bold;">return</span> GetEnumerator<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+        <span style="color: #008000;">&#125;</span>
+    <span style="color: #008000;">&#125;</span>
+&nbsp;
+    <span style="color: #0600FF; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">class</span> FoundFileData
+    <span style="color: #008000;">&#123;</span>
+        <span style="color: #0600FF; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">string</span> AlternateFileName<span style="color: #008000;">;</span>
+        <span style="color: #0600FF; font-weight: bold;">public</span> FileAttributes Attributes<span style="color: #008000;">;</span>
+        <span style="color: #0600FF; font-weight: bold;">public</span> DateTime CreationTime<span style="color: #008000;">;</span>
+        <span style="color: #0600FF; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">string</span> FileName<span style="color: #008000;">;</span>
+        <span style="color: #0600FF; font-weight: bold;">public</span> DateTime LastAccessTime<span style="color: #008000;">;</span>
+        <span style="color: #0600FF; font-weight: bold;">public</span> DateTime LastWriteTime<span style="color: #008000;">;</span>
+        <span style="color: #0600FF; font-weight: bold;">public</span> UInt64 Size<span style="color: #008000;">;</span>
+&nbsp;
+        <span style="color: #0600FF; font-weight: bold;">internal</span> FoundFileData<span style="color: #008000;">&#40;</span><span style="color: #0600FF; font-weight: bold;">ref</span> WIN32_FIND_DATA win32FindData<span style="color: #008000;">&#41;</span>
+        <span style="color: #008000;">&#123;</span>
+            Attributes <span style="color: #008000;">=</span> <span style="color: #008000;">&#40;</span>FileAttributes<span style="color: #008000;">&#41;</span>win32FindData<span style="color: #008000;">.</span><span style="color: #0000FF;">dwFileAttributes</span><span style="color: #008000;">;</span>
+            CreationTime <span style="color: #008000;">=</span> DateTime<span style="color: #008000;">.</span><span style="color: #0000FF;">FromFileTime</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">long</span><span style="color: #008000;">&#41;</span>
+                    <span style="color: #008000;">&#40;</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#40;</span>UInt64<span style="color: #008000;">&#41;</span>win32FindData<span style="color: #008000;">.</span><span style="color: #0000FF;">ftCreationTime</span><span style="color: #008000;">.</span><span style="color: #0000FF;">dwHighDateTime</span> <span style="color: #008000;">&lt;&lt;</span> <span style="color: #FF0000;">32</span><span style="color: #008000;">&#41;</span> <span style="color: #008000;">+</span>
+                     <span style="color: #008000;">&#40;</span>UInt64<span style="color: #008000;">&#41;</span>win32FindData<span style="color: #008000;">.</span><span style="color: #0000FF;">ftCreationTime</span><span style="color: #008000;">.</span><span style="color: #0000FF;">dwLowDateTime</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+&nbsp;
+            LastAccessTime <span style="color: #008000;">=</span> DateTime<span style="color: #008000;">.</span><span style="color: #0000FF;">FromFileTime</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">long</span><span style="color: #008000;">&#41;</span>
+                    <span style="color: #008000;">&#40;</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#40;</span>UInt64<span style="color: #008000;">&#41;</span>win32FindData<span style="color: #008000;">.</span><span style="color: #0000FF;">ftLastAccessTime</span><span style="color: #008000;">.</span><span style="color: #0000FF;">dwHighDateTime</span> <span style="color: #008000;">&lt;&lt;</span> <span style="color: #FF0000;">32</span><span style="color: #008000;">&#41;</span> <span style="color: #008000;">+</span>
+                     <span style="color: #008000;">&#40;</span>UInt64<span style="color: #008000;">&#41;</span>win32FindData<span style="color: #008000;">.</span><span style="color: #0000FF;">ftLastAccessTime</span><span style="color: #008000;">.</span><span style="color: #0000FF;">dwLowDateTime</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+&nbsp;
+            LastWriteTime <span style="color: #008000;">=</span> DateTime<span style="color: #008000;">.</span><span style="color: #0000FF;">FromFileTime</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">long</span><span style="color: #008000;">&#41;</span>
+                    <span style="color: #008000;">&#40;</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#40;</span>UInt64<span style="color: #008000;">&#41;</span>win32FindData<span style="color: #008000;">.</span><span style="color: #0000FF;">ftLastWriteTime</span><span style="color: #008000;">.</span><span style="color: #0000FF;">dwHighDateTime</span> <span style="color: #008000;">&lt;&lt;</span> <span style="color: #FF0000;">32</span><span style="color: #008000;">&#41;</span> <span style="color: #008000;">+</span>
+                     <span style="color: #008000;">&#40;</span>UInt64<span style="color: #008000;">&#41;</span>win32FindData<span style="color: #008000;">.</span><span style="color: #0000FF;">ftLastWriteTime</span><span style="color: #008000;">.</span><span style="color: #0000FF;">dwLowDateTime</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+&nbsp;
+            Size <span style="color: #008000;">=</span> <span style="color: #008000;">&#40;</span><span style="color: #008000;">&#40;</span>UInt64<span style="color: #008000;">&#41;</span>win32FindData<span style="color: #008000;">.</span><span style="color: #0000FF;">nFileSizeHigh</span> <span style="color: #008000;">&lt;&lt;</span> <span style="color: #FF0000;">32</span><span style="color: #008000;">&#41;</span> <span style="color: #008000;">+</span> win32FindData<span style="color: #008000;">.</span><span style="color: #0000FF;">nFileSizeLow</span><span style="color: #008000;">;</span>
+            FileName <span style="color: #008000;">=</span> win32FindData<span style="color: #008000;">.</span><span style="color: #0000FF;">cFileName</span><span style="color: #008000;">;</span>
+            AlternateFileName <span style="color: #008000;">=</span> win32FindData<span style="color: #008000;">.</span><span style="color: #0000FF;">cAlternateFileName</span><span style="color: #008000;">;</span>
+        <span style="color: #008000;">&#125;</span>
+    <span style="color: #008000;">&#125;</span>
+&nbsp;
+    <span style="color: #008080; font-style: italic;">/// &lt;summary&gt;</span>
+    <span style="color: #008080; font-style: italic;">/// Safely wraps handles that need to be closed via FindClose() WIN32 method (obtained by FindFirstFile())</span>
+    <span style="color: #008080; font-style: italic;">/// &lt;/summary&gt;</span>
+    <span style="color: #0600FF; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">class</span> SafeFindFileHandle <span style="color: #008000;">:</span> SafeHandleZeroOrMinusOneIsInvalid
+    <span style="color: #008000;">&#123;</span>
+        <span style="color: #008000;">&#91;</span>DllImport<span style="color: #008000;">&#40;</span><span style="color: #666666;">&quot;kernel32.dll&quot;</span>, SetLastError <span style="color: #008000;">=</span> <span style="color: #0600FF; font-weight: bold;">true</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">&#93;</span>
+        <span style="color: #0600FF; font-weight: bold;">private</span> <span style="color: #0600FF; font-weight: bold;">static</span> <span style="color: #0600FF; font-weight: bold;">extern</span> <span style="color: #6666cc; font-weight: bold;">bool</span> FindClose<span style="color: #008000;">&#40;</span>SafeHandle hFindFile<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+&nbsp;
+        <span style="color: #0600FF; font-weight: bold;">public</span> SafeFindFileHandle<span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">bool</span> ownsHandle<span style="color: #008000;">&#41;</span>
+            <span style="color: #008000;">:</span> <span style="color: #0600FF; font-weight: bold;">base</span><span style="color: #008000;">&#40;</span>ownsHandle<span style="color: #008000;">&#41;</span>
+        <span style="color: #008000;">&#123;</span>
+        <span style="color: #008000;">&#125;</span>
+&nbsp;
+        <span style="color: #0600FF; font-weight: bold;">protected</span> <span style="color: #0600FF; font-weight: bold;">override</span> <span style="color: #6666cc; font-weight: bold;">bool</span> ReleaseHandle<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span>
+        <span style="color: #008000;">&#123;</span>
+            <span style="color: #0600FF; font-weight: bold;">return</span> FindClose<span style="color: #008000;">&#40;</span><span style="color: #0600FF; font-weight: bold;">this</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+        <span style="color: #008000;">&#125;</span>
+    <span style="color: #008000;">&#125;</span>
+&nbsp;
+    <span style="color: #008080; font-style: italic;">// The CharSet must match the CharSet of the corresponding PInvoke signature</span>
+    <span style="color: #008000;">&#91;</span>StructLayout<span style="color: #008000;">&#40;</span>LayoutKind<span style="color: #008000;">.</span><span style="color: #0000FF;">Sequential</span>, CharSet <span style="color: #008000;">=</span> CharSet<span style="color: #008000;">.</span><span style="color: #0000FF;">Auto</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">&#93;</span>
+    <span style="color: #0600FF; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">struct</span> WIN32_FIND_DATA
+    <span style="color: #008000;">&#123;</span>
+        <span style="color: #0600FF; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">uint</span> dwFileAttributes<span style="color: #008000;">;</span>
+        <span style="color: #0600FF; font-weight: bold;">public</span> FILETIME ftCreationTime<span style="color: #008000;">;</span>
+        <span style="color: #0600FF; font-weight: bold;">public</span> FILETIME ftLastAccessTime<span style="color: #008000;">;</span>
+        <span style="color: #0600FF; font-weight: bold;">public</span> FILETIME ftLastWriteTime<span style="color: #008000;">;</span>
+        <span style="color: #0600FF; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">uint</span> nFileSizeHigh<span style="color: #008000;">;</span>
+        <span style="color: #0600FF; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">uint</span> nFileSizeLow<span style="color: #008000;">;</span>
+        <span style="color: #0600FF; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">uint</span> dwReserved0<span style="color: #008000;">;</span>
+        <span style="color: #0600FF; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">uint</span> dwReserved1<span style="color: #008000;">;</span>
+        <span style="color: #008000;">&#91;</span>MarshalAs<span style="color: #008000;">&#40;</span>UnmanagedType<span style="color: #008000;">.</span><span style="color: #0000FF;">ByValTStr</span>, SizeConst <span style="color: #008000;">=</span> <span style="color: #FF0000;">260</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">&#93;</span>
+        <span style="color: #0600FF; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">string</span> cFileName<span style="color: #008000;">;</span>
+        <span style="color: #008000;">&#91;</span>MarshalAs<span style="color: #008000;">&#40;</span>UnmanagedType<span style="color: #008000;">.</span><span style="color: #0000FF;">ByValTStr</span>, SizeConst <span style="color: #008000;">=</span> <span style="color: #FF0000;">14</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">&#93;</span>
+        <span style="color: #0600FF; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">string</span> cAlternateFileName<span style="color: #008000;">;</span>
+    <span style="color: #008000;">&#125;</span>
+<span style="color: #008000;">&#125;</span></pre></td></tr></table></div>
+
+				</div>
+		
+				<div class="postmetadata">
+					Tags: <a href="http://ripper234.com/tag/c/" rel="tag">C#</a>, <a href="http://ripper234.com/tag/directory/" rel="tag">Directory</a>, <a href="http://ripper234.com/tag/getfiles/" rel="tag">GetFiles</a>, <a href="http://ripper234.com/tag/programming/" rel="tag">Programming</a><br /><!--					Category: <a href="http://ripper234.com/p/category/uncategorized/" rel="category tag">Uncategorized</a>&nbsp;&nbsp;|&nbsp; !-->
+					<a href="http://ripper234.com/p/c-alternative-to-directorygetfiles/#comments">9 Comments</a>									 </div>
+			</div>
+	
+						
+			<div class="post" id="post-925">
+				<h2 class="posttitle"><a href="http://ripper234.com/p/never-rely-on-tail-recursion-elimination/" rel="bookmark" title="Permanent Link to Never rely on tail recursion elimination">Never rely on tail recursion elimination</a></h2>
+				<div class="postmetadata">29/1/09, 15:30 <!-- by ripper234 --></div>
+				<div class="postentry">
+					<div class="fblikebutton_button" style="margin-bottom: 10px; display: block;"><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fripper234.com%2Fp%2Fnever-rely-on-tail-recursion-elimination%2F&amp;layout=standard&amp;show-faces=true&amp;width=450&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; width:450px; height:26px"></iframe></div>
+<p>Corollary: Never write a recursively method with an unbounded stack depth.</p>
+<p>I previously posted a <a href="http://ripper234.com/p/programming-the-art-of-giving-percise-instructions/">recursive implementation of Factorial</a>, and asked the readers &#8220;not to bother saying it&#8217;s inefficient because of recursion, since it will probably be optimized away anyway&#8221;. Not true.</p>
+<p>I don&#8217;t really understand why (just posted a question to <a href="http://stackoverflow.com/questions/491376/why-doesnt-net-c-eliminate-tail-recursion">StackOverflow</a>), but C# does not generally perform tail recursion elimination (at least as my measly test show).</p>
+<p>The following method can be easily optimized, both to work faster, consume less space and not to cause a StackOverflowException &#8230; but it is not optimized by the compiler (verified by Reflector and the fact a StackOverflowException was indeed thrown).</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="csharp" style="font-family:monospace;"><span style="color: #0600FF; font-weight: bold;">private</span> <span style="color: #0600FF; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">void</span> Foo<span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">int</span> i<span style="color: #008000;">&#41;</span>
+<span style="color: #008000;">&#123;</span>
+    <span style="color: #0600FF; font-weight: bold;">if</span> <span style="color: #008000;">&#40;</span>i <span style="color: #008000;">==</span> <span style="color: #FF0000;">1000000</span><span style="color: #008000;">&#41;</span>
+        <span style="color: #0600FF; font-weight: bold;">return</span><span style="color: #008000;">;</span>
+&nbsp;
+    <span style="color: #0600FF; font-weight: bold;">if</span> <span style="color: #008000;">&#40;</span>i <span style="color: #008000;">%</span> <span style="color: #FF0000;">100</span> <span style="color: #008000;">==</span> <span style="color: #FF0000;">0</span><span style="color: #008000;">&#41;</span>
+        Console<span style="color: #008000;">.</span><span style="color: #0000FF;">WriteLine</span><span style="color: #008000;">&#40;</span>i<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+&nbsp;
+    Foo<span style="color: #008000;">&#40;</span>i<span style="color: #008000;">+</span><span style="color: #FF0000;">1</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+<span style="color: #008000;">&#125;</span></pre></td></tr></table></div>
+
+<p>So &#8230; if for some reason you prefer writing recursive methods over using loops, do it only where performance is not a consideration and you have a good understanding of the maximal stack depth.</p>
+				</div>
+		
+				<div class="postmetadata">
+					Tags: <a href="http://ripper234.com/tag/c/" rel="tag">C#</a>, <a href="http://ripper234.com/tag/optimization/" rel="tag">Optimization</a>, <a href="http://ripper234.com/tag/programming/" rel="tag">Programming</a>, <a href="http://ripper234.com/tag/recursion/" rel="tag">Recursion</a>, <a href="http://ripper234.com/tag/stackoverflow/" rel="tag">Stackoverflow</a>, <a href="http://ripper234.com/tag/tail-recursion/" rel="tag">Tail Recursion</a><br /><!--					Category: <a href="http://ripper234.com/p/category/uncategorized/" rel="category tag">Uncategorized</a>&nbsp;&nbsp;|&nbsp; !-->
+					<a href="http://ripper234.com/p/never-rely-on-tail-recursion-elimination/#comments">8 Comments</a>									 </div>
+			</div>
+	
+		
+		<div class="navigation">
+			<div class="alignleft"><a href="http://ripper234.com/tag/c/page/2/" >&laquo; Previous Entries</a></div>
+			<div class="alignright"></div>
+		</div>
+		
+	
+	</div>
+	<div id="sidebar">
+		<ul>
+			
+			<li id="text-227228801" class="widget widget_text">			<div class="textwidget"><h2 class='title'>Subscribe</h2>
+<div class='widget-content'>
+<table border="0" cellpadding="5">
+<tr>
+
+
+<td>
+<a href="http://feeds.feedburner.com/AQuantumImmortal"><img width="88px" height="26px" style="border:0" alt="" src="http://feeds.feedburner.com/~fc/AQuantumImmortal?bg=99CCFF&amp;fg=444444&amp;anim=0" /></a>
+</td>
+</tr>
+
+
+<tr>
+
+
+<td>
+<a href="http://feeds.feedburner.com/AQuantumImmortal" rel="alternate" type="application/rss+xml">
+
+<img alt="" style="vertical-align:middle;border:0" width="16px" height="16px" src="http://www.feedburner.com/fb/images/pub/feed-icon16x16.png"/>
+</a>
+<a href="http://feeds.feedburner.com/AQuantumImmortal" rel="alternate" type="application/rss+xml">
+RSS
+</a>
+</td>
+
+
+
+<td>
+<a href="http://www.feedburner.com/fb/a/emailverifySubmit?feedId=1046632&loc=en_US">
+<img height="16px" width="25px"
+style="vertical-align:middle;border:0" src="http://dl.dropbox.com/u/464119/Blog/Icons/EmailEnvelope.png"/>
+</a>
+<a href="http://www.feedburner.com/fb/a/emailverifySubmit?feedId=1046632&loc=en_US" rel="alternate" type="application/rss+xml">
+Email</a>
+</td>
+</tr>
+</table>
+</div></div>
+		</li>
+<li id="recent-comments-2" class="widget widget_recent_comments"><h2 class="widgettitle">Recent Comments</h2>
+<ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link"><a href='http://ripper234.com/p/did-someone-just-hack-my-gmail/' rel='external nofollow' class='url'>A Quantum Immortal &raquo; Did someone just hack my gmail?</a></span> on <a href="http://ripper234.com/p/how-not-to-use-google-authenticator/comment-page-1/#comment-171073">How not to use Google Authenticator</a></li><li class="recentcomments"><span class="comment-author-link"><a href='http://ripper234.com/p/how-not-to-use-google-authenticator/' rel='external nofollow' class='url'>A Quantum Immortal &raquo; How not to use Google Authenticator</a></span> on <a href="http://ripper234.com/p/did-someone-just-hack-my-gmail/comment-page-1/#comment-171072">Did someone just hack my gmail?</a></li><li class="recentcomments"><span class="comment-author-link"><a href='http://Ponetium.WordPress.com' rel='external nofollow' class='url'>Ponetium</a></span> on <a href="http://ripper234.com/p/did-someone-just-hack-my-gmail/comment-page-1/#comment-171026">Did someone just hack my gmail?</a></li><li class="recentcomments"><span class="comment-author-link">Andrey</span> on <a href="http://ripper234.com/p/the-fractional-fractal/comment-page-1/#comment-170023">The Fractional Fractal</a></li><li class="recentcomments"><span class="comment-author-link"><a href='http://ripper234.pip.verisignlabs.com/' rel='external nofollow' class='url'>ripper234</a></span> on <a href="http://ripper234.com/p/my-awakening-satori/comment-page-1/#comment-169598">My Awakening Experiences AKA Satori</a></li></ul></li>
+<li id="tag_cloud-2" class="widget widget_tag_cloud"><h2 class="widgettitle">Tags</h2>
+<div class="tagcloud"><a href='http://ripper234.com/tag/net/' class='tag-link-321 tag-link-position-1' title='15 topics' style='font-size: 13.3944954128pt;'>.net</a>
+<a href='http://ripper234.com/tag/algorithms/' class='tag-link-79 tag-link-position-2' title='6 topics' style='font-size: 8.89908256881pt;'>Algorithms</a>
+<a href='http://ripper234.com/tag/aya/' class='tag-link-602 tag-link-position-3' title='7 topics' style='font-size: 9.54128440367pt;'>Aya</a>
+<a href='http://ripper234.com/tag/biology/' class='tag-link-11 tag-link-position-4' title='8 topics' style='font-size: 10.1834862385pt;'>Biology</a>
+<a href='http://ripper234.com/tag/bitcoin/' class='tag-link-487 tag-link-position-5' title='38 topics' style='font-size: 18.4036697248pt;'>bitcoin</a>
+<a href='http://ripper234.com/tag/blogging/' class='tag-link-591 tag-link-position-6' title='19 topics' style='font-size: 14.6788990826pt;'>blogging</a>
+<a href='http://ripper234.com/tag/c/' class='tag-link-42 tag-link-position-7' title='20 topics' style='font-size: 14.9357798165pt;'>C#</a>
+<a href='http://ripper234.com/tag/career/' class='tag-link-475 tag-link-position-8' title='7 topics' style='font-size: 9.54128440367pt;'>Career</a>
+<a href='http://ripper234.com/tag/computer-science/' class='tag-link-8 tag-link-position-9' title='16 topics' style='font-size: 13.7798165138pt;'>Computer Science</a>
+<a href='http://ripper234.com/tag/cool/' class='tag-link-36 tag-link-position-10' title='6 topics' style='font-size: 8.89908256881pt;'>Cool</a>
+<a href='http://ripper234.com/tag/delver/' class='tag-link-202 tag-link-position-11' title='8 topics' style='font-size: 10.1834862385pt;'>Delver</a>
+<a href='http://ripper234.com/tag/draft/' class='tag-link-327 tag-link-position-12' title='14 topics' style='font-size: 13.1376146789pt;'>Draft</a>
+<a href='http://ripper234.com/tag/evil/' class='tag-link-596 tag-link-position-13' title='6 topics' style='font-size: 8.89908256881pt;'>Evil</a>
+<a href='http://ripper234.com/tag/facebook/' class='tag-link-114 tag-link-position-14' title='7 topics' style='font-size: 9.54128440367pt;'>Facebook</a>
+<a href='http://ripper234.com/tag/gaming/' class='tag-link-592 tag-link-position-15' title='21 topics' style='font-size: 15.1926605505pt;'>Gaming</a>
+<a href='http://ripper234.com/tag/good/' class='tag-link-143 tag-link-position-16' title='7 topics' style='font-size: 9.54128440367pt;'>Good</a>
+<a href='http://ripper234.com/tag/google/' class='tag-link-597 tag-link-position-17' title='25 topics' style='font-size: 16.0917431193pt;'>Google</a>
+<a href='http://ripper234.com/tag/humor/' class='tag-link-594 tag-link-position-18' title='46 topics' style='font-size: 19.4311926606pt;'>Humor</a>
+<a href='http://ripper234.com/tag/java/' class='tag-link-268 tag-link-position-19' title='13 topics' style='font-size: 12.752293578pt;'>Java</a>
+<a href='http://ripper234.com/tag/javascript/' class='tag-link-509 tag-link-position-20' title='8 topics' style='font-size: 10.1834862385pt;'>javascript</a>
+<a href='http://ripper234.com/tag/magic/' class='tag-link-26 tag-link-position-21' title='26 topics' style='font-size: 16.3486238532pt;'>Magic</a>
+<a href='http://ripper234.com/tag/mastercoin/' class='tag-link-535 tag-link-position-22' title='9 topics' style='font-size: 10.8256880734pt;'>MasterCoin</a>
+<a href='http://ripper234.com/tag/microsoft/' class='tag-link-131 tag-link-position-23' title='5 topics' style='font-size: 8pt;'>Microsoft</a>
+<a href='http://ripper234.com/tag/open-source/' class='tag-link-87 tag-link-position-24' title='9 topics' style='font-size: 10.8256880734pt;'>Open Source</a>
+<a href='http://ripper234.com/tag/philosophy/' class='tag-link-224 tag-link-position-25' title='6 topics' style='font-size: 8.89908256881pt;'>Philosophy</a>
+<a href='http://ripper234.com/tag/programming/' class='tag-link-21 tag-link-position-26' title='73 topics' style='font-size: 22pt;'>Programming</a>
+<a href='http://ripper234.com/tag/project-euler/' class='tag-link-397 tag-link-position-27' title='6 topics' style='font-size: 8.89908256881pt;'>Project Euler</a>
+<a href='http://ripper234.com/tag/resharper/' class='tag-link-280 tag-link-position-28' title='7 topics' style='font-size: 9.54128440367pt;'>Resharper</a>
+<a href='http://ripper234.com/tag/rss/' class='tag-link-39 tag-link-position-29' title='8 topics' style='font-size: 10.1834862385pt;'>RSS</a>
+<a href='http://ripper234.com/tag/science/' class='tag-link-593 tag-link-position-30' title='5 topics' style='font-size: 8pt;'>Science</a>
+<a href='http://ripper234.com/tag/security/' class='tag-link-182 tag-link-position-31' title='8 topics' style='font-size: 10.1834862385pt;'>Security</a>
+<a href='http://ripper234.com/tag/shards-of-alara/' class='tag-link-330 tag-link-position-32' title='6 topics' style='font-size: 8.89908256881pt;'>Shards of Alara</a>
+<a href='http://ripper234.com/tag/spam/' class='tag-link-12 tag-link-position-33' title='6 topics' style='font-size: 8.89908256881pt;'>Spam</a>
+<a href='http://ripper234.com/tag/stackoverflow/' class='tag-link-296 tag-link-position-34' title='11 topics' style='font-size: 11.8532110092pt;'>Stackoverflow</a>
+<a href='http://ripper234.com/tag/starcraft/' class='tag-link-6 tag-link-position-35' title='6 topics' style='font-size: 8.89908256881pt;'>Starcraft</a>
+<a href='http://ripper234.com/tag/startups/' class='tag-link-471 tag-link-position-36' title='9 topics' style='font-size: 10.8256880734pt;'>Startups</a>
+<a href='http://ripper234.com/tag/stupid/' class='tag-link-66 tag-link-position-37' title='5 topics' style='font-size: 8pt;'>Stupid</a>
+<a href='http://ripper234.com/tag/teamcity/' class='tag-link-254 tag-link-position-38' title='8 topics' style='font-size: 10.1834862385pt;'>TeamCity</a>
+<a href='http://ripper234.com/tag/thesis/' class='tag-link-117 tag-link-position-39' title='6 topics' style='font-size: 8.89908256881pt;'>Thesis</a>
+<a href='http://ripper234.com/tag/threading/' class='tag-link-294 tag-link-position-40' title='10 topics' style='font-size: 11.3394495413pt;'>Threading</a>
+<a href='http://ripper234.com/tag/unit-testing/' class='tag-link-244 tag-link-position-41' title='8 topics' style='font-size: 10.1834862385pt;'>Unit Testing</a>
+<a href='http://ripper234.com/tag/walkthrough/' class='tag-link-328 tag-link-position-42' title='8 topics' style='font-size: 10.1834862385pt;'>Walkthrough</a>
+<a href='http://ripper234.com/tag/wikipedia/' class='tag-link-14 tag-link-position-43' title='9 topics' style='font-size: 10.8256880734pt;'>Wikipedia</a>
+<a href='http://ripper234.com/tag/wordpress/' class='tag-link-3 tag-link-position-44' title='7 topics' style='font-size: 9.54128440367pt;'>wordpress</a>
+<a href='http://ripper234.com/tag/xkcd/' class='tag-link-76 tag-link-position-45' title='5 topics' style='font-size: 8pt;'>xkcd</a></div>
+</li>
+<li id="archives-2" class="widget widget_archive"><h2 class="widgettitle">Archives</h2>
+		<ul>
+			<li><a href='http://ripper234.com/p/2015/11/'>November 2015</a>&nbsp;(1)</li>
+	<li><a href='http://ripper234.com/p/2015/08/'>August 2015</a>&nbsp;(3)</li>
+	<li><a href='http://ripper234.com/p/2015/07/'>July 2015</a>&nbsp;(2)</li>
+	<li><a href='http://ripper234.com/p/2015/06/'>June 2015</a>&nbsp;(1)</li>
+	<li><a href='http://ripper234.com/p/2015/04/'>April 2015</a>&nbsp;(1)</li>
+	<li><a href='http://ripper234.com/p/2015/03/'>March 2015</a>&nbsp;(1)</li>
+	<li><a href='http://ripper234.com/p/2015/01/'>January 2015</a>&nbsp;(2)</li>
+	<li><a href='http://ripper234.com/p/2014/12/'>December 2014</a>&nbsp;(2)</li>
+	<li><a href='http://ripper234.com/p/2014/11/'>November 2014</a>&nbsp;(7)</li>
+	<li><a href='http://ripper234.com/p/2014/10/'>October 2014</a>&nbsp;(1)</li>
+	<li><a href='http://ripper234.com/p/2014/09/'>September 2014</a>&nbsp;(6)</li>
+	<li><a href='http://ripper234.com/p/2014/08/'>August 2014</a>&nbsp;(1)</li>
+	<li><a href='http://ripper234.com/p/2014/06/'>June 2014</a>&nbsp;(5)</li>
+	<li><a href='http://ripper234.com/p/2014/05/'>May 2014</a>&nbsp;(1)</li>
+	<li><a href='http://ripper234.com/p/2014/04/'>April 2014</a>&nbsp;(7)</li>
+	<li><a href='http://ripper234.com/p/2014/02/'>February 2014</a>&nbsp;(2)</li>
+	<li><a href='http://ripper234.com/p/2014/01/'>January 2014</a>&nbsp;(2)</li>
+	<li><a href='http://ripper234.com/p/2013/12/'>December 2013</a>&nbsp;(2)</li>
+	<li><a href='http://ripper234.com/p/2013/11/'>November 2013</a>&nbsp;(13)</li>
+	<li><a href='http://ripper234.com/p/2013/10/'>October 2013</a>&nbsp;(5)</li>
+	<li><a href='http://ripper234.com/p/2013/09/'>September 2013</a>&nbsp;(2)</li>
+	<li><a href='http://ripper234.com/p/2013/08/'>August 2013</a>&nbsp;(12)</li>
+	<li><a href='http://ripper234.com/p/2013/07/'>July 2013</a>&nbsp;(1)</li>
+	<li><a href='http://ripper234.com/p/2013/03/'>March 2013</a>&nbsp;(1)</li>
+	<li><a href='http://ripper234.com/p/2013/01/'>January 2013</a>&nbsp;(3)</li>
+	<li><a href='http://ripper234.com/p/2012/12/'>December 2012</a>&nbsp;(2)</li>
+	<li><a href='http://ripper234.com/p/2012/11/'>November 2012</a>&nbsp;(2)</li>
+	<li><a href='http://ripper234.com/p/2012/10/'>October 2012</a>&nbsp;(1)</li>
+	<li><a href='http://ripper234.com/p/2012/09/'>September 2012</a>&nbsp;(1)</li>
+	<li><a href='http://ripper234.com/p/2012/08/'>August 2012</a>&nbsp;(3)</li>
+	<li><a href='http://ripper234.com/p/2012/07/'>July 2012</a>&nbsp;(4)</li>
+	<li><a href='http://ripper234.com/p/2012/06/'>June 2012</a>&nbsp;(2)</li>
+	<li><a href='http://ripper234.com/p/2012/05/'>May 2012</a>&nbsp;(3)</li>
+	<li><a href='http://ripper234.com/p/2012/04/'>April 2012</a>&nbsp;(4)</li>
+	<li><a href='http://ripper234.com/p/2012/03/'>March 2012</a>&nbsp;(2)</li>
+	<li><a href='http://ripper234.com/p/2012/02/'>February 2012</a>&nbsp;(1)</li>
+	<li><a href='http://ripper234.com/p/2012/01/'>January 2012</a>&nbsp;(3)</li>
+	<li><a href='http://ripper234.com/p/2011/12/'>December 2011</a>&nbsp;(2)</li>
+	<li><a href='http://ripper234.com/p/2011/11/'>November 2011</a>&nbsp;(1)</li>
+	<li><a href='http://ripper234.com/p/2011/10/'>October 2011</a>&nbsp;(4)</li>
+	<li><a href='http://ripper234.com/p/2011/09/'>September 2011</a>&nbsp;(4)</li>
+	<li><a href='http://ripper234.com/p/2011/08/'>August 2011</a>&nbsp;(1)</li>
+	<li><a href='http://ripper234.com/p/2011/07/'>July 2011</a>&nbsp;(1)</li>
+	<li><a href='http://ripper234.com/p/2011/06/'>June 2011</a>&nbsp;(5)</li>
+	<li><a href='http://ripper234.com/p/2011/05/'>May 2011</a>&nbsp;(4)</li>
+	<li><a href='http://ripper234.com/p/2011/04/'>April 2011</a>&nbsp;(5)</li>
+	<li><a href='http://ripper234.com/p/2011/03/'>March 2011</a>&nbsp;(10)</li>
+	<li><a href='http://ripper234.com/p/2011/02/'>February 2011</a>&nbsp;(3)</li>
+	<li><a href='http://ripper234.com/p/2010/12/'>December 2010</a>&nbsp;(3)</li>
+	<li><a href='http://ripper234.com/p/2010/11/'>November 2010</a>&nbsp;(1)</li>
+	<li><a href='http://ripper234.com/p/2010/07/'>July 2010</a>&nbsp;(2)</li>
+	<li><a href='http://ripper234.com/p/2010/06/'>June 2010</a>&nbsp;(3)</li>
+	<li><a href='http://ripper234.com/p/2010/05/'>May 2010</a>&nbsp;(3)</li>
+	<li><a href='http://ripper234.com/p/2010/04/'>April 2010</a>&nbsp;(3)</li>
+	<li><a href='http://ripper234.com/p/2010/02/'>February 2010</a>&nbsp;(1)</li>
+	<li><a href='http://ripper234.com/p/2010/01/'>January 2010</a>&nbsp;(3)</li>
+	<li><a href='http://ripper234.com/p/2009/11/'>November 2009</a>&nbsp;(1)</li>
+	<li><a href='http://ripper234.com/p/2009/10/'>October 2009</a>&nbsp;(6)</li>
+	<li><a href='http://ripper234.com/p/2009/09/'>September 2009</a>&nbsp;(2)</li>
+	<li><a href='http://ripper234.com/p/2009/08/'>August 2009</a>&nbsp;(5)</li>
+	<li><a href='http://ripper234.com/p/2009/07/'>July 2009</a>&nbsp;(5)</li>
+	<li><a href='http://ripper234.com/p/2009/06/'>June 2009</a>&nbsp;(2)</li>
+	<li><a href='http://ripper234.com/p/2009/05/'>May 2009</a>&nbsp;(3)</li>
+	<li><a href='http://ripper234.com/p/2009/04/'>April 2009</a>&nbsp;(3)</li>
+	<li><a href='http://ripper234.com/p/2009/03/'>March 2009</a>&nbsp;(10)</li>
+	<li><a href='http://ripper234.com/p/2009/02/'>February 2009</a>&nbsp;(6)</li>
+	<li><a href='http://ripper234.com/p/2009/01/'>January 2009</a>&nbsp;(6)</li>
+	<li><a href='http://ripper234.com/p/2008/12/'>December 2008</a>&nbsp;(11)</li>
+	<li><a href='http://ripper234.com/p/2008/11/'>November 2008</a>&nbsp;(12)</li>
+	<li><a href='http://ripper234.com/p/2008/10/'>October 2008</a>&nbsp;(6)</li>
+	<li><a href='http://ripper234.com/p/2008/09/'>September 2008</a>&nbsp;(7)</li>
+	<li><a href='http://ripper234.com/p/2008/08/'>August 2008</a>&nbsp;(8)</li>
+	<li><a href='http://ripper234.com/p/2008/07/'>July 2008</a>&nbsp;(5)</li>
+	<li><a href='http://ripper234.com/p/2008/06/'>June 2008</a>&nbsp;(4)</li>
+	<li><a href='http://ripper234.com/p/2008/05/'>May 2008</a>&nbsp;(7)</li>
+	<li><a href='http://ripper234.com/p/2008/04/'>April 2008</a>&nbsp;(6)</li>
+	<li><a href='http://ripper234.com/p/2008/03/'>March 2008</a>&nbsp;(19)</li>
+	<li><a href='http://ripper234.com/p/2008/02/'>February 2008</a>&nbsp;(29)</li>
+	<li><a href='http://ripper234.com/p/2008/01/'>January 2008</a>&nbsp;(6)</li>
+	<li><a href='http://ripper234.com/p/2007/12/'>December 2007</a>&nbsp;(16)</li>
+	<li><a href='http://ripper234.com/p/2007/11/'>November 2007</a>&nbsp;(17)</li>
+	<li><a href='http://ripper234.com/p/2007/10/'>October 2007</a>&nbsp;(13)</li>
+	<li><a href='http://ripper234.com/p/2007/09/'>September 2007</a>&nbsp;(14)</li>
+	<li><a href='http://ripper234.com/p/2007/08/'>August 2007</a>&nbsp;(22)</li>
+	<li><a href='http://ripper234.com/p/2007/07/'>July 2007</a>&nbsp;(12)</li>
+		</ul>
+		</li>
+<li id="linkcat-2" class="widget widget_links"><h2 class="widgettitle">Blogroll</h2>
+
+	<ul class='xoxo blogroll'>
+<li><a href="http://blogs.jetbrains.com/dotnet/">JebBrains .NET</a></li>
+<li><a href="http://slashdot.org/">SlashDot</a></li>
+
+	</ul>
+</li>
+
+<li id="linkcat-103" class="widget widget_links"><h2 class="widgettitle">Comics</h2>
+
+	<ul class='xoxo blogroll'>
+<li><a href="http://www.phdcomics.com/">Phd Comics</a></li>
+<li><a href="http://www.xkcd.com/">xkcd</a></li>
+
+	</ul>
+</li>
+
+<li id="linkcat-422" class="widget widget_links"><h2 class="widgettitle">Develpment</h2>
+
+	<ul class='xoxo blogroll'>
+<li><a href="http://blogs.msdn.com/bclteam/">BCL</a></li>
+<li><a href="http://blogs.msdn.com/clrteam/">CLR</a></li>
+<li><a href="http://www.facebook.com/notes.php?id=9445547199">Facebook Dev</a></li>
+<li><a href="http://highscalability.com/">High Scalability</a></li>
+<li><a href="http://www.bluebytesoftware.com/blog/">Joe Duffy</a></li>
+<li><a href="http://www.joelonsoftware.com/">Joel Spolksy</a></li>
+<li><a href="http://msmvps.com/blogs/jon_skeet/">Jon Skeet</a></li>
+<li><a href="http://top-performance.blogspot.com/" rel="contact met">Moshe Kaplan</a></li>
+<li><a href="http://blogs.msdn.com/pfxteam/">Parallel Extension</a></li>
+<li><a href="http://resharper.blogspot.com/">Resharper</a></li>
+<li><a href="http://www.hanselman.com/blog/">Scott Hanselman</a></li>
+<li><a href="http://blog.stackoverflow.com/">StackOverflow</a></li>
+
+	</ul>
+</li>
+
+<li id="linkcat-423" class="widget widget_links"><h2 class="widgettitle">Friends</h2>
+
+	<ul class='xoxo blogroll'>
+<li><a href="http://blogs.microsoft.co.il/blogs/alon/" rel="met">Alon Fliess</a></li>
+<li><a href="http://eli.thegreenplace.net/" rel="friend met">Eli Bendersky</a></li>
+<li><a href="http://pilaheleg.blogli.co.il/" rel="friend met">Hila Peleg</a></li>
+<li><a href="http://idanz.blogli.co.il/" rel="friend met">Idan Zeirman</a></li>
+<li><a href="http://ilyadoc.blogspot.com/" rel="friend met">Ilya Konstantinov</a></li>
+<li><a href="http://ilyadoc.blogspot.com/" rel="met">Ilya Konstantinov</a></li>
+<li><a href="http://www.algorithm.co.il/" rel="friend met">Imri Goldberg</a></li>
+<li><a href="http://www.kenegozi.com/blog/" rel="friend met">Ken Egozi</a></li>
+<li><a href="http://blog.karmona.com/" rel="met co-worker">Moti Karmona</a></li>
+<li><a href="http://alteregozi.com/feed/" rel="friend met">Ofer Egozi</a></li>
+<li><a href="http://omriqa.blogspot.com/" rel="met co-worker">Omri Lapidot</a></li>
+<li><a href="http://www.lnbogen.com/" rel="friend met">Oren Ellenbogen</a></li>
+<li><a href="http://blog.shlomoid.com/" rel="friend met">Shlomo Priymak</a></li>
+<li><a href="http://www.tomergabel.com/" rel="met">Tomer Gabel</a></li>
+<li><a href="http://ponetium.wordpress.com/" rel="friend">הלא אנושית מהר כרוב</a></li>
+
+	</ul>
+</li>
+
+		</ul>
+	</div>
+
+</div> <!-- wrapper -->
+<div id="footer">
+	<a href="http://ripper234.com/feed/">Entries (RSS)</a> and <a href="http://ripper234.com/comments/feed/">Comments (RSS)</a>. Valid <a href="http://validator.w3.org/check/referer" title="This page validates as XHTML 1.0 Transitional"><abbr title="eXtensible HyperText Markup Language">XHTML</abbr></a> and <a href="http://jigsaw.w3.org/css-validator/check/referer"><abbr title="Cascading Style Sheets">CSS</abbr></a>.<br />
+	Powered by <a href="http://wordpress.org/" title="Powered by WordPress.">WordPress</a> and <a href="http://srinig.com/wordpress/themes/fluid-blue/">Fluid Blue theme</a>.<br />
+	<!-- 41 queries. 0.745 seconds. -->
+	<script type='text/javascript' src='http://platform.twitter.com/widgets.js'></script>	<script type="text/javascript">
+	  window.___gcfg = {lang: 'en'};
+	
+	  (function() {
+	    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+	    po.src = 'https://apis.google.com/js/plusone.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+	  })();
+	</script><script type='text/javascript'>
+/* <![CDATA[ */
+var ratingsL10n = {"plugin_url":"http:\/\/ripper234.com\/wp-content\/plugins\/wp-postratings","ajax_url":"http:\/\/ripper234.com\/wp-admin\/admin-ajax.php","text_wait":"Please rate only 1 post at a time.","image":"squares","image_ext":"gif","max":"5","show_loading":"1","show_fading":"1","custom":"0"};
+var ratings_mouseover_image=new Image();ratings_mouseover_image.src=ratingsL10n.plugin_url+"/images/"+ratingsL10n.image+"/rating_over."+ratingsL10n.image_ext;;
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://ripper234.wpengine.netdna-cdn.com/wp-content/plugins/wp-postratings/postratings-js.js?ver=1.63'></script>
+<script type='text/javascript' src='http://ripper234.wpengine.netdna-cdn.com/wp-includes/js/wp-embed.min.js?ver=4.5.3'></script>
+
+<div id="fb-root"></div>
+<script type="text/javascript">
+  window.fbAsyncInit = function() {
+    FB.init({"appId":"125818707482670","channelUrl":"http:\/\/ripper234.com\/?sfc-channel-file=1","status":true,"cookie":true,"xfbml":true,"oauth":true});
+    
+  };
+  (function(d){
+       var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+       js = d.createElement('script'); js.id = id; js.async = true;
+       js.src = "//connect.facebook.net/en_US/all.js";
+       d.getElementsByTagName('head')[0].appendChild(js);
+   }(document));     
+</script>
+</div>
+</div> <!-- page -->
+</body>
+</html>
