@@ -163,7 +163,7 @@ body {
 }
 
 .row {
-    height: 100%;
+    height: 1000px;
     padding-top: 100px;
 }
 .row:nth-child(even) {
