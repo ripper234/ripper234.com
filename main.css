@@ -172,3 +172,27 @@ body {
     width:100%;
     border-radius:15px;
 }
+
+/* Tag Cloud */
+.cloud li:nth-of-type(3n + 1) {
+    font-size: 2.5em;
+}
+.cloud li:nth-of-type(4n+3) {
+    font-size: 3em;
+}
+.cloud li:nth-of-type(5n - 3) {
+    font-size: 2em;
+}
+.cloud li {
+    display:inline;
+    margin-right:20px;
+    font-size: 1.5em;
+}
+.cloud {
+    width: 450px;
+    margin:auto;
+    position: absolute;
+  top: 50%;
+    left:40%;
+  transform: translateY(-50%);
+}
