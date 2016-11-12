@@ -131,6 +131,7 @@ body {
   .masthead {
     position: fixed;
     top: 0;
+      z-index: 1;
   }
   .mastfoot {
     position: fixed;
@@ -166,7 +167,6 @@ body {
 
 #top {
     background:#1E323F;
-    z-index: 1;
     position: absolute;
     padding: 15px 25px;
     width:100%;
