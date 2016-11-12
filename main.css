@@ -163,6 +163,9 @@ body {
 }
 
 .row {
-    height: 1000px;
+    height: 100%;
     padding-top: 100px;
+}
+.row:nth-child(even) {
+    background: #404040;
 }
