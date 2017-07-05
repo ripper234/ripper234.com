@@ -12,22 +12,22 @@ $(window).resize(resizeRows);
 // https://jsfiddle.net/cse_tushar/Dxtyu/141/
 $(document).ready(function () {
     $(document).on("scroll", onScroll);
-    
+
     //smoothscroll
     $('a[href^="#"]').on('click', function (e) {
         e.preventDefault();
         $(document).off("scroll");
-        
+
         $('a').each(function () {
             $(this).removeClass('active');
         })
         $(this).addClass('active');
-      
+
         var target = this.hash,
             menu = target;
         $target = $(target);
         $('html, body').stop().animate({
-            'scrollTop': $target.offset().top+2
+            'scrollTop': $target.offset().top + 2
         }, 500, 'swing', function () {
             window.location.hash = target;
             $(document).on("scroll", onScroll);
@@ -35,7 +35,7 @@ $(document).ready(function () {
     });
 });
 
-function onScroll(event){
+function onScroll(event) {
     var scrollPos = $(document).scrollTop();
     $('.nav li').each(function () {
         var currItem = $(this);
@@ -45,7 +45,7 @@ function onScroll(event){
             $('.nav ul li a').removeClass("active");
             currItem.addClass("active");
         }
-        else{
+        else {
             currItem.removeClass("active");
         }
     });
