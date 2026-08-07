@@ -1,15 +1,15 @@
 # ripper234.com migration tasks
 
-Last updated: 2026-08-06
+Last updated: 2026-08-07
 
-## Execution status (2026-08-06)
+## Execution status (2026-08-07)
 
 - [x] Scanned the public Wix home page and public Work With Me page.
 - [x] Prepared and locally validated a static GitHub Pages copy.
 - [x] Added a custom GitHub Actions Pages deployment workflow.
 - [x] Prepared this migration, rollback, and future content-refresh checklist.
-- [ ] Push to GitHub: the local `main` branch is ready. Direct push from this execution container is blocked by outbound network policy (both DNS and direct internet egress). A browser-authenticated Windows push package is prepared; run `PUSH_TO_GITHUB.cmd` outside the repository to authenticate through GitHub, push `main`, configure GitHub Pages for Actions, and trigger the deployment workflow. No personal access token needs to be pasted into chat.
-- [ ] Enable Pages in repository settings: requires repository admin access.
+- [x] Published the prepared 13-file website snapshot to remote `main` in commit [`06511ff`](https://github.com/ripper234/ripper234.com/commit/06511ffe895e2fb4dd43d0b2dec3879513a73701), on top of the user-created root commit, without force-pushing. The remote tree exactly matches the locally validated tree at prepared commit `97eb6b5`.
+- [ ] Enable Pages via GitHub Actions: [workflow run #1](https://github.com/ripper234/ripper234.com/actions/runs/31182510947) triggered successfully but failed at **Configure Pages** because the new repository does not yet have a Pages site. Select **GitHub Actions** once in **Repository → Settings → Pages**, then rerun the workflow.
 - [ ] Change DNS: intentionally deferred until the separate preview is reviewed and requires access to the authoritative DNS provider.
 - [ ] Replace Wix-hosted images with local files before Wix is canceled.
 
@@ -36,12 +36,12 @@ Create a static, maintainable copy of the current Wix website in `ripper234/ripp
 
 Target preview URL: `https://ripper234.github.io/ripper234.com/`
 
-- [ ] Push the prepared `main` branch to `https://github.com/ripper234/ripper234.com`.
-  - Preferred: extract the Windows push package and double-click `PUSH_TO_GITHUB.cmd`.
-  - The runner installs Git and the official GitHub CLI through `winget` only when missing, opens GitHub's browser authentication flow, verifies that the authenticated account can push, and runs `git push --set-upstream origin main`.
-  - Fallback: open the included `ripper234.com` folder in GitHub Desktop and click **Push origin**.
+- [x] Publish the prepared website snapshot to `https://github.com/ripper234/ripper234.com`.
+  - Safely reconciled the user-created root commit `653dc37` with the prepared site by creating child commit [`06511ff`](https://github.com/ripper234/ripper234.com/commit/06511ffe895e2fb4dd43d0b2dec3879513a73701); no force-push was used.
+  - Remote tree `b75e43e` exactly matches the local tree at prepared commit `97eb6b5`. The original commit SHA could not be retained because the manually created root is a different parent, but the complete website content and file modes were preserved.
 - [ ] In GitHub: **Repository → Settings → Pages → Build and deployment → Source: GitHub Actions**.
 - [ ] Open the latest **Deploy static site to GitHub Pages** workflow run and confirm it succeeds.
+  - Initial run: [#1](https://github.com/ripper234/ripper234.com/actions/runs/31182510947) failed at **Configure Pages** with `Get Pages site failed: Not Found`; checkout and workflow triggering both succeeded.
 - [ ] Test the preview on desktop and mobile:
   - [ ] Home sections and anchor navigation.
   - [ ] `/work-with-me/`.
