@@ -1,17 +1,21 @@
 # ripper234.com migration tasks
 
-Last updated: 2026-08-07
+Last updated: 2026-08-09
 
-## Execution status (2026-08-07)
+## Execution status (2026-08-09)
 
 - [x] Scanned the public Wix home page and public Work With Me page.
 - [x] Prepared and locally validated a static GitHub Pages copy.
 - [x] Added a custom GitHub Actions Pages deployment workflow.
 - [x] Prepared this migration, rollback, and future content-refresh checklist.
 - [x] Published the prepared 13-file website snapshot to remote `main` in commit [`06511ff`](https://github.com/ripper234/ripper234.com/commit/06511ffe895e2fb4dd43d0b2dec3879513a73701), on top of the user-created root commit, without force-pushing. The remote tree exactly matches the locally validated tree at prepared commit `97eb6b5`.
-- [ ] Enable Pages via GitHub Actions: [workflow run #1](https://github.com/ripper234/ripper234.com/actions/runs/31182510947) triggered successfully but failed at **Configure Pages** because the new repository does not yet have a Pages site. Select **GitHub Actions** once in **Repository → Settings → Pages**, then rerun the workflow.
+- [x] Enabled GitHub Pages with GitHub Actions; deployment [run #4](https://github.com/ripper234/ripper234.com/actions/runs/31298620261) succeeded.
+- [x] Corrected the first snapshot's visual divergence and restored the Wix desktop structure, typography, geometry, gradients, assets, and links in [`d834b40`](https://github.com/ripper234/ripper234.com/commit/d834b40f6c9a5a1605435f39ad9a435287e061a5).
+- [x] Added local SVG project, portfolio, nonprofit, contact, and social icons and removed the duplicate Pages workflow.
+- [x] Verified the deployed home page, `/work-with-me/`, stylesheet, and local assets; the smoke test passes for all three HTML pages.
+- [ ] Complete a manual mobile and keyboard review.
 - [ ] Change DNS: intentionally deferred until the separate preview is reviewed and requires access to the authoritative DNS provider.
-- [ ] Replace Wix-hosted images with local files before Wix is canceled.
+- [ ] Replace the remaining Wix-hosted raster images and font files with local copies before Wix is canceled.
 
 ## Goal
 
@@ -30,7 +34,7 @@ Create a static, maintainable copy of the current Wix website in `ripper234/ripp
   - [x] Metadata, canonical URLs, `robots.txt`, `sitemap.xml`, and a custom `404.html`.
 - [x] Add a GitHub Actions Pages deployment workflow.
 - [x] Add local smoke tests and preview instructions.
-- [ ] **Before canceling Wix:** download and self-host the five referenced Wix media assets. The first copy deliberately uses the existing `static.wixstatic.com` URLs so the visual content is preserved, but this is not a fully independent archive.
+- [ ] **Before canceling Wix:** download and self-host the remaining Wix raster images and fonts. The fidelity copy deliberately uses the current Wix CDN URLs for those files, so it is not yet a fully independent archive.
 
 ## 1. Publish the separate GitHub Pages preview
 
@@ -39,17 +43,18 @@ Target preview URL: `https://ripper234.github.io/ripper234.com/`
 - [x] Publish the prepared website snapshot to `https://github.com/ripper234/ripper234.com`.
   - Safely reconciled the user-created root commit `653dc37` with the prepared site by creating child commit [`06511ff`](https://github.com/ripper234/ripper234.com/commit/06511ffe895e2fb4dd43d0b2dec3879513a73701); no force-push was used.
   - Remote tree `b75e43e` exactly matches the local tree at prepared commit `97eb6b5`. The original commit SHA could not be retained because the manually created root is a different parent, but the complete website content and file modes were preserved.
-- [ ] In GitHub: **Repository → Settings → Pages → Build and deployment → Source: GitHub Actions**.
-- [ ] Open the latest **Deploy static site to GitHub Pages** workflow run and confirm it succeeds.
-  - Initial run: [#1](https://github.com/ripper234/ripper234.com/actions/runs/31182510947) failed at **Configure Pages** with `Get Pages site failed: Not Found`; checkout and workflow triggering both succeeded.
+- [x] In GitHub: **Repository → Settings → Pages → Build and deployment → Source: GitHub Actions**.
+- [x] Open the latest **Deploy static site to GitHub Pages** workflow run and confirm it succeeds.
+  - Successful deployment: [run #4](https://github.com/ripper234/ripper234.com/actions/runs/31298620261).
 - [ ] Test the preview on desktop and mobile:
-  - [ ] Home sections and anchor navigation.
-  - [ ] `/work-with-me/`.
-  - [ ] External links.
+  - [x] Desktop home sections and anchor navigation.
+  - [x] Desktop `/work-with-me/`.
+  - [x] External link targets preserved and smoke-tested.
+  - [ ] Mobile layout.
   - [ ] Keyboard navigation.
-  - [ ] Images load from Wix CDN.
-  - [ ] No console errors.
-- [ ] Keep this preview URL live until the custom-domain cutover is verified.
+  - [x] Local SVG assets and Wix CDN images load.
+  - [x] No desktop console errors.
+- [x] Keep this preview URL live until the custom-domain cutover is verified.
 
 ## 2. Prepare a safe domain cutover
 
