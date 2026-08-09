@@ -498,7 +498,7 @@ button { font: inherit; }
 
 /* Contact */
 .contact { position: relative; height: 302px; overflow: hidden; background: var(--lavender); }
-.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 162px; padding-top: 79px; }
+.contact-grid { display: grid; grid-template-columns: 490px 328px; gap: 162px; padding-top: 81.8125px; }
 .contact h2 {
   margin: 0;
   color: var(--purple);
@@ -509,7 +509,7 @@ button { font: inherit; }
   line-height: 1;
   white-space: nowrap;
 }
-.contact-buttons { display: flex; gap: 20px; margin-top: 34px; }
+.contact-buttons { display: flex; gap: 21px; margin: 40px 0 0 9px; }
 .contact-buttons a {
   width: 160px;
   height: 42px;
@@ -533,8 +533,8 @@ button { font: inherit; }
 .contact-buttons a:focus-visible { color: #fff; background: var(--purple); }
 .contact-buttons a:hover img,
 .contact-buttons a:focus-visible img { filter: brightness(0) invert(1); }
-.follow-column { padding-left: 3px; }
-.social-links { display: flex; gap: 31px; margin: 34px 0 0 59px; }
+.follow-column { padding-left: 0; }
+.social-links { display: flex; gap: 32px; margin: 40px 0 0 69px; }
 .social-links a {
   width: 42px;
   height: 42px;
@@ -758,6 +758,7 @@ button { font: inherit; }
   .contact-grid { grid-template-columns: 1fr; gap: 55px; padding-top: 0; }
   .contact-dots { display: none; }
   .follow-column { padding-left: 0; }
+  .contact-buttons { margin-left: 0; }
   .social-links { margin-left: 0; }
   .live-calls { height: auto; min-height: 520px; padding: 70px 0; }
   .live-panel { top: auto; height: auto; min-height: 342px; padding: 48px 24px; }
