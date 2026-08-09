@@ -10,7 +10,7 @@ Last updated: 2026-08-09
 - [x] Prepared this migration, rollback, and future content-refresh checklist.
 - [x] Published the prepared 13-file website snapshot to remote `main` in commit [`06511ff`](https://github.com/ripper234/ripper234.com/commit/06511ffe895e2fb4dd43d0b2dec3879513a73701), on top of the user-created root commit, without force-pushing. The remote tree exactly matches the locally validated tree at prepared commit `97eb6b5`.
 - [x] Enabled GitHub Pages with GitHub Actions; deployment [run #4](https://github.com/ripper234/ripper234.com/actions/runs/31298620261) succeeded.
-- [x] Corrected the first snapshot's visual divergence and restored the Wix desktop structure, typography, geometry, gradients, assets, and links in [`d834b40`](https://github.com/ripper234/ripper234.com/commit/d834b40f6c9a5a1605435f39ad9a435287e061a5).
+- [x] Corrected the first snapshot's visual divergence, beginning in [`d834b40`](https://github.com/ripper234/ripper234.com/commit/d834b40f6c9a5a1605435f39ad9a435287e061a5) and completing the measured desktop fidelity pass in [`84e164a`](https://github.com/ripper234/ripper234.com/commit/84e164ad37a986b048e0cb21aceaaf00ab321e66).
 - [x] Added local SVG project, portfolio, nonprofit, contact, and social icons and removed the duplicate Pages workflow.
 - [x] Verified the deployed home page, `/work-with-me/`, stylesheet, and local assets; the smoke test passes for all three HTML pages.
 - [ ] Complete a manual mobile and keyboard review.
