@@ -13,10 +13,31 @@
   font-display: swap;
 }
 @font-face {
+  font-family: "Ron Poppins Regular";
+  src: url("https://static.wixstatic.com/ufonts/044ec0_8a940bae2f2740e789023089a84fc84d/woff2/file.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Ron Poppins Semibold";
+  src: url("https://static.wixstatic.com/ufonts/044ec0_5e1923e7dbf9494a8145b99e8128bafd/woff2/file.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
   font-family: "Ron Montserrat";
   src: url("https://static.wixstatic.com/ufonts/0018cc_5bb0f74fed5a4b009451f4cc6c2db54d/woff2/file.woff2") format("woff2");
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Ron Montserrat Bold";
+  src: url("https://static.wixstatic.com/ufonts/0018cc_cc1a6693216442f69643d093bbcc52c3/woff2/file.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
   font-display: swap;
 }
 @font-face {
@@ -208,7 +229,7 @@ button { font: inherit; }
 .whatsapp-follow:focus-visible { background: #18b956; }
 
 /* Project cards */
-.projects { height: 394px; padding-top: 82px; background: rgba(246, 249, 245, .8); }
+.projects { height: 394px; padding-top: 75px; background: rgba(246, 249, 245, .8); }
 .project-grid {
   display: grid;
   grid-template-columns: 446px 310px 189px;
@@ -226,6 +247,8 @@ button { font: inherit; }
 .whatever-card { background: rgba(0, 108, 255, .69); }
 .more-card { background: rgba(233, 227, 252, .9); }
 .project-icon { position: absolute; z-index: 2; top: 42px; left: 44px; width: auto; height: 50px; object-fit: contain; }
+.fredo-card .project-icon { left: 47px; width: 38px; height: 50px; object-fit: fill; }
+.whatever-card .project-icon { filter: brightness(0); }
 .project-title,
 .project-copy { position: absolute; z-index: 2; left: 44px; right: 24px; display: block; }
 .project-title {
@@ -233,13 +256,13 @@ button { font: inherit; }
   font-family: "Space Grotesk", sans-serif;
   font-size: 20px;
   font-weight: 700;
-  line-height: 1.3;
+  line-height: 1.2;
 }
-.project-copy { top: 167px; color: var(--copy); font-size: 16px; line-height: 1.2; }
+.project-copy { top: 165px; color: var(--copy); font-size: 16px; line-height: 1.2; }
 .project-watermark,
 .more-watermark { position: absolute; z-index: 1; opacity: .055; pointer-events: none; }
-.fredo-watermark { top: -29px; right: -7px; width: 180px; height: 223px; }
-.whatever-watermark { top: -10px; right: -6px; width: 145px; height: 112px; }
+.fredo-watermark { top: -22px; right: 0; width: 150px; height: 198px; }
+.whatever-watermark { top: 0; right: 18px; width: 128px; height: 98px; }
 .project-ampersand {
   position: absolute;
   z-index: 2;
@@ -263,13 +286,13 @@ button { font: inherit; }
 .section-title { display: flex; align-items: flex-start; gap: 14px; }
 .section-title > img { flex: 0 0 50px; width: 50px; height: 50px; object-fit: contain; }
 .section-title h2 {
-  margin: -3px 0 0;
+  margin: 0;
   color: var(--copy);
-  font-family: "Ron Montserrat Black", Montserrat, sans-serif;
+  font-family: "Ron Poppins Semibold", Poppins, sans-serif;
   font-size: 48px;
-  font-weight: 900;
-  letter-spacing: -.03em;
-  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.4;
 }
 
 /* Portfolio */
@@ -281,8 +304,9 @@ button { font: inherit; }
 .portfolio-grid {
   position: relative;
   height: 442px;
-  margin-top: 38.40625px;
+  margin-top: 31.8px;
 }
+.portfolio .section-title h2 { margin-top: -6px; }
 .portfolio-item {
   position: absolute;
   width: 80px;
@@ -309,6 +333,7 @@ button { font: inherit; }
   height: var(--logo-size, 34px);
   max-width: none;
   object-fit: fill;
+  filter: brightness(0) saturate(100%) invert(28%);
   transform: translate(-50%, -50%);
 }
 .portfolio-item:nth-child(1) { --logo-size: 28px; }
@@ -340,17 +365,17 @@ button { font: inherit; }
 .portfolio-item[href]:focus-visible span { color: var(--purple); }
 
 /* Submit */
-.submit-startup { height: 383px; }
-.submit-inner { position: relative; height: 100%; padding-top: 77px; }
+.submit-startup { height: 383px; background: var(--lavender); }
+.submit-inner { position: relative; height: 100%; padding-top: 81px; }
 .submit-startup h2 {
-  width: 455px;
-  margin: 0;
+  width: 442px;
+  margin: 0 0 0 1px;
   color: var(--purple);
   font-family: "Ron Montserrat Black", Montserrat, sans-serif;
   font-size: 70px;
   font-weight: 900;
   letter-spacing: -.03em;
-  line-height: 1.1;
+  line-height: 1.1642857;
 }
 .submit-inner > img { position: absolute; top: 97px; right: 89px; width: 331px; height: 194px; }
 .outline-button,
@@ -368,17 +393,24 @@ button { font: inherit; }
   font-size: 14px;
   text-decoration: none;
 }
-.submit-startup .outline-button { margin-top: 23px; }
+.submit-startup .outline-button { margin: 28px 0 0 1px; }
 .outline-button:hover,
 .outline-button:focus-visible { color: #fff; background: var(--purple); }
 
 /* Nonprofits */
 .nonprofits { height: 429px; padding-top: 98px; background: #fff; }
-.nonprofit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 65px; }
+.nonprofits .section-title { gap: 18px; }
+.nonprofits .section-title h2 { margin-top: 1px; }
+.nonprofit-grid {
+  display: grid;
+  grid-template-columns: 293px 291px 264px;
+  gap: 44px;
+  margin: 69.8px 0 0 44px;
+}
 .nonprofit-grid a {
   min-width: 0;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 14px;
   color: var(--ink);
   font-family: "Space Grotesk", sans-serif;
@@ -387,7 +419,20 @@ button { font: inherit; }
   line-height: 1.25;
   text-decoration: none;
 }
-.nonprofit-grid img { width: 59px; height: 55px; object-fit: contain; flex: 0 0 59px; }
+.nonprofit-grid img {
+  width: 59px;
+  height: 50px;
+  object-fit: fill;
+  flex: 0 0 59px;
+  filter: brightness(0) saturate(100%) invert(28%);
+}
+.nonprofit-grid a:first-child span { margin-top: 3px; }
+.nonprofit-grid a:nth-child(2) { gap: 11px; }
+.nonprofit-grid a:nth-child(2) img,
+.nonprofit-grid a:nth-child(3) img { width: 55px; height: 55px; flex-basis: 55px; }
+.nonprofit-grid a:nth-child(2) span { margin-top: 5px; }
+.nonprofit-grid a:nth-child(3) { gap: 15px; }
+.nonprofit-grid a:nth-child(3) span { margin-top: 16px; }
 .nonprofit-grid small { display: block; max-width: 180px; margin-top: 4px; font-family: "Ron Montserrat", sans-serif; font-size: 9px; font-weight: 400; }
 .nonprofit-grid a:hover,
 .nonprofit-grid a:focus-visible { color: var(--purple); }
@@ -404,8 +449,9 @@ button { font: inherit; }
     #f6f9f5;
 }
 .verticals-inner { position: relative; height: 100%; padding-top: 96px; }
-.verticals-title h2 { line-height: 1.15; }
-.verticals-title p { margin: 3px 0 0; color: var(--copy); font-family: "Space Grotesk", sans-serif; font-size: 28px; line-height: 1.4; }
+.verticals-title { gap: 12px; }
+.verticals-title h2 { line-height: 1.4; }
+.verticals-title p { margin: -4px 0 0; color: var(--copy); font-family: "Ron Poppins Regular", Poppins, sans-serif; font-size: 28px; line-height: 1.4; }
 .interest-tree { position: absolute; inset: 0; color: var(--copy); font-family: "Space Grotesk", sans-serif; font-size: 15px; }
 .tree-label { position: absolute; font-size: 16px; font-weight: 700; line-height: 1.35; }
 .guidelines-label { top: 226px; left: 340px; }
@@ -489,7 +535,7 @@ button { font: inherit; }
 }
 .work-band-overlay { position: absolute; inset: 0; background: rgba(9, 20, 5, .3); }
 .work-band-content { position: relative; z-index: 1; padding-top: 94px; color: #fff; text-align: center; }
-.work-band h2 { margin: 0; font-family: "Space Grotesk", sans-serif; font-size: 30px; line-height: 1.4; }
+.work-band h2 { margin: 0; font-family: "Ron Montserrat Bold", Montserrat, sans-serif; font-size: 30px; font-weight: 700; line-height: 1.4; }
 .work-band h2 a { color: #fff; text-decoration: none; }
 .solid-button { margin-top: 19px; color: #fff; background: var(--purple); border-color: var(--purple); }
 .solid-button:hover,
@@ -571,20 +617,20 @@ button { font: inherit; }
   overflow: hidden;
   background: url("https://static.wixstatic.com/media/11062b_867596dcd2764928aba4cac8501f4d38~mv2.jpg/v1/fill/w_1348,h_520,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_867596dcd2764928aba4cac8501f4d38~mv2.jpg") center / cover no-repeat;
 }
-.live-photo-overlay { position: absolute; inset: 0; background: rgba(116, 55, 255, .58); }
+.live-photo-overlay { position: absolute; inset: 0; background: rgba(88, 0, 255, .6); }
 .live-panel {
   position: relative;
   z-index: 1;
-  top: 95px;
+  top: 95.8125px;
   height: 342px;
   padding-top: 48px;
   border-radius: 23px;
   color: #fff;
-  background: rgba(88, 0, 255, .88);
+  background: rgba(88, 0, 255, .87);
   text-align: center;
 }
-.live-panel h2 { margin: 0; font-family: "Space Grotesk", sans-serif; font-size: 40px; line-height: 1.15; }
-.live-lede { margin: 3px 0 0; font-family: "Space Grotesk", sans-serif; font-size: 24px; line-height: 1.2; }
+.live-panel h2 { height: 49px; margin: 0; font-family: "Ron Montserrat Bold", Montserrat, sans-serif; font-size: 40px; font-weight: 700; line-height: 1.225; }
+.live-lede { height: 61.8px; margin: -.2px 0 0; font-family: "Ron Poppins Regular", Poppins, sans-serif; font-size: 24px; line-height: 1.2; }
 .live-button { width: 160px; margin-top: 35px; color: #fff; border-color: #fff; font-weight: 700; }
 .live-button:hover,
 .live-button:focus-visible { color: var(--purple); background: #fff; }
@@ -621,6 +667,7 @@ button { font: inherit; }
   font-weight: 400;
   line-height: 1.1;
 }
+.work-copy h1,
 .work-copy h2 { color: var(--purple); }
 .work-copy section:nth-child(1) h1 { margin-bottom: 20px; }
 .work-copy section:nth-child(2) h2 { margin-bottom: 14px; }
@@ -731,7 +778,7 @@ button { font: inherit; }
   .submit-startup h2 { max-width: 100%; font-size: 56px; }
   .submit-inner > img { position: static; width: 100%; height: auto; }
   .nonprofits { height: auto; padding: 70px 0; }
-  .nonprofit-grid { grid-template-columns: 1fr; gap: 30px; }
+  .nonprofit-grid { grid-template-columns: 1fr; gap: 30px; margin-left: 0; }
   .verticals { height: auto; padding: 70px 0; }
   .verticals-inner { height: auto; padding-top: 0; }
   .interest-tree { position: static; display: grid; grid-template-columns: 1fr 2fr; gap: 25px; margin-top: 55px; }
