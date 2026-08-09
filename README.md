@@ -1,12 +1,13 @@
 # ripper234.com
 
-Static recreation of the public Wix site at `ripper234.com`, prepared for GitHub Pages.
+Static, fidelity-first recreation of the public Wix site at `ripper234.com`, prepared for GitHub Pages.
 
 ## What is included
 
 - Home page with the current public sections and links.
 - `/work-with-me/` page.
-- Responsive, dependency-free HTML/CSS/JavaScript.
+- Responsive, framework-free HTML/CSS/JavaScript.
+- Original Wix layout, typography, gradients, cards, icons, section order, and links.
 - GitHub Pages deployment workflow.
 - SEO basics: canonical metadata, sitemap, robots file, and 404 page.
 - Migration and content-refresh plan in [`Tasks.md`](Tasks.md).
@@ -36,4 +37,4 @@ Do not add the custom domain until the preview has been reviewed. The exact cuto
 
 ## Important asset note
 
-The current copy references five public images on Wix’s CDN. This preserves fidelity without blocking the first preview, but it is not a permanent Wix-independent archive. Download the originals from Wix Media Manager and move them into `assets/images/` before canceling Wix.
+Project, portfolio, and organization SVGs are stored locally. The remaining hero, decorative, photographic, and font files still load from Wix’s public CDNs. This preserves fidelity without blocking the preview, but it is not a permanent Wix-independent archive. Download those originals and self-host them before canceling Wix.
