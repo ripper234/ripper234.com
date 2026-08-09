@@ -20,6 +20,13 @@
   font-display: swap;
 }
 @font-face {
+  font-family: "Ron Poppins Light";
+  src: url("https://static.wixstatic.com/ufonts/044ec0_e3b5daa0d43a4222b923a4ead0517a6e/woff2/file.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
   font-family: "Ron Poppins Semibold";
   src: url("https://static.wixstatic.com/ufonts/044ec0_5e1923e7dbf9494a8145b99e8128bafd/woff2/file.woff2") format("woff2");
   font-style: normal;
@@ -117,7 +124,8 @@ button { font: inherit; }
   display: grid;
   grid-template-columns: 126px 140px 154px 143px 176px 121px 120px;
   align-items: start;
-  font-family: "Ron Poppins", Poppins, sans-serif;
+  font-family: "Ron Poppins Light", Poppins, sans-serif;
+  font-weight: 300;
   font-size: 14px;
 }
 .site-nav a {
@@ -126,7 +134,7 @@ button { font: inherit; }
   align-items: center;
   justify-content: center;
   height: 48px;
-  color: #5f5f5f;
+  color: #474747;
   text-decoration: none;
 }
 .site-nav a:not(.nav-cta)::before {
@@ -245,20 +253,26 @@ button { font: inherit; }
 }
 .fredo-card { background: rgba(0, 230, 216, .5); }
 .whatever-card { background: rgba(0, 108, 255, .69); }
-.more-card { background: rgba(233, 227, 252, .9); }
+.more-card { background: rgba(233, 227, 252, .9); transform: translateY(1px); }
 .project-icon { position: absolute; z-index: 2; top: 42px; left: 44px; width: auto; height: 50px; object-fit: contain; }
 .fredo-card .project-icon { left: 47px; width: 38px; height: 50px; object-fit: fill; }
 .whatever-card .project-icon { filter: brightness(0); }
 .project-title,
 .project-copy { position: absolute; z-index: 2; left: 44px; right: 24px; display: block; }
 .project-title {
-  top: 129px;
+  top: 136px;
   font-family: "Space Grotesk", sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 1.2;
 }
-.project-copy { top: 165px; color: var(--copy); font-size: 16px; line-height: 1.2; }
+.project-copy { top: 172px; color: var(--copy); font-size: 16px; line-height: 1.2; }
+.fredo-card .project-title,
+.fredo-card .project-copy { left: 45px; }
+.whatever-card .project-title,
+.whatever-card .project-copy,
+.more-card .project-title,
+.more-card .project-copy { left: 46px; }
 .project-watermark,
 .more-watermark { position: absolute; z-index: 1; opacity: .055; pointer-events: none; }
 .fredo-watermark { top: -22px; right: 0; width: 150px; height: 198px; }
@@ -306,7 +320,7 @@ button { font: inherit; }
   height: 442px;
   margin-top: 31.8px;
 }
-.portfolio .section-title h2 { margin-top: -6px; }
+.portfolio .section-title h2 { margin-top: -6px; letter-spacing: -1.36px; }
 .portfolio-item {
   position: absolute;
   width: 80px;
@@ -630,7 +644,7 @@ button { font: inherit; }
   text-align: center;
 }
 .live-panel h2 { height: 49px; margin: 0; font-family: "Ron Montserrat Bold", Montserrat, sans-serif; font-size: 40px; font-weight: 700; line-height: 1.225; }
-.live-lede { height: 61.8px; margin: -.2px 0 0; font-family: "Ron Poppins Regular", Poppins, sans-serif; font-size: 24px; line-height: 1.2; }
+.live-lede { height: 61.8px; margin: -1px 0 0; font-family: "Ron Poppins Regular", Poppins, sans-serif; font-size: 24px; line-height: 1.2; }
 .live-button { width: 160px; margin-top: 35px; color: #fff; border-color: #fff; font-weight: 700; }
 .live-button:hover,
 .live-button:focus-visible { color: var(--purple); background: #fff; }
@@ -662,9 +676,9 @@ button { font: inherit; }
 .work-copy h2 {
   margin: 0;
   color: var(--ink);
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Ron Poppins", Poppins, sans-serif;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.1;
 }
 .work-copy h1,
