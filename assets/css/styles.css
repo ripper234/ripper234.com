@@ -48,6 +48,13 @@
   font-display: swap;
 }
 @font-face {
+  font-family: "Ron Montserrat Light";
+  src: url("https://static.wixstatic.com/ufonts/000751_cd7dc935920d43cdbefb277e4e3693b0/woff2/file.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
   font-family: "Space Grotesk";
   src: url("https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/spacegrotesk/v6/V8mDoQDjQSkFtoMM3T6r8E7mPbF4C_k3HqU.woff2") format("woff2");
   font-style: normal;
@@ -466,16 +473,17 @@ button { font: inherit; }
 .verticals-title { gap: 12px; }
 .verticals-title h2 { line-height: 1.4; }
 .verticals-title p { margin: -4px 0 0; color: var(--copy); font-family: "Ron Poppins Regular", Poppins, sans-serif; font-size: 28px; line-height: 1.4; }
-.interest-tree { position: absolute; inset: 0; color: var(--copy); font-family: "Space Grotesk", sans-serif; font-size: 15px; }
-.tree-label { position: absolute; font-size: 16px; font-weight: 700; line-height: 1.35; }
-.guidelines-label { top: 226px; left: 340px; }
-.specific-label { top: 703px; left: 358px; }
-.not-label { top: 718px; left: 574px; color: #ee3c3c; font-weight: 400; }
+.interest-tree { position: absolute; inset: 0; color: var(--copy); font-family: "Ron Montserrat Light", Montserrat, sans-serif; font-size: 15px; font-weight: 300; }
+.tree-label { position: absolute; font-family: "Ron Montserrat Bold", Montserrat, sans-serif; font-size: 16px; font-weight: 700; line-height: 1.35; }
+.guidelines-label { top: 227.4px; left: 346px; }
+.specific-label { top: 703px; left: 364px; }
+.not-label { top: 718px; left: 573px; color: #ee3c3c; font-family: "Ron Montserrat Light", Montserrat, sans-serif; font-weight: 300; }
 .guidelines-list,
 .not-list { position: absolute; margin: 0; padding: 0; list-style: none; }
-.guidelines-list { top: 195px; left: 565px; width: 410px; }
+.guidelines-list { top: 201px; left: 579px; width: 396px; }
 .guidelines-list li { position: relative; min-height: 50px; padding-left: 0; }
-.guidelines-list li:nth-child(2) { min-height: 90px; }
+.guidelines-list li:nth-child(1) { min-height: 40px; }
+.guidelines-list li:nth-child(2) { min-height: 92px; }
 .guidelines-list li:nth-child(5) { min-height: 66px; }
 .guidelines-list li::before {
   position: absolute;
@@ -506,7 +514,7 @@ button { font: inherit; }
 .interest-tree::before {
   position: absolute;
   top: 226px;
-  left: 286px;
+  left: 292px;
   height: 483px;
   content: "";
   border-left: 1px solid var(--purple);
@@ -520,7 +528,7 @@ button { font: inherit; }
   content: "";
   border-top: 1px solid var(--purple);
 }
-.not-list { top: 716px; left: 768px; width: 210px; }
+.not-list { top: 717.8125px; left: 769px; width: 209px; }
 .not-list li { position: relative; min-height: 57px; }
 .not-list li::before {
   position: absolute;
