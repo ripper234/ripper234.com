@@ -82,6 +82,13 @@
   font-weight: 400;
   font-display: swap;
 }
+@font-face {
+  font-family: "Ron Poppins UI Semibold";
+  src: url("https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/poppins/v5/9VWMTeb5jtXkNoTv949Npfk_vArhqVIZ0nv9q090hN8.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
 
 :root {
   --ink: #091405;
@@ -176,7 +183,7 @@ button { font: inherit; }
   content: "";
   background: transparent;
 }
-.site-nav a:not(.nav-cta) { align-items: flex-start; padding-top: 9.796875px; }
+.site-nav a:not(.nav-cta) { align-items: flex-start; padding-top: 9px; }
 .site-nav a:hover,
 .site-nav a:focus-visible,
 .site-nav a.is-active,
@@ -304,12 +311,12 @@ button { font: inherit; }
 .whatever-card { background: rgba(0, 108, 255, .69); }
 .more-card { background: rgba(233, 227, 252, .9); transform: translateY(1px); }
 .project-icon { position: absolute; z-index: 2; top: 49px; left: 46px; width: auto; height: 50px; object-fit: contain; }
-.fredo-card .project-icon { left: 46px; width: 38px; height: 50px; object-fit: fill; }
+.fredo-card .project-icon { left: 47px; width: 38px; height: 50px; object-fit: fill; }
 .whatever-card .project-icon { top: 51px; left: 46px; width: 45px; height: 50px; }
 .project-title,
 .project-copy { position: absolute; z-index: 2; left: 44px; right: 24px; display: block; }
 .project-title {
-  top: 136px;
+  top: 138px;
   font-family: "Ron Montserrat Bold", Montserrat, sans-serif;
   font-size: 20px;
   font-weight: 700;
@@ -330,11 +337,11 @@ button { font: inherit; }
 .project-ampersand {
   position: absolute;
   z-index: 2;
-  top: 40px;
+  top: 48px;
   left: 46px;
-  font-family: "Ron Poppins Semibold", Poppins, sans-serif;
+  font-family: "Ron Poppins UI Semibold", Poppins, sans-serif;
   font-size: 60px;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 0;
   line-height: 1;
 }
@@ -369,7 +376,7 @@ button { font: inherit; }
   height: 442px;
   margin-top: 31.8px;
 }
-.portfolio .section-title h2 { margin-top: -6px; letter-spacing: -1.44px; }
+.portfolio .section-title h2 { margin-top: -6px; letter-spacing: -1.36px; }
 .portfolio .section-title > img { height: 48px; transform: translateY(1px); }
 .portfolio-item {
   position: absolute;
@@ -434,10 +441,10 @@ button { font: inherit; }
 .submit-startup { height: 383px; background: var(--lavender); }
 .submit-inner { position: relative; height: 100%; padding-top: 81px; }
 .submit-startup h2 {
-  width: 442px;
+  width: 454px;
   height: 163px;
   margin: 0 0 0 1px;
-  padding-top: 3px;
+  padding-top: 5px;
   color: var(--purple);
   font-family: "Ron Montserrat Black", Montserrat, sans-serif;
   font-size: 70px;
@@ -634,6 +641,7 @@ button { font: inherit; }
   letter-spacing: normal;
   line-height: .8;
   white-space: nowrap;
+  transform: translateY(10px);
 }
 .contact-buttons { display: flex; gap: 21px; margin: 49px 0 0 9px; }
 .contact-buttons a {
@@ -733,7 +741,7 @@ button { font: inherit; }
   font-size: 14px;
   font-weight: 400;
 }
-.site-footer p { margin: 0; }
+.site-footer p { margin: 0; transform: translate(-10px, -3.390625px); }
 
 /* Work-with-me page */
 .work-page { color: var(--copy); background: linear-gradient(to right, #fafafa 0 337px, #fff 337px); }
@@ -950,6 +958,8 @@ button { font: inherit; }
   .work-copy section:nth-child(3) p,
   .work-copy section:nth-child(4) p { width: auto; }
   .work-page { background: #fff; }
+  .contact h2,
+  .site-footer p { transform: none; }
 }
 
 @media (max-width: 620px) {
