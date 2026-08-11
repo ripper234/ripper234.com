@@ -61,6 +61,34 @@
   font-weight: 400 700;
   font-display: swap;
 }
+@font-face {
+  font-family: "Ron Avenir Light";
+  src: url("https://static.parastorage.com/fonts/v2/af36905f-3c92-4ef9-b0c1-f91432f16ac1/v1/avenir-lt-w01_35-light1475496.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Ron Montserrat Medium";
+  src: url("https://static.wixstatic.com/ufonts/000751_474b12cced6d49f2849f503203e8b313/woff2/file.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Ron Poppins ExtraLight";
+  src: url("https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/poppins/v5/h3r77AwDsldr1E_2g4qqGPk_vArhqVIZ0nv9q090hN8.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Ron Poppins UI Semibold";
+  src: url("https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/poppins/v5/9VWMTeb5jtXkNoTv949Npfk_vArhqVIZ0nv9q090hN8.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
 
 :root {
   --ink: #091405;
@@ -132,16 +160,18 @@ button { font: inherit; }
   grid-template-columns: 126px 140px 154px 143px 176px 121px 120px;
   align-items: start;
   font-family: "Ron Poppins Light", Poppins, sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 14px;
 }
 .site-nav a {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   height: 48px;
+  padding-left: 23px;
   color: #474747;
+  line-height: 48px;
   text-decoration: none;
 }
 .site-nav a:not(.nav-cta)::before {
@@ -153,6 +183,7 @@ button { font: inherit; }
   content: "";
   background: transparent;
 }
+.site-nav a:not(.nav-cta) { align-items: flex-start; padding-top: 9px; }
 .site-nav a:hover,
 .site-nav a:focus-visible,
 .site-nav a.is-active,
@@ -164,11 +195,16 @@ button { font: inherit; }
 .site-nav .nav-cta {
   grid-column: 7;
   align-self: center;
+  justify-content: center;
   margin-top: 0;
   height: 36px;
+  padding-left: 0;
   border: 1px solid var(--purple);
   border-radius: 999px;
   color: var(--purple);
+  font-family: "Ron Poppins Regular", Poppins, sans-serif;
+  letter-spacing: .7px;
+  line-height: normal;
 }
 .site-nav .nav-cta:hover,
 .site-nav .nav-cta:focus-visible { color: #fff; background: var(--purple); }
@@ -194,6 +230,7 @@ button { font: inherit; }
   font-weight: 900;
   letter-spacing: -.03em;
   line-height: .9166667;
+  transform: translateY(-1px);
 }
 .hero h1 span { display: block; }
 .hero-role {
@@ -209,7 +246,7 @@ button { font: inherit; }
 .hero-text {
   width: 351px;
   margin: 28px 0 0 6px;
-  color: var(--ink);
+  color: var(--copy);
   font-size: 16px;
   line-height: 1.4;
 }
@@ -228,20 +265,31 @@ button { font: inherit; }
   left: 6px;
   width: 247px;
   height: 45px;
-  display: flex;
-  align-items: center;
-  gap: 11px;
-  padding: 0 14px 0 10px;
+  display: block;
+  padding: 3px;
   border-radius: 999px;
-  color: #fff;
+  color: #f6f9f5;
   background: #25d366;
-  font-size: 13px;
-  letter-spacing: .14em;
   text-decoration: none;
+  transition: background-color .2s ease;
 }
-.whatsapp-follow svg { width: 37px; height: 37px; flex: 0 0 37px; }
+.whatsapp-follow img { position: absolute; top: 4px; left: 8.828px; width: 37px; height: 37px; max-width: none; }
+.whatsapp-follow span {
+  position: absolute;
+  top: 13.5px;
+  left: 55.828px;
+  width: 188.172px;
+  height: 18px;
+  color: #f6f9f5;
+  font-family: "Ron Avenir Light", Avenir, sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: 3.75px;
+  line-height: 18px;
+  white-space: nowrap;
+}
 .whatsapp-follow:hover,
-.whatsapp-follow:focus-visible { background: #18b956; }
+.whatsapp-follow:focus-visible { background: #25d366; }
 
 /* Project cards */
 .projects { height: 394px; padding-top: 75px; background: rgba(246, 249, 245, .8); }
@@ -258,50 +306,51 @@ button { font: inherit; }
   color: var(--ink);
   text-decoration: none;
 }
+.project-card a { color: inherit; text-decoration: none; }
 .fredo-card { background: rgba(0, 230, 216, .5); }
 .whatever-card { background: rgba(0, 108, 255, .69); }
 .more-card { background: rgba(233, 227, 252, .9); transform: translateY(1px); }
-.project-icon { position: absolute; z-index: 2; top: 42px; left: 44px; width: auto; height: 50px; object-fit: contain; }
+.project-icon { position: absolute; z-index: 2; top: 49px; left: 46px; width: auto; height: 50px; object-fit: contain; }
 .fredo-card .project-icon { left: 47px; width: 38px; height: 50px; object-fit: fill; }
-.whatever-card .project-icon { filter: brightness(0); }
+.whatever-card .project-icon { top: 51px; left: 46px; width: 45px; height: 50px; }
 .project-title,
 .project-copy { position: absolute; z-index: 2; left: 44px; right: 24px; display: block; }
 .project-title {
-  top: 136px;
-  font-family: "Space Grotesk", sans-serif;
+  top: 138px;
+  font-family: "Ron Montserrat Bold", Montserrat, sans-serif;
   font-size: 20px;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1;
 }
-.project-copy { top: 172px; color: var(--copy); font-size: 16px; line-height: 1.2; }
+.project-copy { top: 172px; color: var(--ink); font-size: 16px; line-height: normal; }
 .fredo-card .project-title,
 .fredo-card .project-copy { left: 45px; }
 .whatever-card .project-title,
 .whatever-card .project-copy,
 .more-card .project-title,
 .more-card .project-copy { left: 46px; }
+.more-card .project-copy { left: 45px; }
 .project-watermark,
-.more-watermark { position: absolute; z-index: 1; opacity: .055; pointer-events: none; }
+.more-watermark { position: absolute; z-index: 1; opacity: .05; pointer-events: none; }
 .fredo-watermark { top: -22px; right: 0; width: 150px; height: 198px; }
 .whatever-watermark { top: 0; right: 18px; width: 128px; height: 98px; }
 .project-ampersand {
   position: absolute;
   z-index: 2;
-  top: 24px;
+  top: 48px;
   left: 46px;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Ron Poppins UI Semibold", Poppins, sans-serif;
   font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 0;
   line-height: 1;
 }
 .more-watermark {
-  top: -36px;
-  right: -11px;
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 150px;
-  font-weight: 700;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 74px;
 }
-.project-card:hover,
-.project-card:focus-visible { filter: saturate(1.08) brightness(.98); }
 
 /* Shared section titles */
 .section-title { display: flex; align-items: flex-start; gap: 14px; }
@@ -327,7 +376,13 @@ button { font: inherit; }
   height: 442px;
   margin-top: 31.8px;
 }
-.portfolio .section-title h2 { margin-top: -6px; letter-spacing: -1.36px; }
+.portfolio .section-title h2 {
+  margin-top: -6px;
+  font-family: "Ron Poppins UI Semibold", Poppins, sans-serif;
+  font-weight: 400;
+  letter-spacing: -1.44px;
+}
+.portfolio .section-title > img { height: 48px; transform: translateY(1px); }
 .portfolio-item {
   position: absolute;
   width: 80px;
@@ -370,6 +425,8 @@ button { font: inherit; }
 .portfolio-item:nth-child(11) { --logo-size: 55px; }
 .portfolio-item:nth-child(12) { --logo-size: 30px; }
 .portfolio-item:nth-child(13) { --logo-size: 65px; }
+.portfolio-item:nth-child(14) img { margin-left: 1px; }
+.portfolio-item:nth-child(18) img { filter: none; }
 .portfolio-item span {
   position: absolute;
   top: 71px;
@@ -389,15 +446,19 @@ button { font: inherit; }
 .submit-startup { height: 383px; background: var(--lavender); }
 .submit-inner { position: relative; height: 100%; padding-top: 81px; }
 .submit-startup h2 {
-  width: 442px;
+  width: 454px;
+  height: 163px;
   margin: 0 0 0 1px;
+  padding-top: 5px;
   color: var(--purple);
   font-family: "Ron Montserrat Black", Montserrat, sans-serif;
   font-size: 70px;
   font-weight: 900;
-  letter-spacing: -.03em;
-  line-height: 1.1642857;
+  letter-spacing: normal;
+  line-height: 1.1;
 }
+.submit-tight { letter-spacing: -.03em; }
+.submit-r { letter-spacing: .03em; }
 .submit-inner > img { position: absolute; top: 97px; right: 89px; width: 331px; height: 194px; }
 .outline-button,
 .solid-button,
@@ -410,8 +471,9 @@ button { font: inherit; }
   border: 1px solid var(--purple);
   border-radius: 999px;
   color: var(--purple);
-  font-family: "Ron Poppins", Poppins, sans-serif;
+  font-family: "Ron Poppins Regular", Poppins, sans-serif;
   font-size: 14px;
+  letter-spacing: .7px;
   text-decoration: none;
 }
 .submit-startup .outline-button { margin: 28px 0 0 1px; }
@@ -422,6 +484,7 @@ button { font: inherit; }
 .nonprofits { height: 429px; padding-top: 98px; background: #fff; }
 .nonprofits .section-title { gap: 18px; }
 .nonprofits .section-title h2 { margin-top: 1px; }
+.nonprofits .section-title > img { transform: translateY(1px) rotate(1.054deg); }
 .nonprofit-grid {
   display: grid;
   grid-template-columns: 293px 291px 264px;
@@ -433,11 +496,11 @@ button { font: inherit; }
   display: flex;
   align-items: flex-start;
   gap: 14px;
-  color: var(--ink);
-  font-family: "Space Grotesk", sans-serif;
+  color: var(--copy);
+  font-family: "Ron Montserrat Bold", Montserrat, sans-serif;
   font-size: 16px;
   font-weight: 700;
-  line-height: 1.25;
+  line-height: 1.3;
   text-decoration: none;
 }
 .nonprofit-grid img {
@@ -445,7 +508,7 @@ button { font: inherit; }
   height: 50px;
   object-fit: fill;
   flex: 0 0 59px;
-  filter: brightness(0) saturate(100%) invert(28%);
+  filter: none;
 }
 .nonprofit-grid a:first-child span { margin-top: 3px; }
 .nonprofit-grid a:nth-child(2) { gap: 11px; }
@@ -455,6 +518,15 @@ button { font: inherit; }
 .nonprofit-grid a:nth-child(3) { gap: 15px; }
 .nonprofit-grid a:nth-child(3) span { margin-top: 16px; }
 .nonprofit-grid small { display: block; max-width: 180px; margin-top: 4px; font-family: "Ron Montserrat", sans-serif; font-size: 9px; font-weight: 400; }
+.nonprofit-grid a:nth-child(3) small {
+  width: 144px;
+  margin: 9px 0 0 11px;
+  color: #fff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.4;
+}
 .nonprofit-grid a:hover,
 .nonprofit-grid a:focus-visible { color: var(--purple); }
 
@@ -477,7 +549,7 @@ button { font: inherit; }
 .tree-label { position: absolute; font-family: "Ron Montserrat Bold", Montserrat, sans-serif; font-size: 16px; font-weight: 700; line-height: 1.35; }
 .guidelines-label { top: 227.4px; left: 346px; }
 .specific-label { top: 703px; left: 364px; }
-.not-label { top: 718px; left: 573px; color: #ee3c3c; font-family: "Ron Montserrat Light", Montserrat, sans-serif; font-weight: 300; }
+.not-label { top: 718px; left: 573px; color: #ff0000; font-family: "Ron Montserrat Medium", Montserrat, sans-serif; font-size: 15px; font-weight: 500; }
 .guidelines-list,
 .not-list { position: absolute; margin: 0; padding: 0; list-style: none; }
 .guidelines-list { top: 201px; left: 579px; width: 396px; }
@@ -536,7 +608,7 @@ button { font: inherit; }
   left: -64px;
   width: 52px;
   content: "";
-  border-top: 1px solid #ee3c3c;
+  border-top: 1px solid #ff0000;
 }
 .not-list::before {
   position: absolute;
@@ -544,7 +616,7 @@ button { font: inherit; }
   left: -64px;
   height: 282px;
   content: "";
-  border-left: 1px solid #ee3c3c;
+  border-left: 1px solid #ff0000;
 }
 .not-list small { font-size: 15px; }
 
@@ -553,13 +625,13 @@ button { font: inherit; }
   position: relative;
   height: 302px;
   overflow: hidden;
-  background: url("https://static.wixstatic.com/media/e2b581_b3ab926be64b43ac868be54a8043e4da~mv2.jpg/v1/fill/w_1348,h_302,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e2b581_b3ab926be64b43ac868be54a8043e4da~mv2.jpg") center / cover no-repeat;
+  background: #c5c7c4 url("https://static.wixstatic.com/media/e2b581_b3ab926be64b43ac868be54a8043e4da~mv2.jpg/v1/fill/w_1348,h_302,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e2b581_b3ab926be64b43ac868be54a8043e4da~mv2.jpg") center / cover no-repeat;
 }
-.work-band-overlay { position: absolute; inset: 0; background: rgba(9, 20, 5, .3); }
-.work-band-content { position: relative; z-index: 1; padding-top: 94px; color: #fff; text-align: center; }
-.work-band h2 { margin: 0; font-family: "Ron Montserrat Bold", Montserrat, sans-serif; font-size: 30px; font-weight: 700; line-height: 1.4; }
+.work-band-overlay { display: none; }
+.work-band-content { position: relative; z-index: 1; padding-top: 100px; color: #fff; text-align: center; }
+.work-band h2 { margin: 0; font-family: "Ron Montserrat Bold", Montserrat, sans-serif; font-size: 30px; font-weight: 700; line-height: 1.4; transform: translateX(-3px); }
 .work-band h2 a { color: #fff; text-decoration: none; }
-.solid-button { margin-top: 19px; color: #fff; background: var(--purple); border-color: var(--purple); }
+.solid-button { width: 141px; margin-top: 24px; color: #fff; background: var(--purple); border-color: var(--purple); transform: translateX(-11.5px); }
 .solid-button:hover,
 .solid-button:focus-visible { color: var(--purple); background: #fff; }
 .wix-spacer { height: 500px; background: #fff; }
@@ -573,34 +645,39 @@ button { font: inherit; }
   font-family: "Ron Montserrat Black", Montserrat, sans-serif;
   font-size: 45px;
   font-weight: 900;
-  letter-spacing: -.03em;
-  line-height: 1;
+  letter-spacing: normal;
+  line-height: .8;
   white-space: nowrap;
+  transform: translateY(10px);
 }
-.contact-buttons { display: flex; gap: 21px; margin: 40px 0 0 9px; }
+.contact-buttons { display: flex; gap: 21px; margin: 49px 0 0 9px; }
 .contact-buttons a {
   width: 160px;
   height: 42px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
   border: 1px solid var(--purple);
   border-radius: 999px;
   color: var(--purple);
-  font-family: "Ron Poppins", Poppins, sans-serif;
+  font-family: "Ron Poppins Regular", Poppins, sans-serif;
   font-size: 14px;
+  letter-spacing: .7px;
   text-decoration: none;
+  transition: background-color .2s ease, border-color .2s ease, border-radius .2s ease, color .2s ease;
 }
 .contact-buttons img {
-  width: 19px;
-  height: auto;
+  width: 20px;
+  height: 20px;
+  object-fit: fill;
   filter: invert(14%) sepia(99%) saturate(7488%) hue-rotate(267deg) brightness(93%) contrast(132%);
+  transition: width .2s ease, height .2s ease, filter .2s ease;
 }
 .contact-buttons a:hover,
-.contact-buttons a:focus-visible { color: #fff; background: var(--purple); }
+.contact-buttons a:focus-visible { color: #fff; background: var(--purple); border-color: #fff; border-radius: 20px; }
 .contact-buttons a:hover img,
-.contact-buttons a:focus-visible img { filter: brightness(0) invert(1); }
+.contact-buttons a:focus-visible img { width: 26px; height: 26px; filter: brightness(0) invert(1); }
 .follow-column { padding-left: 0; }
 .social-links { display: flex; gap: 32px; margin: 40px 0 0 69px; }
 .social-links a {
@@ -624,13 +701,14 @@ button { font: inherit; }
   filter: invert(14%) sepia(99%) saturate(7488%) hue-rotate(267deg) brightness(93%) contrast(132%);
 }
 .social-links a:nth-child(2) img { width: 20px; height: 20px; }
+.social-links a:nth-child(2) { border-width: 1.2px; }
 .social-links a:hover,
 .social-links a:focus-visible { color: #fff; background: var(--purple); }
 .social-links a:hover img,
 .social-links a:focus-visible img { filter: brightness(0) invert(1); }
 .contact-dots { position: absolute; opacity: .18; }
 .contact-dots-top { top: 0; left: calc(50% - 18px); }
-.contact-dots-bottom { right: calc(50% - 514px); bottom: -1px; }
+.contact-dots-bottom { right: calc(50% - 536px); bottom: -1px; }
 
 /* Live calls */
 .live-calls {
@@ -664,14 +742,17 @@ button { font: inherit; }
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #c7c7c7;
+  color: #fff;
   background: #232323;
-  font-size: 12px;
+  font-family: "Ron Poppins ExtraLight", Poppins, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
 }
-.site-footer p { margin: 0; }
+.site-footer p { margin: 0; transform: translate(-10px, -3.390625px); }
+.work-page .site-footer p { transform: translate(-10px, -2.203125px); }
 
 /* Work-with-me page */
-.work-page { color: var(--copy); background: #fff; }
+.work-page { color: var(--copy); background: linear-gradient(to right, #fafafa 0 337px, #fff 337px); }
 .work-document { min-height: 1908px; padding-top: 40px; }
 .work-copy { width: 835px; margin-left: calc(50% - 299px); }
 .work-copy section { margin: 0; }
@@ -707,6 +788,7 @@ button { font: inherit; }
   justify-content: center;
   gap: 5px;
   margin-top: 83.625px;
+  transform: translateX(-13.515625px);
 }
 .work-share a {
   width: 46px;
@@ -723,16 +805,62 @@ button { font: inherit; }
   font-size: 22px;
   text-decoration: none;
 }
-.work-share a:nth-child(2) { width: 48px; }
-.work-share img { width: 26px; height: 26px; object-fit: contain; }
-.work-share a:first-child { color: #1e80e8; }
-.work-share a:nth-child(3) { color: #25d366; }
-.work-share a:last-child { color: #0877a9; font-size: 16px; font-weight: 700; }
+.work-share a:nth-child(2) { width: 47.64px; }
+.work-share img { width: 26px; height: 26px; object-fit: fill; }
+.work-share a:nth-child(2) img { width: 27.64px; }
+.work-share a:nth-child(3) img { width: 25.88px; }
+.work-share a:hover,
+.work-share a:focus-visible { box-shadow: inset 0 0 5px rgba(0, 0, 0, .45); }
+
+/* Local replacement for the Wix-hosted UserWay launcher. */
+.accessibility-toggle {
+  position: fixed;
+  z-index: 1000;
+  left: 23px;
+  bottom: 26px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #5800ff;
+  box-shadow: none;
+  cursor: pointer;
+}
+.accessibility-toggle img { width: 44px; height: 44px; }
+.accessibility-menu {
+  position: fixed;
+  z-index: 999;
+  left: 23px;
+  bottom: 80px;
+  width: 238px;
+  padding: 18px;
+  border: 1px solid rgba(88, 0, 255, .2);
+  border-radius: 12px;
+  color: var(--copy);
+  background: #fff;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, .22);
+}
+.accessibility-menu[hidden] { display: none; }
+.accessibility-menu h2 { margin: 0 0 12px; color: var(--purple); font-family: "Ron Poppins Semibold", Poppins, sans-serif; font-size: 18px; }
+.accessibility-menu button { width: 100%; padding: 9px 8px; border: 0; border-top: 1px solid #ece8f7; color: var(--copy); background: #fff; text-align: left; cursor: pointer; }
+.accessibility-text { font-size: 118%; }
+.accessibility-contrast { filter: contrast(1.35); }
+.accessibility-links a { text-decoration: underline !important; }
+.accessibility-motion *,
+.accessibility-motion *::before,
+.accessibility-motion *::after { scroll-behavior: auto !important; animation: none !important; transition: none !important; }
 
 :focus-visible { outline: 2px solid var(--purple); outline-offset: 3px; }
 
 @media (max-width: 1020px) {
   :root { --header-height: 60px; }
+  .work-band h2,
+  .solid-button,
+  .work-share { transform: none; }
   .site-header { height: var(--header-height); }
   .header-inner { position: relative; }
   .menu-button {
@@ -765,7 +893,8 @@ button { font: inherit; }
     transition: transform 160ms ease, visibility 160ms ease;
   }
   .site-nav.is-open { transform: none; visibility: visible; }
-  .site-nav a { min-height: 44px; }
+  .site-nav a { min-height: 44px; justify-content: center; padding-left: 0; }
+  .site-nav a:not(.nav-cta) { align-items: center; padding-top: 0; }
   .site-nav a:not(.nav-cta)::before { display: none; }
   .site-nav .nav-cta { grid-column: auto; width: 180px; margin: 8px auto 0; }
   .hero { height: auto; min-height: 920px; }
@@ -803,7 +932,7 @@ button { font: inherit; }
   .nonprofit-grid { grid-template-columns: 1fr; gap: 30px; margin-left: 0; }
   .verticals { height: auto; padding: 70px 0; }
   .verticals-inner { height: auto; padding-top: 0; }
-  .interest-tree { position: static; display: grid; grid-template-columns: 1fr 2fr; gap: 25px; margin-top: 55px; }
+  .interest-tree { position: static; display: grid; grid-template-columns: 1fr 2fr; gap: 25px; margin-top: 55px; transform: none; }
   .interest-tree::before,
   .tree-label::before,
   .guidelines-list::before,
@@ -836,6 +965,10 @@ button { font: inherit; }
   .work-copy section:nth-child(3) p { margin-left: 0; }
   .work-copy section:nth-child(3) p,
   .work-copy section:nth-child(4) p { width: auto; }
+  .work-page { background: #fff; }
+  .contact h2,
+  .site-footer p,
+  .work-page .site-footer p { transform: none; }
 }
 
 @media (max-width: 620px) {
