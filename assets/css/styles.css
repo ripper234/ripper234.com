@@ -376,7 +376,12 @@ button { font: inherit; }
   height: 442px;
   margin-top: 31.8px;
 }
-.portfolio .section-title h2 { margin-top: -6px; letter-spacing: -1.36px; }
+.portfolio .section-title h2 {
+  margin-top: -6px;
+  font-family: "Ron Poppins UI Semibold", Poppins, sans-serif;
+  font-weight: 400;
+  letter-spacing: -1.44px;
+}
 .portfolio .section-title > img { height: 48px; transform: translateY(1px); }
 .portfolio-item {
   position: absolute;
@@ -744,6 +749,7 @@ button { font: inherit; }
   font-weight: 400;
 }
 .site-footer p { margin: 0; transform: translate(-10px, -3.390625px); }
+.work-page .site-footer p { transform: translate(-10px, -2.203125px); }
 
 /* Work-with-me page */
 .work-page { color: var(--copy); background: linear-gradient(to right, #fafafa 0 337px, #fff 337px); }
@@ -782,7 +788,7 @@ button { font: inherit; }
   justify-content: center;
   gap: 5px;
   margin-top: 83.625px;
-  transform: translateX(-13.328125px);
+  transform: translateX(-13.515625px);
 }
 .work-share a {
   width: 46px;
@@ -961,7 +967,8 @@ button { font: inherit; }
   .work-copy section:nth-child(4) p { width: auto; }
   .work-page { background: #fff; }
   .contact h2,
-  .site-footer p { transform: none; }
+  .site-footer p,
+  .work-page .site-footer p { transform: none; }
 }
 
 @media (max-width: 620px) {
