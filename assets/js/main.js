@@ -32,4 +32,42 @@
       if (window.innerWidth > 980) closeMenu();
     });
   }
+
+  const accessibilityToggle = document.querySelector('[data-accessibility-toggle]');
+  const accessibilityMenu = document.querySelector('[data-accessibility-menu]');
+
+  if (accessibilityToggle instanceof HTMLButtonElement && accessibilityMenu instanceof HTMLElement) {
+    const closeAccessibilityMenu = () => {
+      accessibilityMenu.hidden = true;
+      accessibilityToggle.setAttribute('aria-expanded', 'false');
+    };
+
+    accessibilityToggle.addEventListener('click', () => {
+      const willOpen = accessibilityMenu.hidden;
+      accessibilityMenu.hidden = !willOpen;
+      accessibilityToggle.setAttribute('aria-expanded', String(willOpen));
+      if (willOpen) accessibilityMenu.querySelector('button')?.focus();
+    });
+
+    accessibilityMenu.addEventListener('click', (event) => {
+      const actionButton = event.target instanceof Element
+        ? event.target.closest('[data-accessibility-action]')
+        : null;
+      if (!(actionButton instanceof HTMLButtonElement)) return;
+
+      const action = actionButton.dataset.accessibilityAction;
+      if (action === 'reset') {
+        document.documentElement.classList.remove('accessibility-text', 'accessibility-contrast', 'accessibility-links', 'accessibility-motion');
+        return;
+      }
+      if (action) document.documentElement.classList.toggle(`accessibility-${action}`);
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && !accessibilityMenu.hidden) {
+        closeAccessibilityMenu();
+        accessibilityToggle.focus();
+      }
+    });
+  }
 })();
