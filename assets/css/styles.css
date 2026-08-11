@@ -452,6 +452,8 @@ button { font: inherit; }
   letter-spacing: normal;
   line-height: 1.1;
 }
+.submit-tight { letter-spacing: -.03em; }
+.submit-r { letter-spacing: .03em; }
 .submit-inner > img { position: absolute; top: 97px; right: 89px; width: 331px; height: 194px; }
 .outline-button,
 .solid-button,
